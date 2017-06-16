@@ -23,7 +23,7 @@ public class MainActivity extends Activity {
 
         surfaceView.setEGLContextClientVersion(2);
         surfaceView.getHolder().setFormat(PixelFormat.RGBA_8888);
-        MyRender render = new MyRender(surfaceView);
+        GLSurfaceView.Renderer render = new MyRender3(surfaceView);
         surfaceView.setRenderer(render);
         surfaceView.setRenderMode(GLSurfaceView.RENDERMODE_CONTINUOUSLY);
     }

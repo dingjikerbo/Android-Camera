@@ -1,6 +1,5 @@
 package com.hobot.smarthome.testcamera;
 
-import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLES20;
@@ -12,8 +11,6 @@ import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 import java.nio.FloatBuffer;
 import java.nio.IntBuffer;
-import java.util.LinkedList;
-import java.util.Queue;
 
 import javax.microedition.khronos.egl.EGLConfig;
 import javax.microedition.khronos.opengles.GL10;
@@ -22,7 +19,10 @@ import javax.microedition.khronos.opengles.GL10;
  * Created by liwentian on 17/6/15.
  */
 
-public class MyRender implements GLSurfaceView.Renderer, Camera.PreviewCallback {
+/**
+ * 将NV21中的Y分量传给OpenGL
+ */
+public class MyRender2 implements GLSurfaceView.Renderer, Camera.PreviewCallback {
 
     private static final int WIDTH = 1280;
     private static final int HEIGHT = 720;
@@ -80,7 +80,7 @@ public class MyRender implements GLSurfaceView.Renderer, Camera.PreviewCallback 
 
     private int mGLTextureId = -1;
 
-    public MyRender(GLSurfaceView view) {
+    public MyRender2(GLSurfaceView view) {
         mSurfaceView = view;
 
         mCamera = Camera.open(1);
@@ -98,6 +98,8 @@ public class MyRender implements GLSurfaceView.Renderer, Camera.PreviewCallback 
         mGLTextureBuffer = ByteBuffer.allocateDirect(TEXTURE_NO_ROTATION.length * 4)
                 .order(ByteOrder.nativeOrder())
                 .asFloatBuffer();
+
+        mGLRgbBuffer = IntBuffer.allocate(WIDTH * HEIGHT);
     }
 
     private void startPreview() {
@@ -162,8 +164,12 @@ public class MyRender implements GLSurfaceView.Renderer, Camera.PreviewCallback 
         Log.v("bush", "onDrawFrame");
 
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT | GLES20.GL_DEPTH_BUFFER_BIT);
+        GLES20.glClearColor(1f, 1f, 1f, 1f);
 
-        mGLTextureId = OpenGlUtils.loadTexture(mGLRgbBuffer, mCamera.getParameters().getPreviewSize(), mGLTextureId);
+        synchronized (mGLRgbBuffer) {
+            mGLRgbBuffer.position(0);
+            mGLTextureId = OpenGlUtils.loadTexture(mGLRgbBuffer, mCamera.getParameters().getPreviewSize(), mGLTextureId);
+        }
 
         GLES20.glUseProgram(mGLProgId);
 
@@ -195,11 +201,12 @@ public class MyRender implements GLSurfaceView.Renderer, Camera.PreviewCallback 
     public void onPreviewFrame(final byte[] data, Camera camera) {
         Log.v("bush", "onPreviewFrame");
 
-        if (mGLRgbBuffer == null) {
-            mGLRgbBuffer = IntBuffer.allocate(WIDTH * HEIGHT);
+        synchronized (mGLRgbBuffer) {
+            mGLRgbBuffer.position(0);
+            for (int i = 0; i < WIDTH * HEIGHT; i++) {
+                mGLRgbBuffer.put(data[i] & 0xff);
+            }
         }
-
-        GPUImageNativeLibrary.YUVtoRBGA(data, WIDTH, HEIGHT, mGLRgbBuffer.array());
 
         mCamera.addCallbackBuffer(data);
     }
