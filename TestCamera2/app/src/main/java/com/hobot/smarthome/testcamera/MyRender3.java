@@ -64,15 +64,15 @@ public class MyRender3 implements GLSurfaceView.Renderer, Camera.PreviewCallback
             "precision mediump float;\n" +
                     "varying vec2 v_texCoord;\n" +
                     "uniform sampler2D y_texture;\n" +
-                    "uniform sampler2D uv_texture\n" +
-                    "void main()\n" +
-                    "float r,g,b,y,u,v;\n" +
+                    "uniform sampler2D uv_texture;\n" +
+                    "void main() {\n" +
+                    "float r, g, b, y, u, v;\n" +
                     "y = texture2D(y_texture, v_texCoord).r;\n" +
                     "u = texture2D(uv_texture, v_texCoord).a - 0.5;\n" +
                     "v = texture2D(uv_texture, v_texCoord).r - 0.5;\n" +
-                    "r = y + 1.13983*v;\n" +
-                    "g = y - 0.39465*u - 0.58060*v;\n" +
-                    "b = y + 2.03211*u;\n" +
+                    "r = y + 1.13983 * v;\n" +
+                    "g = y - 0.39465 * u - 0.58060 * v;\n" +
+                    "b = y + 2.03211 * u;\n" +
                     "gl_FragColor = vec4(r, g, b, 1.0);\n" +
                     "}";
 
@@ -171,18 +171,18 @@ public class MyRender3 implements GLSurfaceView.Renderer, Camera.PreviewCallback
 
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textures[0]);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_LINEAR);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER, GLES20.GL_LINEAR);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_LINEAR);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER, GLES20.GL_LINEAR);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
         mYTestureId = textures[0];
 
         GLES20.glActiveTexture(GLES20.GL_TEXTURE1);
         GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, textures[1]);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_LINEAR);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER, GLES20.GL_LINEAR);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
-        GLES20.glTexParameteri(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MAG_FILTER, GLES20.GL_LINEAR);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_MIN_FILTER, GLES20.GL_LINEAR);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_S, GLES20.GL_CLAMP_TO_EDGE);
+        GLES20.glTexParameterf(GLES20.GL_TEXTURE_2D, GLES20.GL_TEXTURE_WRAP_T, GLES20.GL_CLAMP_TO_EDGE);
         mUVTextureId = textures[1];
 
         LogUtils.v(String.format("yTexture = %d, uvTexture = %d", mYTestureId, mUVTextureId));
@@ -216,13 +216,16 @@ public class MyRender3 implements GLSurfaceView.Renderer, Camera.PreviewCallback
             mYBuffer.position(0);
             GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mYTestureId);
-            GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, 0, GLES20.GL_LUMINANCE, WIDTH, HEIGHT, 0, GLES20.GL_LUMINANCE, GLES20.GL_UNSIGNED_BYTE, mYBuffer);
+            GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, 0, GLES20.GL_LUMINANCE, WIDTH, HEIGHT,
+                    0, GLES20.GL_LUMINANCE, GLES20.GL_UNSIGNED_BYTE, mYBuffer);
             GLES20.glUniform1i(mUniformYTextureLocation, 0);
 
             mUVBuffer.position(0);
             GLES20.glActiveTexture(GLES20.GL_TEXTURE1);
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mUVTextureId);
-            GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, 0, GLES20.GL_LUMINANCE_ALPHA, WIDTH / 2, HEIGHT / 2, 0, GLES20.GL_LUMINANCE_ALPHA, GLES20.GL_UNSIGNED_BYTE, mUVBuffer);
+            GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, 0, GLES20.GL_LUMINANCE_ALPHA, WIDTH / 2, HEIGHT / 2,
+                    0, GLES20.GL_LUMINANCE_ALPHA, GLES20.GL_UNSIGNED_BYTE, mUVBuffer);
+
             GLES20.glUniform1i(mUniformUVTextureLocation, 1);
         }
 
@@ -237,9 +240,6 @@ public class MyRender3 implements GLSurfaceView.Renderer, Camera.PreviewCallback
         GLES20.glEnableVertexAttribArray(mGLAttribTextureCoordinate);
 
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
-        GLES20.glDisableVertexAttribArray(mGLAttribPosition);
-        GLES20.glDisableVertexAttribArray(mGLAttribTextureCoordinate);
-//        GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, 0);
 
         if (mSurfaceTexture != null) {
             mSurfaceTexture.updateTexImage();

@@ -81,4 +81,12 @@ public class OpenGlUtils {
         }
         return textures[0];
     }
+
+    public static void checkError() {
+        int error = GLES20.glGetError();
+
+        if (error != 0) {
+            throw new IllegalStateException("erro = " + error);
+        }
+    }
 }
