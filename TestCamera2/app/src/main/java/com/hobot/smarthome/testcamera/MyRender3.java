@@ -4,6 +4,8 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
+import android.os.Handler;
+import android.os.Looper;
 import android.util.Log;
 
 import java.io.IOException;
@@ -225,7 +227,6 @@ public class MyRender3 implements GLSurfaceView.Renderer, Camera.PreviewCallback
             GLES20.glBindTexture(GLES20.GL_TEXTURE_2D, mUVTextureId);
             GLES20.glTexImage2D(GLES20.GL_TEXTURE_2D, 0, GLES20.GL_LUMINANCE_ALPHA, WIDTH / 2, HEIGHT / 2,
                     0, GLES20.GL_LUMINANCE_ALPHA, GLES20.GL_UNSIGNED_BYTE, mUVBuffer);
-
             GLES20.glUniform1i(mUniformUVTextureLocation, 1);
         }
 
@@ -257,6 +258,8 @@ public class MyRender3 implements GLSurfaceView.Renderer, Camera.PreviewCallback
             mUVBuffer.position(0);
             mUVBuffer.put(data, SIZE, SIZE / 2);
         }
+
+        mSurfaceView.requestRender();
 
         mCamera.addCallbackBuffer(data);
     }
