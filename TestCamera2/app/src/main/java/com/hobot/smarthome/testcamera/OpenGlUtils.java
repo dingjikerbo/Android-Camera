@@ -1,9 +1,15 @@
 package com.hobot.smarthome.testcamera;
 
+import android.content.Context;
+import android.content.res.Resources;
 import android.hardware.Camera;
 import android.opengl.GLES20;
 import android.util.Log;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.IntBuffer;
 
 /**
@@ -11,6 +17,32 @@ import java.nio.IntBuffer;
  */
 
 public class OpenGlUtils {
+
+    public static String loadShader(Context context, int resourceId) {
+        StringBuilder body = new StringBuilder();
+
+        try {
+            InputStream inputStream =
+                    context.getResources().openRawResource(resourceId);
+            InputStreamReader inputStreamReader =
+                    new InputStreamReader(inputStream);
+            BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+
+            String nextLine;
+
+            while ((nextLine = bufferedReader.readLine()) != null) {
+                body.append(nextLine);
+                body.append('\n');
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(
+                    "Could not open resource: " + resourceId, e);
+        } catch (Resources.NotFoundException nfe) {
+            throw new RuntimeException("Resource not found: " + resourceId, nfe);
+        }
+
+        return body.toString();
+    }
 
     public static int loadShader(final String strSource, final int iType) {
         int[] compiled = new int[1];
@@ -25,17 +57,24 @@ public class OpenGlUtils {
         return iShader;
     }
 
-    public static int loadProgram(final String strVSource, final String strFSource) {
+    public static int loadProgram(Context context, int vertex, int frag) {
+        String vertexSrc = loadShader(context, vertex);
+        String fragSrc = loadShader(context, frag);
+        return loadProgram(vertexSrc, fragSrc);
+    }
+
+    public static int loadProgram(String vertexSrc, String fragSrc) {
         int iVShader;
         int iFShader;
         int iProgId;
         int[] link = new int[1];
-        iVShader = loadShader(strVSource, GLES20.GL_VERTEX_SHADER);
+
+        iVShader = loadShader(vertexSrc, GLES20.GL_VERTEX_SHADER);
         if (iVShader == 0) {
             Log.d("Load Program", "Vertex Shader Failed");
             return 0;
         }
-        iFShader = loadShader(strFSource, GLES20.GL_FRAGMENT_SHADER);
+        iFShader = loadShader(fragSrc, GLES20.GL_FRAGMENT_SHADER);
         if (iFShader == 0) {
             Log.d("Load Program", "Fragment Shader Failed");
             return 0;
