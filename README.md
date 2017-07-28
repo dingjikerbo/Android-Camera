@@ -10,6 +10,6 @@ Android摄像机系列
 
 |序号|项目名称|内容简介|注意事项|
 |--- |-------|-------|-------|
-|1|preview1|SurfaceView相机预览|相机旋转方向|
-|2|preview2|TextureView相机预览||
-|3|preview3|GLSurfaceView相机预览|OpenGL绘制时坐标变换|
+|1|preview1|SurfaceView相机预览|相机旋转|
+|2|preview2|TextureView相机预览|相机旋转|
+|3|preview3|GLSurfaceView相机预览|相机旋转，OpenGL绘制时坐标变换|
