@@ -20,5 +20,6 @@ Android摄像机系列
 |序号|项目名称|内容简介|注意事项|
 |--- |-------|-------|-------|
 |1|recorder1|TextureView + MediaRecorder|毫无卡顿|
-|2|recorder2|TextureView + MediaRecorder|OpenGL绘制|
+|2|recorder2|TextureView + MediaRecorder|OpenGL绘制，目前还有问题|
+|3|recorder3|GLSurfaceView + MediaCodec|OpenGL绘制，自己管理EGL|
 

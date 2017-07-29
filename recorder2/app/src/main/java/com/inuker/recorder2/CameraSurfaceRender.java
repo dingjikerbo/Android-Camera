@@ -108,7 +108,7 @@ public class CameraSurfaceRender implements Camera.PreviewCallback {
         mCamera.addCallbackBuffer(data);
     }
 
-    public void toggleRecord(View view) {
+    public void toggleRecord() {
         if (isRecording) {
             try {
                 mMediaRecorder.stop();  // stop the recording
@@ -156,11 +156,12 @@ public class CameraSurfaceRender implements Camera.PreviewCallback {
         // likewise for the camera object itself.
         parameters.setPreviewSize(profile.videoFrameWidth, profile.videoFrameHeight);
 //        mCamera.setParameters(parameters);
-//        try {
+        try {
 //            mCamera.setPreviewTexture(mTextureView.getSurfaceTexture());
-//        } catch (IOException e) {
-//            return false;
-//        }
+            mCamera.setPreviewTexture(mSurfaceTexture);
+        } catch (IOException e) {
+            return false;
+        }
         mMediaRecorder = new MediaRecorder();
 
         // Step 1: Unlock and set camera to MediaRecorder

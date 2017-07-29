@@ -47,7 +47,7 @@ public class MainActivity extends Activity implements TextureView.SurfaceTexture
                 } else {
                     mButton.setText("start record");
                 }
-                mRenderer.toggleRecord(v);
+                mRenderer.toggleRecord();
             }
         });
     }
