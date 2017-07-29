@@ -17,3 +17,8 @@ Android摄像机系列
 
 ## **二，视频录制**
 
+|序号|项目名称|内容简介|注意事项|
+|--- |-------|-------|-------|
+|1|recorder1|TextureView + MediaRecorder|毫无卡顿|
+|2|recorder2|TextureView + MediaRecorder|OpenGL绘制|
+
