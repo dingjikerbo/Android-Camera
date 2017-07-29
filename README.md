@@ -13,6 +13,7 @@ Android摄像机系列
 |1|preview1|SurfaceView相机预览|相机旋转|
 |2|preview2|TextureView相机预览|相机旋转|
 |3|preview3|GLSurfaceView相机预览|相机旋转，OpenGL绘制时坐标变换|
+|4|preview4|TextureView相机预览|采用OpenGL绘制|
 
 ## **二，视频录制**
 
