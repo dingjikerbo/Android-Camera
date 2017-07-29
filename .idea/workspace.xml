@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5fd50bd3-cb1f-481b-86ac-1d45cee21efc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recorder2/app/src/main/java/com/inuker/recorder2/CameraSurfaceRender.java" afterPath="$PROJECT_DIR$/recorder2/app/src/main/java/com/inuker/recorder2/CameraSurfaceRender.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/recorder2/app/src/main/java/com/inuker/recorder2/MainActivity.java" afterPath="$PROJECT_DIR$/recorder2/app/src/main/java/com/inuker/recorder2/MainActivity.java" />
-    </list>
+    <list default="true" id="5fd50bd3-cb1f-481b-86ac-1d45cee21efc" name="Default" comment="" />
     <ignored path="Camera.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
