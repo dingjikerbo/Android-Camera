@@ -3,11 +3,16 @@ package com.inuker.recorder3;
 import android.content.Context;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
+import android.opengl.EGL14;
+import android.opengl.GLES20;
 import android.opengl.GLSurfaceView;
+import android.os.Environment;
 import android.util.Log;
 
+import com.inuker.recorder3.encoder.MovieEncoder;
 import com.inuker.recorder3.program.TextureProgram;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -37,20 +42,30 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     private CameraGLSurfaceView mSurfaceView;
 
+    private MovieEncoder mVideoRecorder;
+
     public CameraSurfaceRender(CameraGLSurfaceView view) {
         mSurfaceView = view;
 
         mYUVBuffer = ByteBuffer.allocateDirect(Constants.BUFFER_SIZE)
                 .order(ByteOrder.nativeOrder());
-    }
 
-    @Override
-    public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         mCamera = Camera.open(1);
 
         Camera.Parameters params = mCamera.getParameters();
         params.setPreviewSize(Constants.WIDTH, Constants.HEIGHT);
         mCamera.setParameters(params);
+
+        mVideoRecorder = new MovieEncoder(view.getContext());
+    }
+
+    @Override
+    public void onSurfaceCreated(GL10 gl, EGLConfig config) {
+        GLES20.glClearColor(0, 0, 0, 1);
+
+        int[] textures = new int[1];
+        GLES20.glGenTextures(1, textures, 0);
+        mSurfaceTexture = new SurfaceTexture(textures[0]);
 
         Context context = mSurfaceView.getContext();
         mTextureProgram = new TextureProgram(context);
@@ -58,9 +73,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        int[] textures = new int[1];
-        glGenTextures(1, textures, 0);
-        mSurfaceTexture = new SurfaceTexture(textures[0]);
+        GLES20.glViewport(0, 0, width, height);
 
         try {
             mCamera.setPreviewTexture(mSurfaceTexture);
@@ -88,6 +101,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         }
         mTextureProgram.draw();
 
+
         mSurfaceTexture.updateTexImage();
     }
 
@@ -98,8 +112,31 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
             mYUVBuffer.put(data);
         }
 
+        mVideoRecorder.frameAvailable(data, mSurfaceTexture);
+
         mSurfaceView.requestRender();
         mCamera.addCallbackBuffer(data);
+    }
+
+    public void onSurfaceDestroy() {
+        releaseCamera();
+        mVideoRecorder.stopRecording();
+    }
+
+    private void releaseCamera() {
+        if (mCamera != null) {
+            mCamera.stopPreview();
+            mCamera.release();
+            mCamera = null;
+        }
+    }
+
+    public void startRecording(File outputFile) {
+        mVideoRecorder.startRecording(new MovieEncoder.EncoderConfig(outputFile, EGL14.eglGetCurrentContext()));
+    }
+
+    public void stopRecording() {
+        mVideoRecorder.stopRecording();
     }
 
 }

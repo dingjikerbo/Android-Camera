@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">recorder3</string>
+
+
+    <string name="start">开始录制</string>
+    <string name="stop">停止录制</string>
 </resources>

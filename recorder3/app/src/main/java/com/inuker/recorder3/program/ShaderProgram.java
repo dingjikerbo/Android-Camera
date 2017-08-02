@@ -2,8 +2,8 @@ package com.inuker.recorder3.program;
 
 import android.content.Context;
 
-import com.inuker.recorder3.ResourceUtils;
-import com.inuker.recorder3.ShaderHelper;
+import com.inuker.recorder3.utils.ResourceUtils;
+import com.inuker.recorder3.utils.ShaderHelper;
 
 import static android.opengl.GLES20.glUseProgram;
 

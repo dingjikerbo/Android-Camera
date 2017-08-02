@@ -136,4 +136,8 @@ public class TextureProgram extends ShaderProgram {
     public void draw() {
         GLES20.glDrawArrays(GLES20.GL_TRIANGLE_STRIP, 0, 4);
     }
+
+    public void release() {
+
+    }
 }

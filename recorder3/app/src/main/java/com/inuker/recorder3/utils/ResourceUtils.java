@@ -1,4 +1,4 @@
-package com.inuker.recorder3;
+package com.inuker.recorder3.utils;
 
 import android.content.Context;
 import android.content.res.Resources;

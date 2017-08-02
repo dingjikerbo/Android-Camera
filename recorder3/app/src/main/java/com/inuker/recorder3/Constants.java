@@ -6,6 +6,8 @@ package com.inuker.recorder3;
 
 public class Constants {
 
+    public static final String TAG = "bush";
+
     public static final int WIDTH = 1280;
 
     public static final int HEIGHT = 720;
