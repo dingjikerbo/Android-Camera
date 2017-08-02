@@ -121,6 +121,7 @@ public class AudioEncoderCore extends MediaEncoderCore implements Runnable {
             drainAudio(false);
         }
 
+        // 这里要先drainAudio，在其后加上end结束符
         drainAudio(true);
 
         mAudioRecord.stop();
