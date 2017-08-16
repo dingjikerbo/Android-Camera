@@ -8,9 +8,9 @@
 
 |序号|项目名称|内容简介|
 |--- |-------|-------|
-|1|glsurfacepreview|GLSurfaceView + OpenGL相机预览，直接绘制到WindowSurface|
-|2|surfaceviewpreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到WindowSurface|
-|3|glsurfacepreview2|GLSurfaceView + OpenGL相机预览，先绘制到OffscreenTexture，再将纹理处理后绘制到WindowSurface|
+|1|glsurfacepreview|GLSurfaceView + OpenGL相机预览，直接绘制到Display Surface|
+|2|surfaceviewpreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface|
+|3|glsurfacepreview2|GLSurfaceView + OpenGL相机预览，先绘制到OffscreenTexture，再将纹理处理后绘制到Display Surface|
 
 ## **二，视频录制**
 
