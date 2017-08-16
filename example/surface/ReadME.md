@@ -1,1 +1,0 @@
-这个工程用于研究SurfaceView的渲染，EGL，FBO等等。
