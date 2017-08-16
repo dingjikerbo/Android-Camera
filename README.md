@@ -8,17 +8,14 @@ Android摄像机系列
 
 ## **一、相机预览**
 
-|序号|项目名称|内容简介|注意事项|
-|--- |-------|-------|-------|
-|1|preview1|SurfaceView相机预览|相机旋转|
-|2|preview2|TextureView相机预览|相机旋转|
-|3|preview3|GLSurfaceView相机预览|相机旋转，OpenGL绘制时坐标变换|
-|4|preview4|TextureView相机预览|采用OpenGL绘制|
+|序号|项目名称|内容简介|
+|--- |-------|-------|
+|1|glsurfacepreview|GLSurfaceView + OpenGL相机预览|
+|2|surfaceviewpreview|SurfaceView + OpenGL + EGL相机预览|
 
 ## **二，视频录制**
 
 |序号|项目名称|内容简介|注意事项|
 |--- |-------|-------|-------|
-|1|recorder1|TextureView + MediaRecorder|毫无卡顿|
 |2|recorder3|GLSurfaceView + MediaCodec|OpenGL绘制，自己管理EGL|
 
