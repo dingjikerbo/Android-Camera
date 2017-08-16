@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
+import android.opengl.GLES20;
 import android.opengl.GLES30;
 import android.os.Handler;
 import android.os.HandlerThread;
@@ -12,6 +13,7 @@ import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
+import com.inuker.library.OffscreenSurface;
 import com.inuker.library.WindowSurface;
 import com.inuker.library.YUVProgram;
 
@@ -19,6 +21,11 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
+import static android.opengl.GLES20.GL_LINEAR;
+import static android.opengl.GLES20.GL_NEAREST;
+import static android.opengl.GLES20.glClear;
+import static android.opengl.GLES20.glClearColor;
 import static android.opengl.GLES20.glGenTextures;
 
 /**
@@ -42,6 +49,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     private EglCore mEglCore;
     private WindowSurface mWindowSurface;
+
+    private OffscreenSurface mOffscreenSurface;
 
     private SurfaceTexture mSurfaceTexture;
 
@@ -90,6 +99,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
     private void doSurfaceChanged(int width, int height) {
         mTextureProgram = new YUVProgram(getContext(), width, height);
 
+        mOffscreenSurface = new OffscreenSurface(mEglCore, width, height);
+
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
         mYUVBuffer = ByteBuffer.allocateDirect(bufferSize)
@@ -122,14 +133,21 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
     }
 
     private void onDrawFrame() {
-        GLES30.glClearColor(1.0f, 0.2f, 0.2f, 1.0f);
-        GLES30.glClear(GLES30.GL_COLOR_BUFFER_BIT);
+        mOffscreenSurface.makeCurrent();
+
+        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClear(GL_COLOR_BUFFER_BIT);
 
         mTextureProgram.useProgram();
         synchronized (mYUVBuffer) {
             mTextureProgram.setUniforms(mYUVBuffer.array());
         }
         mTextureProgram.draw();
+
+        mWindowSurface.makeCurrentReadFrom(mOffscreenSurface);
+
+        GLES30.glBlitFramebuffer(0, 0, mWindowSurface.getWidth(), mWindowSurface.getHeight(),
+                0, 0, mOffscreenSurface.getWidth(), mOffscreenSurface.getHeight(), GL_COLOR_BUFFER_BIT, GL_NEAREST);
 
         mWindowSurface.swapBuffers();
 
