@@ -1,1 +1,1 @@
-相机预览先画到OffscreenTexture上，再画到Window Surface上。
+相机预览先画到OffscreenTexture上，再将纹理处理后画到Window Surface上。

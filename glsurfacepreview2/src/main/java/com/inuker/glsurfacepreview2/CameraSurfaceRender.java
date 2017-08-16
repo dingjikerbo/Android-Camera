@@ -51,7 +51,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     private YUVProgram mYUVProgram;
 
-    private TextureProgram mTextureProgram;
+    private FilterTextureProgram mTextureProgram;
 
     private ByteBuffer mYUVBuffer;
 
@@ -87,7 +87,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         mSurfaceTexture = new SurfaceTexture(textures[0]);
 
         mYUVProgram = new YUVProgram(mGLSurfaceView.getContext(), width, height);
-        mTextureProgram = new TextureProgram(mGLSurfaceView.getContext(), width, height);
+        mTextureProgram = new FilterTextureProgram(mGLSurfaceView.getContext(), width, height);
 
         try {
             mCamera.setPreviewTexture(mSurfaceTexture);
