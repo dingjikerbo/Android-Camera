@@ -1,0 +1,1 @@
+相机预览先画到OffscreenTexture上，再画到Window Surface上。

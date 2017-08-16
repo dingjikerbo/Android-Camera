@@ -6,7 +6,7 @@ import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
 import com.inuker.library.LogUtils;
-import com.inuker.library.TextureProgram;
+import com.inuker.library.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -31,7 +31,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     private SurfaceTexture mSurfaceTexture;
 
-    private TextureProgram mTextureProgram;
+    private YUVProgram mTextureProgram;
 
     private ByteBuffer mYUVBuffer;
 
@@ -60,7 +60,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         glGenTextures(1, textures, 0);
         mSurfaceTexture = new SurfaceTexture(textures[0]);
 
-        mTextureProgram = new TextureProgram(mGLSurfaceView.getContext(), width, height);
+        mTextureProgram = new YUVProgram(mGLSurfaceView.getContext(), width, height);
 
         try {
             mCamera.setPreviewTexture(mSurfaceTexture);

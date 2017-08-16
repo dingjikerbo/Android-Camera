@@ -5,8 +5,8 @@
       <module fileurl="file://$PROJECT_DIR$/Camera.iml" filepath="$PROJECT_DIR$/Camera.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/glsurfacepreview/glsurfacepreview.iml" filepath="$PROJECT_DIR$/glsurfacepreview/glsurfacepreview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/glsurfacepreview2/glsurfacepreview2.iml" filepath="$PROJECT_DIR$/glsurfacepreview2/glsurfacepreview2.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/multisurfacepreview/multisurfacepreview.iml" filepath="$PROJECT_DIR$/multisurfacepreview/multisurfacepreview.iml" />
       <module fileurl="file://$PROJECT_DIR$/surfaceviewpreview/surfaceviewpreview.iml" filepath="$PROJECT_DIR$/surfaceviewpreview/surfaceviewpreview.iml" />
     </modules>
   </component>

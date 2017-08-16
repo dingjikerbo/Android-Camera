@@ -10,8 +10,8 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/glsurfacepreview" />
+            <option value="$PROJECT_DIR$/glsurfacepreview2" />
             <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/multisurfacepreview" />
             <option value="$PROJECT_DIR$/surfaceviewpreview" />
           </set>
         </option>

@@ -43,4 +43,8 @@ public class BaseApplication extends Application {
     public static int getScreenHeight() {
         return mScreenHeight;
     }
+
+    public static int dp2px(int dp) {
+        return (int) (dp *  mDensity + 0.5f);
+    }
 }

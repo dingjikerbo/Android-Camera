@@ -12,7 +12,7 @@ import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
-import com.inuker.library.TextureProgram;
+import com.inuker.library.YUVProgram;
 import com.inuker.library.WindowSurface;
 
 import java.io.IOException;
@@ -37,7 +37,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     private Camera mCamera;
 
-    private TextureProgram mTextureProgram;
+    private YUVProgram mTextureProgram;
     private ByteBuffer mYUVBuffer;
 
     private EglCore mEglCore;
@@ -88,7 +88,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
     }
 
     private void doSurfaceChanged(int width, int height) {
-        mTextureProgram = new TextureProgram(getContext(), width, height);
+        mTextureProgram = new YUVProgram(getContext(), width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
