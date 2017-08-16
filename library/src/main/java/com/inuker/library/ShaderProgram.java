@@ -1,7 +1,6 @@
 package com.inuker.library;
 
 import android.content.Context;
-import android.opengl.GLES20;
 
 import static android.opengl.GLES20.glDeleteProgram;
 import static android.opengl.GLES20.glUseProgram;
