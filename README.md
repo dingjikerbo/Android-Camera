@@ -1,6 +1,4 @@
-# Camera
-
-Android摄像机系列
+# Android Camera
 
 本系列会包括Android Camera预览，拍照，视频录制，播放，滤镜及渲染等，还会对相机系统原理做深入分析。
 
