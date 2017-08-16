@@ -19,4 +19,16 @@ public class MainActivity extends Activity {
         mGLSurfaceView.setRenderer(new CameraSurfaceRender(mGLSurfaceView));
         mGLSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mGLSurfaceView.onPause();
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mGLSurfaceView.onResume();
+    }
 }
