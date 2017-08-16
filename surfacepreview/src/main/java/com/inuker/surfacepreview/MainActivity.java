@@ -1,4 +1,4 @@
-package com.inuker.surfaceviewpreview;
+package com.inuker.surfacepreview;
 
 import android.app.Activity;
 import android.os.Bundle;

@@ -7,7 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/glsurfacepreview/glsurfacepreview.iml" filepath="$PROJECT_DIR$/glsurfacepreview/glsurfacepreview.iml" />
       <module fileurl="file://$PROJECT_DIR$/glsurfacepreview2/glsurfacepreview2.iml" filepath="$PROJECT_DIR$/glsurfacepreview2/glsurfacepreview2.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/surfaceviewpreview/surfaceviewpreview.iml" filepath="$PROJECT_DIR$/surfaceviewpreview/surfaceviewpreview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/surfacepreview/surfacepreview.iml" filepath="$PROJECT_DIR$/surfacepreview/surfacepreview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/surfacepreview2/surfacepreview2.iml" filepath="$PROJECT_DIR$/surfacepreview2/surfacepreview2.iml" />
     </modules>
   </component>
 </project>

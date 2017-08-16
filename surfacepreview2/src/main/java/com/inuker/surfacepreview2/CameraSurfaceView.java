@@ -1,4 +1,4 @@
-package com.inuker.surfaceviewpreview;
+package com.inuker.surfacepreview2;
 
 import android.content.Context;
 import android.graphics.ImageFormat;
@@ -12,8 +12,8 @@ import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
-import com.inuker.library.YUVProgram;
 import com.inuker.library.WindowSurface;
+import com.inuker.library.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

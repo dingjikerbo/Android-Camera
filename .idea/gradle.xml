@@ -12,7 +12,8 @@
             <option value="$PROJECT_DIR$/glsurfacepreview" />
             <option value="$PROJECT_DIR$/glsurfacepreview2" />
             <option value="$PROJECT_DIR$/library" />
-            <option value="$PROJECT_DIR$/surfaceviewpreview" />
+            <option value="$PROJECT_DIR$/surfacepreview" />
+            <option value="$PROJECT_DIR$/surfacepreview2" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

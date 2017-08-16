@@ -1,1 +1,1 @@
-include ':app', ':library', ':glsurfacepreview', ':surfaceviewpreview', ':glsurfacepreview2'
+include ':app', ':library', ':glsurfacepreview', ':surfacepreview', ':glsurfacepreview2', ':surfacepreview2'
