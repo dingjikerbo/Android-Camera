@@ -1,7 +1,9 @@
 package com.inuker.library;
 
 import android.content.Context;
+import android.opengl.GLES20;
 
+import static android.opengl.GLES20.glDeleteProgram;
 import static android.opengl.GLES20.glUseProgram;
 
 /**
@@ -10,7 +12,7 @@ import static android.opengl.GLES20.glUseProgram;
 
 public class ShaderProgram {
 
-    protected final int program;
+    protected int program;
 
     protected final int width, height;
 
@@ -24,5 +26,10 @@ public class ShaderProgram {
 
     public void useProgram() {
         glUseProgram(program);
+    }
+
+    public void release() {
+        glDeleteProgram(program);
+        program = -1;
     }
 }
