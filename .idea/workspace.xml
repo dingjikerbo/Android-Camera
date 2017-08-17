@@ -12,7 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2a55f3c5-6e49-41bc-9470-c0a0d48bf5ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/java/com/inuker/multiglsurfacepreview/MainActivity.java" afterPath="$PROJECT_DIR$/multiglsurfacepreview/src/main/java/com/inuker/multiglsurfacepreview/MainActivity.java" />
     </list>
     <ignored path="Camera.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,8 +69,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="391">
-                <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <first_editor relative-caret-position="272">
+                <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -9301,8 +9300,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="391">
-            <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <first_editor relative-caret-position="272">
+            <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
             <folding />
           </first_editor>
           <second_editor />
