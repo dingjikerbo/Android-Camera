@@ -6,7 +6,6 @@
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/glsurfacepreview/glsurfacepreview.iml" filepath="$PROJECT_DIR$/glsurfacepreview/glsurfacepreview.iml" />
       <module fileurl="file://$PROJECT_DIR$/glsurfacepreview2/glsurfacepreview2.iml" filepath="$PROJECT_DIR$/glsurfacepreview2/glsurfacepreview2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/glsurfacepreview3/glsurfacepreview3.iml" filepath="$PROJECT_DIR$/glsurfacepreview3/glsurfacepreview3.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
       <module fileurl="file://$PROJECT_DIR$/multiglsurfacepreview/multiglsurfacepreview.iml" filepath="$PROJECT_DIR$/multiglsurfacepreview/multiglsurfacepreview.iml" />
       <module fileurl="file://$PROJECT_DIR$/surfacepreview/surfacepreview.iml" filepath="$PROJECT_DIR$/surfacepreview/surfacepreview.iml" />
