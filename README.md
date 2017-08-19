@@ -20,3 +20,9 @@
 |--- |-------|-------|
 |1|recorder1|GLSurfaceView + MediaCodec + AudioCodec + MediaMuxer|
 
+
+## **三，视频播放**
+
+|序号|项目名称|内容简介|
+|--- |-------|-------|
+|1|video1|SurfaceView|
