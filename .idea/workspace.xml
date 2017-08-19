@@ -13,7 +13,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2a55f3c5-6e49-41bc-9470-c0a0d48bf5ab" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" afterPath="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" afterPath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" />
     </list>
     <ignored path="Camera.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -69,11 +69,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="438">
+              <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="370">
-              <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -6944,7 +6954,6 @@
         <option value="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/glsurfacepreview3/CameraSurfaceView.java" />
         <option value="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/MainActivity.java" />
         <option value="$PROJECT_DIR$/surfacepreview2/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" />
         <option value="$PROJECT_DIR$/surfacepreview2/README.md" />
         <option value="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/MainActivity.java" />
         <option value="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/MainActivity.java" />
@@ -6981,6 +6990,7 @@
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" />
+        <option value="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" />
       </list>
     </option>
   </component>
@@ -7153,7 +7163,7 @@
       <recent name="$PROJECT_DIR$/library/src/main/res/raw" />
     </key>
   </component>
-  <component name="RunManager" selected="Android App.surfacepreview">
+  <component name="RunManager" selected="Android App.surfacepreview2">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -8106,13 +8116,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/multisurfacepreview/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -8286,8 +8289,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="438">
+          <caret line="134" column="0" selection-start-line="134" selection-start-column="0" selection-end-line="134" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
-          <caret line="130" column="0" selection-start-line="130" selection-start-column="0" selection-end-line="130" selection-end-column="0" />
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
           <folding />
         </state>
       </provider>
