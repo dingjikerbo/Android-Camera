@@ -12,8 +12,7 @@
 |2|GLSurfacePreview2|GLSurfaceView + OpenGL相机预览，先绘制到FBO的Texture上，再处理后绘制到Display Surface|
 |3|SurfacePreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface|
 |4|SurfacePreview2|SurfaceView + OpenGL + EGL相机预览，先绘制到PBuffer，再Blit到Display Surface|
-|5|MultiGLSurfacePreview|相机预览到两个窗口，一个是原始图像，一个是处理过的图像|
-|6|MultiSurfacePreview|相机预览到两个窗口，一个是原始图像，一个是处理过的图像|
+|5|MultiSurfacePreview|相机预览到两个窗口，一个是原始图像，一个是处理过的图像(变红)|
 
 ## **二，视频录制**
 

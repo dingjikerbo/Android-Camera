@@ -12,42 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2a55f3c5-6e49-41bc-9470-c0a0d48bf5ab" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Todo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventDispatcher.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/raw/filter_tex_fragment.glsl" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/java/com/inuker/multiglsurfacepreview/MainActivity.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/.gitignore" afterPath="$PROJECT_DIR$/multisurfacepreview/.gitignore" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/build.gradle" afterPath="$PROJECT_DIR$/multisurfacepreview/build.gradle" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/proguard-rules.pro" afterPath="$PROJECT_DIR$/multisurfacepreview/proguard-rules.pro" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/androidTest/java/com/inuker/multiglsurfacepreview/ExampleInstrumentedTest.java" afterPath="$PROJECT_DIR$/multisurfacepreview/src/androidTest/java/com/inuker/multiglsurfacepreview/ExampleInstrumentedTest.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/AndroidManifest.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/layout/activity_main.xml" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/layout/activity_main.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-hdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-hdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-hdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-mdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-mdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-mdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-xhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-xhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-xhdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-xxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-xxxhdpi/ic_launcher.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/values/colors.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/values/strings.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/values/styles.xml" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/res/values/styles.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/multiglsurfacepreview/src/test/java/com/inuker/multiglsurfacepreview/ExampleUnitTest.java" afterPath="$PROJECT_DIR$/multisurfacepreview/src/test/java/com/inuker/multiglsurfacepreview/ExampleUnitTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseActivity.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseApplication.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/TextureProgram.java" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/TextureProgram.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
     </list>
     <ignored path="Camera.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,11 +59,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
+            <state relative-caret-position="2600">
+              <caret line="214" column="27" selection-start-line="214" selection-start-column="27" selection-end-line="214" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -103,11 +71,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EventDispatcher.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EventDispatcher.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventDispatcher.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1170">
-              <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+            <state relative-caret-position="405">
+              <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor relative-caret-position="272">
+                <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+                <folding />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BaseSurfaceView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1478">
+              <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -6979,7 +6970,6 @@
         <option value="$PROJECT_DIR$/glsurfacepreview3/build.gradle" />
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/WindowSurface.java" />
         <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/inuker/glsurfacepreview3/CameraSurfaceRender.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/Todo.txt" />
         <option value="$PROJECT_DIR$/multiglsurfacepreview/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/multiglsurfacepreview/src/main/res/values/styles.xml" />
@@ -6996,15 +6986,16 @@
         <option value="$PROJECT_DIR$/multiglsurfacepreview/src/main/java/com/inuker/multiglsurfacepreview/SmallSurfaceView.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseActivity.java" />
-        <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/FilterTextureProgram.java" />
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/TextureProgram.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/res/raw/filter_tex_fragment.glsl" />
-        <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/README.md" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
+        <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" />
       </list>
     </option>
   </component>
@@ -8051,7 +8042,7 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14802982" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19542067" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32881355" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -8190,16 +8181,6 @@
     <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/inuker/glsurfacepreview3/FilterTextureProgram.java" />
     <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/inuker/glsurfacepreview3/MainActivity.java" />
     <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/inuker/glsurfacepreview3/CameraSurfaceRender.java" />
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="357">
-            <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Todo.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -8422,14 +8403,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
-          <caret line="121" column="19" selection-start-line="121" selection-start-column="19" selection-end-line="121" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/GlUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="193">
@@ -8446,21 +8419,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventDispatcher.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="191" column="28" selection-start-line="191" selection-start-column="28" selection-end-line="191" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="405">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventDispatcher.java">
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="272">
+            <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1170">
-          <caret line="78" column="44" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+        <state relative-caret-position="1478">
+          <caret line="167" column="5" selection-start-line="167" selection-start-column="5" selection-end-line="167" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2600">
+          <caret line="214" column="27" selection-start-line="214" selection-start-column="27" selection-end-line="214" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,6 +1,8 @@
 package com.inuker.library;
 
 import android.content.Context;
+import android.opengl.EGL14;
+import android.opengl.EGLContext;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
@@ -22,6 +24,7 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
     private static final int MSG_SURFACE_CREATED = 0x1001;
     private static final int MSG_SURFACE_CHANGED = 0x1002;
     private static final int MSG_SURFACE_DESTROY = 0x1003;
+    private static final int MSG_GET_EGLCONTEXT = 0x1004;
 
     protected HandlerThread mRenderThread;
     protected Handler mRenderHandler;
@@ -101,6 +104,11 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
                 mPendingRunnables.clear();
                 mSurfaceCreated = false;
                 break;
+
+            case MSG_GET_EGLCONTEXT:
+                LogUtils.v(String.format("%s handleMessage %d", getClass().getSimpleName(), msg.what));
+                doGetEglContext((SurfaceCallback) msg.obj);
+                break;
         }
 
         return false;
@@ -127,5 +135,35 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
 
     public String getName() {
         return getClass().getSimpleName();
+    }
+
+    public interface SurfaceCallback {
+        void onCallback(Object object);
+    }
+
+    private void doGetEglContext(final SurfaceCallback callback) {
+        LogUtils.e("doGetEglContext");
+
+        final EGLContext context = EGL14.eglGetCurrentContext();
+
+        post(new Runnable() {
+            @Override
+            public void run() {
+                LogUtils.v(String.format("doGetEglContext run, context = %s", context));
+                callback.onCallback(context);
+            }
+        });
+    }
+
+    public void getEglContext(final SurfaceCallback callback) {
+        if (callback == null) {
+            throw new NullPointerException();
+        }
+        queueEvent(new Runnable() {
+            @Override
+            public void run() {
+                mRenderHandler.obtainMessage(MSG_GET_EGLCONTEXT, callback).sendToTarget();
+            }
+        });
     }
 }

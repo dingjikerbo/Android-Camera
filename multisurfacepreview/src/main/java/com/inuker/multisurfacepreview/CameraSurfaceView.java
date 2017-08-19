@@ -59,8 +59,6 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     private static final int MSG_DRAW_FRAME = 4;
 
-    private static final int MSG_GET_EGLCONTEXT = 5;
-
     private Camera mCamera;
 
     private YUVProgram mYUVProgram;
@@ -212,43 +210,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             case MSG_DRAW_FRAME:
                 onDrawFrame();
                 break;
-
-            case MSG_GET_EGLCONTEXT:
-                LogUtils.v(String.format("%s handleMessage %d", getClass().getSimpleName(), msg.what));
-                doGetEglContext((SurfaceCallback) msg.obj);
-                break;
         }
 
         return super.handleMessage(msg);
-    }
-
-    public interface SurfaceCallback {
-        void onCallback(Object object);
-    }
-
-    private void doGetEglContext(final SurfaceCallback callback) {
-        LogUtils.e("doGetEglContext");
-
-        final EGLContext context = EGL14.eglGetCurrentContext();
-
-        post(new Runnable() {
-            @Override
-            public void run() {
-                LogUtils.v(String.format("doGetEglContext run, context = %s", context));
-                callback.onCallback(context);
-            }
-        });
-    }
-
-    public void getEglContext(final SurfaceCallback callback) {
-        if (callback == null) {
-            throw new NullPointerException();
-        }
-        queueEvent(new Runnable() {
-            @Override
-            public void run() {
-                mRenderHandler.obtainMessage(MSG_GET_EGLCONTEXT, callback).sendToTarget();
-            }
-        });
     }
 }
