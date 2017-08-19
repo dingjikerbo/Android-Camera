@@ -25,15 +25,9 @@ import static android.opengl.GLES20.glGenTextures;
  * Created by liwentian on 17/8/16.
  */
 
-public class CameraSurfaceView extends BaseSurfaceView implements Camera.PreviewCallback, Handler.Callback {
+public class CameraSurfaceView extends BaseSurfaceView implements Camera.PreviewCallback {
 
-    private static final int MSG_SURFACE_CREATED = 1;
-    private static final int MSG_SURFACE_CHANGED = 2;
-    private static final int MSG_SURFACE_DESTROY = 3;
     private static final int MSG_DRAW_FRAME = 4;
-
-    private HandlerThread mRenderThread;
-    private Handler mRenderHandler;
 
     private Camera mCamera;
 
@@ -50,44 +44,16 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
     }
 
     @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-        super.surfaceCreated(holder);
-
+    public void onSurfaceCreated(SurfaceHolder holder) {
         mCamera = Camera.open(1);
 
-        mRenderThread = new HandlerThread("camera");
-        mRenderThread.start();
-
-        mRenderHandler = new Handler(mRenderThread.getLooper(), this);
-        mRenderHandler.obtainMessage(MSG_SURFACE_CREATED, holder).sendToTarget();
-    }
-
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        super.surfaceChanged(holder, format, width, height);
-        mRenderHandler.obtainMessage(MSG_SURFACE_CHANGED, width, height).sendToTarget();
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-        super.surfaceDestroyed(holder);
-
-        if (mCamera != null) {
-            mCamera.setPreviewCallback(null);
-            mCamera.stopPreview();
-            mCamera.release();
-        }
-
-        mRenderHandler.obtainMessage(MSG_SURFACE_DESTROY).sendToTarget();
-    }
-
-    private void doSurfaceCreated(SurfaceHolder holder) {
         mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
         mWindowSurface = new WindowSurface(mEglCore, holder.getSurface(), false);
         mWindowSurface.makeCurrent();
     }
 
-    private void doSurfaceChanged(int width, int height) {
+    @Override
+    public void onSurfaceChanged(int width, int height) {
         mTextureProgram = new YUVProgram(getContext(), width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
@@ -114,9 +80,16 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         mCamera.startPreview();
     }
 
-    private void doSurfaceDestroyed() {
-        mWindowSurface.release();
+    @Override
+    public void onSurfaceDestroyed() {
+        if (mCamera != null) {
+            mCamera.setPreviewCallback(null);
+            mCamera.stopPreview();
+            mCamera.release();
+        }
+
         mTextureProgram.release();
+        mWindowSurface.release();
         mEglCore.makeNothingCurrent();
         mEglCore.release();
     }
@@ -151,23 +124,11 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
     @Override
     public boolean handleMessage(Message msg) {
         switch (msg.what) {
-            case MSG_SURFACE_CREATED:
-                doSurfaceCreated((SurfaceHolder) msg.obj);
-                break;
-
-            case MSG_SURFACE_CHANGED:
-                doSurfaceChanged(msg.arg1, msg.arg2);
-                break;
-
-            case MSG_SURFACE_DESTROY:
-                doSurfaceDestroyed();
-                break;
-
             case MSG_DRAW_FRAME:
                 onDrawFrame();
                 break;
         }
 
-        return false;
+        return super.handleMessage(msg);
     }
 }
