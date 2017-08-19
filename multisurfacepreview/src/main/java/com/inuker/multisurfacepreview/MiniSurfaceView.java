@@ -20,6 +20,7 @@ import com.inuker.library.WindowSurface;
 
 import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
 import static android.opengl.GLES20.GL_NEAREST;
+import static com.inuker.multisurfacepreview.Events.EVENTS_DRAW;
 
 /**
  * Created by liwentian on 17/8/17.
@@ -50,7 +51,7 @@ public class MiniSurfaceView extends BaseSurfaceView implements Handler.Callback
 
         GlUtil.checkGlError("surfaceCreated");
 
-        EventDispatcher.observe(1, this);
+        EventDispatcher.observe(EVENTS_DRAW, this);
     }
 
     @Override
@@ -61,7 +62,12 @@ public class MiniSurfaceView extends BaseSurfaceView implements Handler.Callback
 
     @Override
     public void onSurfaceDestroyed() {
+        EventDispatcher.unObserve(EVENTS_DRAW, this);
 
+        mTextureProgram.release();
+        mWindowSurface.release();
+        mEglCore.makeNothingCurrent();
+        mEglCore.release();
     }
 
     private void onDrawFrame(int offscreenTexture) {
@@ -74,7 +80,9 @@ public class MiniSurfaceView extends BaseSurfaceView implements Handler.Callback
 
     @Override
     public void onEvent(int event, Object object) {
-        mRenderHandler.obtainMessage(2, object).sendToTarget();
+        if (mRenderHandler != null) {
+            mRenderHandler.obtainMessage(2, object).sendToTarget();
+        }
     }
 
     @Override

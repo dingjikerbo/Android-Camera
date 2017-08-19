@@ -50,6 +50,7 @@ import static android.opengl.GLES20.glGenTextures;
 import static android.opengl.GLES20.glTexImage2D;
 import static android.opengl.GLES20.glTexParameterf;
 import static android.opengl.GLES20.glTexParameteri;
+import static com.inuker.multisurfacepreview.Events.EVENTS_DRAW;
 
 /**
  * Created by liwentian on 17/8/16.
@@ -187,7 +188,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
         mWindowSurface.swapBuffers();
 
-        EventDispatcher.dispatch(1, mOffscreenTexture);
+        EventDispatcher.dispatch(EVENTS_DRAW, mOffscreenTexture);
 
         mSurfaceTexture.updateTexImage();
     }
@@ -199,7 +200,9 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mYUVBuffer.put(data);
         }
 
-        mRenderHandler.sendEmptyMessage(MSG_DRAW_FRAME);
+        if (mRenderHandler != null) {
+            mRenderHandler.sendEmptyMessage(MSG_DRAW_FRAME);
+        }
 
         mCamera.addCallbackBuffer(data);
     }
