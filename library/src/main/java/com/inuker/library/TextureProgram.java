@@ -45,13 +45,18 @@ public class TextureProgram extends ShaderProgram {
     private final int aPositionLocation;
     private final int aTextureCoordinatesLocation;
 
-    public TextureProgram(Context context, int width, int height) {
-        super(context, R.raw.tex_vertex, R.raw.tex_fragment, width, height);
+    public TextureProgram(Context context, int vertexShader, int fragmentShader, int width, int height) {
+        super(context, vertexShader, fragmentShader, width, height);
 
         mUniformTextureLocation = glGetUniformLocation(program, "s_texture");
 
         aPositionLocation = glGetAttribLocation(program, "a_Position");
         aTextureCoordinatesLocation = glGetAttribLocation(program, "a_TextureCoordinates");
+    }
+
+
+    public TextureProgram(Context context, int width, int height) {
+        this(context, R.raw.tex_vertex, R.raw.tex_fragment, width, height);
     }
 
     public void draw(int texture) {

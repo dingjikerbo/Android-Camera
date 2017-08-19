@@ -2,6 +2,7 @@ package com.inuker.library;
 
 import android.app.Application;
 import android.content.Context;
+import android.os.Handler;
 import android.view.WindowManager;
 
 /**
@@ -15,6 +16,8 @@ public class BaseApplication extends Application {
     private static int mScreenWidth, mScreenHeight;
 
     private static float mDensity;
+
+    private static Handler mHandler;
 
     public static BaseApplication getInstance() {
         return sInstance;
@@ -34,6 +37,8 @@ public class BaseApplication extends Application {
         mScreenHeight = Math.min(width, height);
 
         mDensity = getResources().getDisplayMetrics().density;
+
+        mHandler = new Handler();
     }
 
     public static int getScreenWidth() {
@@ -46,5 +51,9 @@ public class BaseApplication extends Application {
 
     public static int dp2px(int dp) {
         return (int) (dp *  mDensity + 0.5f);
+    }
+
+    public static void post(Runnable runnable) {
+        mHandler.post(runnable);
     }
 }
