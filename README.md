@@ -18,11 +18,14 @@
 
 |序号|项目名称|内容简介|
 |--- |-------|-------|
-|1|recorder1|GLSurfaceView + MediaCodec + AudioCodec + MediaMuxer|
+|1|recorder1|GLSurfaceView + MediaMuxer，不共享EglContext，只能录制相机预览|
+|2|recorder2|SurfaceView + MediaMuxer，共享EglContext，可以录制整个Surface|
+|3|recorder3|只录制某一个部分，如人脸|
 
 
 ## **三，视频播放**
 
 |序号|项目名称|内容简介|
 |--- |-------|-------|
-|1|video1|SurfaceView|
+|1|video1|SurfaceView播放原始视频|
+|2|video2|视频裁剪播放，并增加一层遮罩|
