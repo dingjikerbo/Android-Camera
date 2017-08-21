@@ -6,7 +6,7 @@
 
 **二、围绕Android相机及图像音频架构和原理做深入分析**
 
-敬请期待
+
 
 ------
 
@@ -38,7 +38,7 @@
 |--- |-------|-------|----|
 |1|recorder1|GLSurfaceView + MediaMuxer，不共享EglContext，只能录制相机预览|Pending|
 |2|recorder2|SurfaceView + MediaMuxer，共享EglContext，可以录制整个Surface|Pending|
-|3|recorder3|只录制某一个部分，如人脸|待办|
+|3|recorder3|只录制Surface上某一个部分，如人脸|Pending|
 
 
 ## **三，视频播放**
