@@ -18,10 +18,10 @@
 |2|GLSurfacePreview2|GLSurfaceView + OpenGL相机预览，先绘制到FBO的Texture上，再处理后(变红)绘制到Display Surface|Done|
 |3|SurfacePreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface|Done|
 |4|SurfacePreview2|SurfaceView + OpenGL + EGL相机预览，先绘制到PBuffer，再Blit到Display Surface|Done|
-|5|MultiSurfacePreview|相机预览到两个窗口，一个是原始图像绘制到Texture，再将Texture处理后画到一个小窗口|Done|
+|5|MultiSurfacePreview|相机预览到两个SurfaceView，共享EglContext，先绘制到Texture，再将Texture处理后Draw到另一个Surface|Done|
 
 ## **二、RGB转换**
-利用GPU将相机帧(NV21)转成RGB并传回CPU，1920 * 1080，RGBA
+利用GPU将相机帧(NV21)转成RGB并传至CPU，帧为1920 * 1080，RGBA
 
 |序号|项目名称|内容简介|状态|
 |--- |-------|-------|-----|
