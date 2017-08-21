@@ -116,7 +116,9 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mYUVBuffer.put(data);
         }
 
-        mRenderHandler.sendEmptyMessage(MSG_DRAW_FRAME);
+        if (mRenderHandler != null) {
+            mRenderHandler.sendEmptyMessage(MSG_DRAW_FRAME);
+        }
 
         mCamera.addCallbackBuffer(data);
     }
