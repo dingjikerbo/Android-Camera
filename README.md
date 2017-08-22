@@ -23,13 +23,14 @@
 ## **二、RGB转换**
 利用GPU将相机帧(NV21)转成RGB并传至CPU，帧为1920 * 1080，RGBA
 
+另开一个线程做RGB转换，不然如果和相机共用上下文，渲染时需要来回切换，且可能阻塞相机渲染，对性能不利。
+
 |序号|模块名称|内容简介|状态|
 |--- |-------|-------|-----|
-|1|RgbConverter1|从Display Surface调glReadPixels，性能很差，~540ms|done|
-|2|RgbConverter2|从EGL Pbuffer调glReadPixels，性能有较大提升，~32ms|done|
-|3|RgbConverter3|从FBO调glReadPixels，性能比PBuffer好一点，~29ms|done|
-|4|RgbConverter4|采用FBO + PBO，共用Display Surface的EglContext，glReadPixels会阻塞，glMapBuffer也有耗时，~10ms|done|
-|5|RgbConverter5|采用FBO + PBO，单独起线程不共享EglContext，glReadPixels耗时0ms, 全部为glMapBuffer耗时，~8ms|done|
+|1|RgbConverter1|从Display Surface直接readPixels，性能很差，~550ms|done|
+|2|RgbConverter2|从Pbuffer调readPixels，性能有较大提升，~32ms|done|
+|3|RgbConverter3|从FBO调readPixels，性能和PBuffer差不多，~28ms|done|
+|4|RgbConverter4|采用PBO，readPixels异步, glMapBuffer阻塞，~6ms|done|
 
 
 ## **三，视频录制**

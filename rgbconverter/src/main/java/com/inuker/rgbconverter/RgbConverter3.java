@@ -10,7 +10,7 @@ import com.inuker.library.YUVProgram;
  * Created by liwentian on 17/8/22.
  */
 
-public class RgbConverter3 extends RgbConverter {
+public class RgbConverter3 extends SingleRgbConverter {
 
     private int mFrameBuffer;
 
@@ -23,10 +23,9 @@ public class RgbConverter3 extends RgbConverter {
     }
 
     @Override
-    void onStart() {
+    void onSurfaceCreated() {
+        super.onSurfaceCreated();
         mYUVProgram = new YUVProgram(mContext, mWidth, mHeight);
-        mYUVProgram.setUpsideDown();
-
         prepareFramebuffer();
     }
 
@@ -67,15 +66,12 @@ public class RgbConverter3 extends RgbConverter {
             throw new RuntimeException("Framebuffer not complete, status=" + status);
         }
 
-        // Switch back to the default framebuffer.
-        GLES30.glBindFramebuffer(GLES30.GL_FRAMEBUFFER, 0);
-
         GlUtil.checkGlError("prepareFramebuffer done");
     }
 
     @Override
-    void onDrawFrame() {
-        GLES30.glBindFramebuffer(GLES30.GL_FRAMEBUFFER, mFrameBuffer);
+    void onDrawSurface() {
+        super.onDrawSurface();
 
         synchronized (mYUVBuffer) {
             mYUVProgram.useProgram();
@@ -83,16 +79,17 @@ public class RgbConverter3 extends RgbConverter {
             mYUVProgram.draw();
         }
 
+        mOffscreenSurface.swapBuffers();
+
         readPixels();
         pixelsToBitmap();
-
-        GLES30.glBindFramebuffer(GLES30.GL_FRAMEBUFFER, 0);
     }
 
     @Override
-    void onDestroy() {
+    void onSurfaceDestroy() {
         mYUVProgram.release();
         GLES30.glDeleteFramebuffers(1, new int[] {mFrameBuffer}, 0);
         GLES30.glDeleteTextures(1, new int[] {mOffscreenTexture}, 0);
+        super.onSurfaceDestroy();
     }
 }

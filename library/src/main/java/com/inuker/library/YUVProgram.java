@@ -52,10 +52,10 @@ public class YUVProgram extends ShaderProgram {
     };
 
     public static final float TEXTURE_NO_ROTATION[] = {
-            0.0f, 0.0f,
-            1.0f, 0.0f,
             0.0f, 1.0f,
             1.0f, 1.0f,
+            0.0f, 0.0f,
+            1.0f, 0.0f,
     };
 
     public static final float TEXTURE_UPSIDE_DOWN[] = {

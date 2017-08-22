@@ -6,7 +6,6 @@
         <item>readPixels directly from Display Surface</item>
         <item>readPixels from Egl PBuffer</item>
         <item>readPixels from FBO</item>
-        <item>readPixels from Single PBO</item>
-        <item>readPixels from Dual PBO</item>
+        <item>readPixels from PBO</item>
     </string-array>
 </resources>

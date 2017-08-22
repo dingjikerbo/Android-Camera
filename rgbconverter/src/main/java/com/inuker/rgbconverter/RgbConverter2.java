@@ -1,6 +1,9 @@
 package com.inuker.rgbconverter;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.HandlerThread;
+import android.os.Message;
 
 import com.inuker.library.EglCore;
 import com.inuker.library.OffscreenSurface;
@@ -10,11 +13,7 @@ import com.inuker.library.YUVProgram;
  * Created by liwentian on 17/8/21.
  */
 
-public class RgbConverter2 extends RgbConverter {
-
-    private EglCore mEglCore;
-
-    private OffscreenSurface mOffscreenSurface;
+public class RgbConverter2 extends SingleRgbConverter {
 
     private YUVProgram mYUVProgram;
 
@@ -23,26 +22,21 @@ public class RgbConverter2 extends RgbConverter {
     }
 
     @Override
-    void onStart() {
-        mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
-
-        mOffscreenSurface = new OffscreenSurface(mEglCore, mWidth, mHeight);
-        mOffscreenSurface.makeCurrent();
+    void onSurfaceCreated() {
+        super.onSurfaceCreated();
 
         mYUVProgram = new YUVProgram(mContext, mWidth, mHeight);
     }
 
     @Override
-    void onDestroy() {
+    void onSurfaceDestroy() {
         mYUVProgram.release();
-        mOffscreenSurface.release();
-        mEglCore.makeNothingCurrent();
-        mEglCore.release();
+        super.onSurfaceDestroy();
     }
 
     @Override
-    void onDrawFrame() {
-        mOffscreenSurface.makeCurrent();
+    void onDrawSurface() {
+        super.onDrawSurface();
 
         synchronized (mYUVBuffer) {
             mYUVProgram.useProgram();

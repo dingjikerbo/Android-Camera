@@ -54,10 +54,11 @@ public abstract class RgbConverter implements IRgbConverter {
 
     @Override
     public final void destroy() {
+        onDestroy();
         mYUVBuffer = null;
         mPixelBuffer = null;
+        LogUtils.e("destroy, mPixelbuffer null");
         System.gc();
-        onDestroy();
     }
 
     @Override
@@ -75,6 +76,10 @@ public abstract class RgbConverter implements IRgbConverter {
     }
 
     void readPixels() {
+        if (mPixelBuffer == null) {
+            LogUtils.e(String.format("readPixels failed, pixelBuffer already set null!!"));
+            return;
+        }
         long start = System.currentTimeMillis();
         mPixelBuffer.position(0);
         GLES30.glReadPixels(0, 0, mWidth, mHeight, GLES30.GL_RGBA, GLES30.GL_UNSIGNED_BYTE, mPixelBuffer);
@@ -87,10 +92,9 @@ public abstract class RgbConverter implements IRgbConverter {
         pixelsToBitmap(mPixelBuffer);
     }
 
-    private boolean ENABLE = false;
-
     void pixelsToBitmap(ByteBuffer pixelBuffer) {
-        if (!ENABLE) {
+        if (pixelBuffer == null) {
+            LogUtils.e(String.format("pixelsToBitmap failed, pixelBuffer already set null!!"));
             return;
         }
 
