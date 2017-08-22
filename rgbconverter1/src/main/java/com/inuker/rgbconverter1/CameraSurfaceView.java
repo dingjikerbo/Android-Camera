@@ -8,9 +8,11 @@ import android.opengl.GLES30;
 import android.os.Message;
 import android.view.SurfaceHolder;
 
+import com.inuker.library.BaseApplication;
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.EventDispatcher;
+import com.inuker.library.LogUtils;
 import com.inuker.library.WindowSurface;
 import com.inuker.library.YUVProgram;
 
@@ -38,8 +40,12 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     private SurfaceTexture mSurfaceTexture;
 
-    public CameraSurfaceView(Context context) {
+    private RgbConverter mRgbConverter;
+
+    public CameraSurfaceView(Context context, RgbConverter converter) {
         super(context);
+
+        mRgbConverter = converter;
     }
 
     @Override
@@ -49,12 +55,14 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
         mWindowSurface = new WindowSurface(mEglCore, holder.getSurface(), false);
         mWindowSurface.makeCurrent();
+
+        mYUVProgram = new YUVProgram(getContext(), BaseApplication.getScreenWidth(), BaseApplication.getScreenHeight());
+
+        mRgbConverter.start();
     }
 
     @Override
     public void onSurfaceChanged(int width, int height) {
-        mYUVProgram = new YUVProgram(getContext(), width, height);
-
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
         mYUVBuffer = ByteBuffer.allocateDirect(bufferSize)
@@ -87,6 +95,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mCamera.release();
         }
 
+        mRgbConverter.destroy();
+
         mYUVProgram.release();
         mWindowSurface.release();
         mEglCore.makeNothingCurrent();
@@ -97,6 +107,10 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         GLES30.glClearColor(1.0f, 0.2f, 0.2f, 1.0f);
         GLES30.glClear(GLES30.GL_COLOR_BUFFER_BIT);
 
+        mSurfaceTexture.updateTexImage();
+
+        mWindowSurface.makeCurrent();
+
         mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
             mYUVProgram.setUniforms(mYUVBuffer.array());
@@ -105,7 +119,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
         mWindowSurface.swapBuffers();
 
-        mSurfaceTexture.updateTexImage();
+        mRgbConverter.frameDrawed();
     }
 
     @Override
@@ -115,7 +129,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mYUVBuffer.put(data);
         }
 
-        EventDispatcher.dispatchInstant(Events.FRAME_AVAILABLE, data);
+        mRgbConverter.frameAvailable(data);
 
         if (mRenderHandler != null) {
             mRenderHandler.removeMessages(MSG_DRAW_FRAME);

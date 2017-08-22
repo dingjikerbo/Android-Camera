@@ -10,5 +10,7 @@ public interface IRgbConverter {
 
     void destroy();
 
+    void frameDrawed();
+
     void frameAvailable(byte[] bytes);
 }

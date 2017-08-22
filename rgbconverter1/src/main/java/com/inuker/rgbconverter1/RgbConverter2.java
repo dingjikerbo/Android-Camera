@@ -3,7 +3,9 @@ package com.inuker.rgbconverter1;
 import android.content.Context;
 import android.view.Surface;
 
+import com.inuker.library.EglCore;
 import com.inuker.library.GlUtil;
+import com.inuker.library.OffscreenSurface;
 import com.inuker.library.YUVProgram;
 
 /**
@@ -12,24 +14,34 @@ import com.inuker.library.YUVProgram;
 
 public class RgbConverter2 extends RgbConverter {
 
+    private EglCore mEglCore;
+
+    private OffscreenSurface mOffscreenSurface;
+
     private YUVProgram mYUVProgram;
 
-    public RgbConverter2(Context context, int width, int height, Surface surface) {
-        super(context, width, height, surface);
+    public RgbConverter2(Context context) {
+        super(context);
     }
 
     @Override
-    void onRenderCreate() {
-        super.onRenderCreate();
+    void onDestroy() {
+
+    }
+
+    @Override
+    void onStart() {
+        mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
+
+        mOffscreenSurface = new OffscreenSurface(mEglCore, mWidth, mHeight);
+        mOffscreenSurface.makeCurrent();
 
         mYUVProgram = new YUVProgram(mContext, mWidth, mHeight);
-
-        GlUtil.checkGlError("render create done");
     }
 
     @Override
-    void onFrameAvailable() {
-        super.onFrameAvailable();
+    void onDrawFrame() {
+        mOffscreenSurface.makeCurrent();
 
         synchronized (mYUVBuffer) {
             mYUVProgram.useProgram();
@@ -37,8 +49,12 @@ public class RgbConverter2 extends RgbConverter {
             mYUVProgram.draw();
         }
 
-        mWindowSurface.swapBuffers();
+        mOffscreenSurface.swapBuffers();
 
-        GlUtil.checkGlError("draw frame done");
+        readPixels();
+    }
+
+    @Override
+    void onFrameAvailable() {
     }
 }

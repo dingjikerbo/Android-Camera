@@ -34,6 +34,14 @@ public class EventDispatcher {
         }
     }
 
+    public static void observe(EventListener l, int... events) {
+        synchronized (sListeners) {
+            for (int event : events) {
+                observe(event, l);
+            }
+        }
+    }
+
     public static void unObserve(int event, EventListener l) {
         if (l == null) {
             return;
@@ -43,6 +51,14 @@ public class EventDispatcher {
             List<EventListener> listeners = sListeners.get(event);
             if (listeners != null) {
                 listeners.remove(l);
+            }
+        }
+    }
+
+    public static void unObserve(EventListener l, int... events) {
+        synchronized (sListeners) {
+            for (int event : events) {
+                unObserve(event, l);
             }
         }
     }

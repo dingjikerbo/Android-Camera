@@ -21,6 +21,8 @@ import java.util.Queue;
 
 public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHolder.Callback, Handler.Callback {
 
+    public final String TAG = getClass().getSimpleName();
+
     private static final int MSG_SURFACE_CREATED = 0x1001;
     private static final int MSG_SURFACE_CHANGED = 0x1002;
     private static final int MSG_SURFACE_DESTROY = 0x1003;

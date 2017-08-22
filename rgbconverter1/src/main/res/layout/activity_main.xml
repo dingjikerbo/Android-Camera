@@ -8,34 +8,23 @@
     <FrameLayout
         android:id="@+id/full"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
-    <FrameLayout
-        android:id="@+id/mini1"
+    <ImageView
+        android:id="@+id/image"
         android:layout_width="160dp"
         android:layout_height="90dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
 
-    <FrameLayout
-        android:id="@+id/mini2"
-        android:layout_width="160dp"
-        android:layout_height="90dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"/>
-
-    <FrameLayout
-        android:id="@+id/mini3"
-        android:layout_width="160dp"
-        android:layout_height="90dp"
+    <TextView
+        android:id="@+id/fps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentBottom="true"/>
-
-    <FrameLayout
-        android:id="@+id/mini4"
-        android:layout_width="160dp"
-        android:layout_height="90dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dp"
+        android:textColor="#ff0000"
+        android:textSize="22sp" />
 
 </RelativeLayout>

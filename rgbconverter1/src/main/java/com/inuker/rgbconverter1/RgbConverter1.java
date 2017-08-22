@@ -9,11 +9,15 @@ import android.os.HandlerThread;
 import android.os.Message;
 import android.view.Surface;
 
+import com.inuker.library.BaseApplication;
 import com.inuker.library.EglCore;
 import com.inuker.library.GlUtil;
+import com.inuker.library.LogUtils;
 import com.inuker.library.WindowSurface;
 import com.inuker.library.YUVProgram;
 
+
+import java.nio.ByteBuffer;
 
 import static com.inuker.library.EglCore.FLAG_TRY_GLES3;
 
@@ -23,33 +27,28 @@ import static com.inuker.library.EglCore.FLAG_TRY_GLES3;
 
 public class RgbConverter1 extends RgbConverter {
 
-    private YUVProgram mYUVProgram;
-
-    public RgbConverter1(Context context, int width, int height, Surface surface) {
-        super(context, width, height, surface);
+    public RgbConverter1(Context context) {
+        super(context);
     }
 
     @Override
-    void onRenderCreate() {
-        super.onRenderCreate();
-
-        mYUVProgram = new YUVProgram(mContext, mWidth, mHeight);
-
-        GlUtil.checkGlError("render create done");
+    void onDrawFrame() {
+        readPixels();
+        pixelsToBitmap();
     }
 
     @Override
     void onFrameAvailable() {
-        super.onFrameAvailable();
 
-        synchronized (mYUVBuffer) {
-            mYUVProgram.useProgram();
-            mYUVProgram.setUniforms(mYUVBuffer.array());
-            mYUVProgram.draw();
-        }
+    }
 
-        mWindowSurface.swapBuffers();
+    @Override
+    void onDestroy() {
 
-        GlUtil.checkGlError("draw frame done");
+    }
+
+    @Override
+    void onStart() {
+
     }
 }

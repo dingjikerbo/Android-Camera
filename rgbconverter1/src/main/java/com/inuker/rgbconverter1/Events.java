@@ -6,5 +6,7 @@ package com.inuker.rgbconverter1;
 
 public class Events {
 
-    public static final int FRAME_AVAILABLE = 1;
+    public static final int BITMAP_AVAILABLE = 1;
+
+    public static final int FPS_AVAILABLE = 2;
 }

@@ -2,6 +2,7 @@ package com.inuker.library;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -31,5 +32,10 @@ public class BaseActivity extends Activity implements Handler.Callback {
 
     public void postDelayed(Runnable runnable, long delayInMillis) {
         mHandler.postDelayed(runnable, delayInMillis);
+    }
+
+    public void startActivity(final Class target) {
+        Intent intent = new Intent(this, target);
+        startActivity(intent);
     }
 }
