@@ -25,10 +25,10 @@
 
 |序号|项目名称|内容简介|状态|
 |--- |-------|-------|-----|
-|1|RGBConverter1|从Display Surface调glReadPixels，性能很差，~500ms|Pending|
-|2|RGBConverter2|从EGL Pbuffer调glReadPixels，性能有较大提升，~60ms|Pending|
-|3|RGBConverter3|从FBO调glReadPixels，性能比PBuffer好一点，~25ms|Pending|
-|4|RGBConverter4|采用FBO + PBO，~5ms|Pending|
+|1|RGBConverter1|从Display Surface调glReadPixels，性能很差，~540ms|Pending|
+|2|RGBConverter2|从EGL Pbuffer调glReadPixels，性能有较大提升，~30ms|Pending|
+|3|RGBConverter3|从FBO调glReadPixels，性能比PBuffer好一点，~29ms|Pending|
+|4|RGBConverter4|采用FBO + PBO，~10ms|Pending|
 |5|RGBConverter5|采用FBO + 2PBO，~3ms|Pending|
 
 

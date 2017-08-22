@@ -25,11 +25,6 @@ public class RgbConverter2 extends RgbConverter {
     }
 
     @Override
-    void onDestroy() {
-
-    }
-
-    @Override
     void onStart() {
         mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
 
@@ -37,6 +32,14 @@ public class RgbConverter2 extends RgbConverter {
         mOffscreenSurface.makeCurrent();
 
         mYUVProgram = new YUVProgram(mContext, mWidth, mHeight);
+    }
+
+    @Override
+    void onDestroy() {
+        mYUVProgram.release();
+        mOffscreenSurface.release();
+        mEglCore.makeNothingCurrent();
+        mEglCore.release();
     }
 
     @Override
@@ -52,9 +55,6 @@ public class RgbConverter2 extends RgbConverter {
         mOffscreenSurface.swapBuffers();
 
         readPixels();
-    }
-
-    @Override
-    void onFrameAvailable() {
+        pixelsToBitmap();
     }
 }

@@ -61,6 +61,10 @@ public class MainActivity extends BaseActivity implements EventListener {
                 return new RgbConverter1(this);
             case 2:
                 return new RgbConverter2(this);
+            case 3:
+                return new RgbConverter3(this);
+            case 4:
+                return new RgbConverter4(this);
             default:
                 return null;
         }
@@ -68,6 +72,10 @@ public class MainActivity extends BaseActivity implements EventListener {
 
     @Override
     protected void onDestroy() {
+        if (mBitmap != null && !mBitmap.isRecycled()) {
+            mBitmap.recycle();
+            mBitmap = null;
+        }
         EventDispatcher.unObserve(this, BITMAP_AVAILABLE, FPS_AVAILABLE);
         super.onDestroy();
     }
@@ -85,7 +93,7 @@ public class MainActivity extends BaseActivity implements EventListener {
         });
     }
 
-    private void updateFps(final Long fps) {
+    private void updateFps(final int fps) {
         mTvFps.post(new Runnable() {
             @Override
             public void run() {
@@ -101,7 +109,8 @@ public class MainActivity extends BaseActivity implements EventListener {
                 updateBitmap((Bitmap) object);
                 break;
             case FPS_AVAILABLE:
-                updateFps((Long) object);
+                int time = object != null ? (int) object : 0;
+                updateFps(time);
                 break;
         }
 

@@ -18,6 +18,7 @@ import com.inuker.library.EventDispatcher;
 import com.inuker.library.EventListener;
 import com.inuker.library.GlUtil;
 import com.inuker.library.LogUtils;
+import com.inuker.library.RuntimeCounter;
 import com.inuker.library.TaskUtils;
 import com.inuker.library.WindowSurface;
 import com.inuker.library.YUVProgram;
@@ -48,6 +49,8 @@ public abstract class RgbConverter implements IRgbConverter {
 
     protected int mWidth, mHeight;
 
+    protected RuntimeCounter mRuntimeCounter;
+
     public RgbConverter(Context context) {
         mContext = context;
 
@@ -58,6 +61,8 @@ public abstract class RgbConverter implements IRgbConverter {
                 .order(ByteOrder.nativeOrder());
 
         mPixelBuffer = ByteBuffer.allocate(mWidth * mHeight * 4);
+
+        mRuntimeCounter = new RuntimeCounter();
     }
 
     @Override
@@ -70,6 +75,7 @@ public abstract class RgbConverter implements IRgbConverter {
     public final void destroy() {
         mYUVBuffer = null;
         mPixelBuffer = null;
+        System.gc();
         onDestroy();
     }
 
@@ -85,37 +91,42 @@ public abstract class RgbConverter implements IRgbConverter {
             mYUVBuffer.position(0);
             mYUVBuffer.put(bytes);
         }
-
-        onFrameAvailable();
-
-        GlUtil.checkGlError(String.format("%s frameAvailable", TAG));
     }
 
     void readPixels() {
         long start = System.currentTimeMillis();
         mPixelBuffer.position(0);
         GLES30.glReadPixels(0, 0, mWidth, mHeight, GLES30.GL_RGBA, GLES30.GL_UNSIGNED_BYTE, mPixelBuffer);
+        mRuntimeCounter.add(System.currentTimeMillis() - start);
         LogUtils.v(String.format("%s glReadPixels takes %dms", TAG, System.currentTimeMillis() - start));
-        EventDispatcher.dispatch(Events.FPS_AVAILABLE, System.currentTimeMillis() - start);
+        EventDispatcher.dispatch(Events.FPS_AVAILABLE, mRuntimeCounter.getAvg());
     }
 
     void pixelsToBitmap() {
+        pixelsToBitmap(mPixelBuffer);
+    }
+
+    private boolean ENABLE = false;
+
+    void pixelsToBitmap(ByteBuffer pixelBuffer) {
+        if (!ENABLE) {
+            return;
+        }
+
         long start = System.currentTimeMillis();
 
         final Bitmap bmp = Bitmap.createBitmap(mWidth, mHeight, Bitmap.Config.ARGB_8888);
 
-        mPixelBuffer.rewind();
-        bmp.copyPixelsFromBuffer(mPixelBuffer);
+        pixelBuffer.rewind();
+        bmp.copyPixelsFromBuffer(pixelBuffer);
 
         EventDispatcher.dispatch(Events.BITMAP_AVAILABLE, bmp);
         LogUtils.v(String.format("pixelsToBitmap takes %dms", System.currentTimeMillis() - start));
     }
 
+    abstract void onStart();
+
     abstract void onDrawFrame();
 
-    abstract void onFrameAvailable();
-
     abstract void onDestroy();
-
-    abstract void onStart();
 }

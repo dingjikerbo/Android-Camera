@@ -32,23 +32,18 @@ public class RgbConverter1 extends RgbConverter {
     }
 
     @Override
+    void onStart() {
+
+    }
+
+    @Override
     void onDrawFrame() {
         readPixels();
         pixelsToBitmap();
     }
 
     @Override
-    void onFrameAvailable() {
-
-    }
-
-    @Override
     void onDestroy() {
-
-    }
-
-    @Override
-    void onStart() {
 
     }
 }

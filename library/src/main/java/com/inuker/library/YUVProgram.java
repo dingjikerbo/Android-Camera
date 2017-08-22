@@ -58,6 +58,13 @@ public class YUVProgram extends ShaderProgram {
             1.0f, 1.0f,
     };
 
+    public static final float TEXTURE_UPSIDE_DOWN[] = {
+            0.0f, 0.0f,
+            1.0f, 0.0f,
+            0.0f, 1.0f,
+            1.0f, 1.0f,
+    };
+
     // Attribute locations
     private final int aPositionLocation;
     private final int aTextureCoordinatesLocation;
@@ -119,6 +126,11 @@ public class YUVProgram extends ShaderProgram {
 
         mGLTextureBuffer.clear();
         mGLTextureBuffer.put(TEXTURE_NO_ROTATION).position(0);
+    }
+
+    public void setUpsideDown() {
+        mGLTextureBuffer.clear();
+        mGLTextureBuffer.put(TEXTURE_UPSIDE_DOWN).position(0);
     }
 
     public void setUniforms(byte[] data) {

@@ -95,7 +95,10 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mCamera.release();
         }
 
+        mYUVBuffer = null;
         mRgbConverter.destroy();
+
+        mSurfaceTexture.release();
 
         mYUVProgram.release();
         mWindowSurface.release();
