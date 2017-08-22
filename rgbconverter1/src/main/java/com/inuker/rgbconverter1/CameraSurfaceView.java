@@ -1,19 +1,18 @@
-package com.inuker.surfacepreview;
+package com.inuker.rgbconverter1;
 
 import android.content.Context;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLES30;
-import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.Message;
 import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.EventDispatcher;
 import com.inuker.library.WindowSurface;
+import com.inuker.library.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -31,7 +30,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     private Camera mCamera;
 
-    private YUVProgram mTextureProgram;
+    private YUVProgram mYUVProgram;
     private ByteBuffer mYUVBuffer;
 
     private EglCore mEglCore;
@@ -54,7 +53,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     @Override
     public void onSurfaceChanged(int width, int height) {
-        mTextureProgram = new YUVProgram(getContext(), width, height);
+        mYUVProgram = new YUVProgram(getContext(), width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
@@ -88,7 +87,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mCamera.release();
         }
 
-        mTextureProgram.release();
+        mYUVProgram.release();
         mWindowSurface.release();
         mEglCore.makeNothingCurrent();
         mEglCore.release();
@@ -98,11 +97,11 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         GLES30.glClearColor(1.0f, 0.2f, 0.2f, 1.0f);
         GLES30.glClear(GLES30.GL_COLOR_BUFFER_BIT);
 
-        mTextureProgram.useProgram();
+        mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mTextureProgram.setUniforms(mYUVBuffer.array());
+            mYUVProgram.setUniforms(mYUVBuffer.array());
         }
-        mTextureProgram.draw();
+        mYUVProgram.draw();
 
         mWindowSurface.swapBuffers();
 
@@ -115,6 +114,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mYUVBuffer.position(0);
             mYUVBuffer.put(data);
         }
+
+        EventDispatcher.dispatchInstant(Events.FRAME_AVAILABLE, data);
 
         if (mRenderHandler != null) {
             mRenderHandler.removeMessages(MSG_DRAW_FRAME);

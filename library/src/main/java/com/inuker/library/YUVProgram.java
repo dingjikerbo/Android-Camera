@@ -72,6 +72,8 @@ public class YUVProgram extends ShaderProgram {
     public YUVProgram(Context context, int width, int height) {
         super(context, R.raw.yuv_vertex, R.raw.yuv_fragment, width, height);
 
+        LogUtils.v(String.format("New YUVProgram width = %d, height = %d", width, height));
+
         mUniformYTextureLocation = glGetUniformLocation(program, "y_texture");
         mUniformUVTextureLocation = glGetUniformLocation(program, "uv_texture");
 
@@ -133,12 +135,16 @@ public class YUVProgram extends ShaderProgram {
                 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, mYBuffer);
         glUniform1i(mUniformYTextureLocation, 0);
 
+        GlUtil.checkGlError("init YTexture");
+
         mUVBuffer.position(0);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, mUVTextureId);
         glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE_ALPHA, width / 2, height / 2,
                 0, GL_LUMINANCE_ALPHA, GL_UNSIGNED_BYTE, mUVBuffer);
         glUniform1i(mUniformUVTextureLocation, 1);
+
+        GlUtil.checkGlError("init UVTexture");
 
         mGLCubeBuffer.position(0);
         glVertexAttribPointer(aPositionLocation, 2, GL_FLOAT, false, 0, mGLCubeBuffer);

@@ -28,4 +28,8 @@ public class BaseActivity extends Activity implements Handler.Callback {
     public boolean handleMessage(Message msg) {
         return false;
     }
+
+    public void postDelayed(Runnable runnable, long delayInMillis) {
+        mHandler.postDelayed(runnable, delayInMillis);
+    }
 }

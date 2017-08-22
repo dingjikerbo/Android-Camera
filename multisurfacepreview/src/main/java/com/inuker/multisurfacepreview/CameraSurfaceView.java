@@ -201,6 +201,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         }
 
         if (mRenderHandler != null) {
+            mRenderHandler.removeMessages(MSG_DRAW_FRAME);
             mRenderHandler.sendEmptyMessage(MSG_DRAW_FRAME);
         }
 
