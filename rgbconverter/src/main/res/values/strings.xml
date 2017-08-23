@@ -4,8 +4,9 @@
 
     <string-array name="converters">
         <item>readPixels directly from Display Surface</item>
-        <item>readPixels from Egl PBuffer</item>
+        <item>readPixels from PBuffer</item>
         <item>readPixels from FBO</item>
+        <item>readPixels from FBO + PBO</item>
         <item>readPixels from PBO</item>
     </string-array>
 </resources>

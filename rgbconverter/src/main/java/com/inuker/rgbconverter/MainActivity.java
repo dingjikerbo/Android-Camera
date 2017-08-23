@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.inuker.library.BaseActivity;
 import com.inuker.library.EventDispatcher;
 import com.inuker.library.EventListener;
-import com.inuker.library.LogUtils;
 
 import static com.inuker.rgbconverter.Events.BITMAP_AVAILABLE;
 import static com.inuker.rgbconverter.Events.FPS_AVAILABLE;
@@ -55,7 +54,7 @@ public class MainActivity extends BaseActivity implements EventListener {
             case 4:
                 return new RgbConverter4(this);
             case 5:
-                return new RgbConverter4(this);
+                return new RgbConverter5(this);
             default:
                 return null;
         }
