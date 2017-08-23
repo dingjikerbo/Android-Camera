@@ -81,8 +81,6 @@ public class RgbConverter5 extends SingleRgbConverter {
             mYUVProgram.draw();
         }
 
-        mOffscreenSurface.swapBuffers();
-
         readPixels();
 
         GLES30.glUnmapBuffer(GLES30.GL_PIXEL_PACK_BUFFER);

@@ -79,8 +79,6 @@ public class RgbConverter3 extends SingleRgbConverter {
             mYUVProgram.draw();
         }
 
-        mOffscreenSurface.swapBuffers();
-
         readPixels();
         pixelsToBitmap();
     }

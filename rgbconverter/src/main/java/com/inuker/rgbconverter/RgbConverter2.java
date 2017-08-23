@@ -44,8 +44,6 @@ public class RgbConverter2 extends SingleRgbConverter {
             mYUVProgram.draw();
         }
 
-        mOffscreenSurface.swapBuffers();
-
         readPixels();
         pixelsToBitmap();
     }

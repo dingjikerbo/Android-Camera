@@ -116,8 +116,6 @@ public class RgbConverter4 extends SingleRgbConverter {
     void onDrawSurface() {
         super.onDrawSurface();
 
-        GLES30.glBindFramebuffer(GLES20.GL_FRAMEBUFFER, mFrameBuffer);
-
         synchronized (mYUVBuffer) {
             mYUVProgram.useProgram();
             mYUVProgram.setUniforms(mYUVBuffer.array());
