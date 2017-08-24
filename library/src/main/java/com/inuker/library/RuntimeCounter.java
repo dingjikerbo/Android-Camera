@@ -10,6 +10,8 @@ public class RuntimeCounter {
 
     public long mSum;
 
+    private volatile long mStart;
+
     public void add(long time) {
         mCount++;
         mSum += time;
@@ -22,5 +24,15 @@ public class RuntimeCounter {
     public void clear() {
         mCount = 0;
         mSum = 0;
+    }
+
+    public void start() {
+        mStart = System.currentTimeMillis();
+    }
+
+    public void end() {
+        long now = System.currentTimeMillis();
+        add(now - mStart);
+        mStart = now;
     }
 }

@@ -24,7 +24,7 @@ public class BaseApplication extends Application {
     }
 
     @Override
-    public final void onCreate() {
+    public void onCreate() {
         super.onCreate();
 
         sInstance = this;
