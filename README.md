@@ -30,6 +30,7 @@
 |3|RgbConverter3|从FBO调readPixels，性能比PBuffer稍好一点，~27ms|done|
 |4|RgbConverter4|从FBO读到PBO，readPixels阻塞, glMapBuffer阻塞，~11ms|done|
 |5|RgbConverter5|从Pbuffer读到PBO，readPixels异步, glMapBuffer阻塞，~6ms|done|
+|6|RgbConverter6|Transform Feedback|pending|
 
 这里方式4和5的结果差别的原因暂时没搞清楚，方式5是从Pbuffer的默认FBO读到PBO，方式4是另开的一个FBO读到PBO，这两种应该没太大区别，而结果表明方式5比较理想，glReadPixels应该是异步，阻塞只在glMapBuffer。
 
