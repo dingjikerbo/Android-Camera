@@ -20,6 +20,7 @@ import static android.opengl.GLES20.GL_DEPTH_BUFFER_BIT;
 import static android.opengl.GLES20.glClear;
 import static android.opengl.GLES20.glClearColor;
 import static android.opengl.GLES20.glGenTextures;
+import static android.opengl.GLES20.glViewport;
 
 /**
  * Created by liwentian on 17/8/16.
@@ -51,6 +52,8 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         LogUtils.v(String.format("onSurfaceChanged width = %d, height = %d", width, height));
 
+        glViewport(0, 0, width, height);
+
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
         mYUVBuffer = ByteBuffer.allocateDirect(bufferSize)
@@ -69,6 +72,8 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         }
 
         mCamera.setPreviewCallbackWithBuffer(this);
+
+
         for (int i = 0; i < 2; i++) {
             byte[] callbackBuffer = new byte[bufferSize];
             mCamera.addCallbackBuffer(callbackBuffer);

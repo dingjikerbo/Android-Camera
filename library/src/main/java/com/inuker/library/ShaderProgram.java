@@ -15,12 +15,16 @@ public class ShaderProgram {
 
     protected final int width, height;
 
+    protected Context context;
+
     protected ShaderProgram(Context context, int vertexId, int fragId, int width, int height) {
+        this.context = context;
+
         program = ShaderHelper.buildProgram(ResourceUtils.readText(context, vertexId),
                 ResourceUtils.readText(context, fragId));
 
-        this.width = width;
-        this.height = height;
+        this.width = Math.max(width, height);
+        this.height = Math.min(width, height);
     }
 
     public void useProgram() {

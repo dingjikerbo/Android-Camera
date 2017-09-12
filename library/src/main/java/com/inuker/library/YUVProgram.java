@@ -1,6 +1,9 @@
 package com.inuker.library;
 
 import android.content.Context;
+import android.content.res.Configuration;
+import android.opengl.GLES20;
+import android.opengl.Matrix;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -69,6 +72,8 @@ public class YUVProgram extends ShaderProgram {
     private final int aPositionLocation;
     private final int aTextureCoordinatesLocation;
 
+    private final int uMVPMatrixLocation;
+
     private final FloatBuffer mGLCubeBuffer;
     private final FloatBuffer mGLTextureBuffer;
 
@@ -83,6 +88,7 @@ public class YUVProgram extends ShaderProgram {
 
         mUniformYTextureLocation = glGetUniformLocation(program, "y_texture");
         mUniformUVTextureLocation = glGetUniformLocation(program, "uv_texture");
+        uMVPMatrixLocation = glGetUniformLocation(program, "uMVPMatrix");
 
         aPositionLocation = glGetAttribLocation(program, "a_Position");
         aTextureCoordinatesLocation = glGetAttribLocation(program, "a_TextureCoordinates");
@@ -155,6 +161,16 @@ public class YUVProgram extends ShaderProgram {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE_ALPHA, width / 2, height / 2,
                 0, GL_LUMINANCE_ALPHA, GL_UNSIGNED_BYTE, mUVBuffer);
         glUniform1i(mUniformUVTextureLocation, 1);
+
+
+        float[] matrix = new float[16];
+        Matrix.setIdentityM(matrix, 0);
+        int orientation = context.getResources().getConfiguration().orientation;
+
+        int degrees = orientation == Configuration.ORIENTATION_LANDSCAPE ? 0 : -90;
+        Matrix.rotateM(matrix, 0, degrees, 0.0f, 0.0f, 1.0f);
+
+        GLES20.glUniformMatrix4fv(uMVPMatrixLocation, 1, false, matrix, 0);
 
         GlUtil.checkGlError("init UVTexture");
 
