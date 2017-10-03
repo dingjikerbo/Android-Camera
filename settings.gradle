@@ -1,1 +1,1 @@
-include ':app', ':library', ':glsurfacepreview', ':surfacepreview', ':glsurfacepreview2', ':surfacepreview2', ':multisurfacepreview', ':rgbconverter', ':datacopy', ':recorder1', ':recorder2'
+include ':app', ':library', ':glsurfacepreview', ':surfacepreview', ':glsurfacepreview2', ':surfacepreview2', ':multisurfacepreview', ':rgbconverter', ':datacopy', ':recorder1', ':recorder2', ':glsurfacepreview3'
