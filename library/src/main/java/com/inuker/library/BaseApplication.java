@@ -36,6 +36,8 @@ public class BaseApplication extends Application {
         mScreenWidth = Math.max(width, height);
         mScreenHeight = Math.min(width, height);
 
+        LogUtils.v(String.format("width = %d, height = %d", mScreenWidth, mScreenHeight));
+
         mDensity = getResources().getDisplayMetrics().density;
 
         mHandler = new Handler();

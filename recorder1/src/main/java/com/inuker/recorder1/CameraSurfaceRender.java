@@ -6,9 +6,9 @@ import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
 import com.inuker.library.CameraHelper;
-import com.inuker.library.EventDispatcher;
 import com.inuker.library.LogUtils;
-import com.inuker.library.MovieEncoder;
+import com.inuker.library.BaseMovieEncoder;
+import com.inuker.library.MovieEncoder1;
 import com.inuker.library.YUVProgram;
 
 import java.io.File;
@@ -41,7 +41,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     private GLSurfaceView mGLSurfaceView;
 
-    private MovieEncoder mVideoEncoder;
+    private BaseMovieEncoder mVideoEncoder;
 
     public CameraSurfaceRender(GLSurfaceView glSurfaceView) {
         mGLSurfaceView = glSurfaceView;
@@ -57,7 +57,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
     public void onSurfaceChanged(GL10 gl, int width, int height) {
         LogUtils.v(String.format("onSurfaceChanged width = %d, height = %d", width, height));
 
-        mVideoEncoder = new MovieEncoder(mGLSurfaceView.getContext(), width, height);
+        mVideoEncoder = new MovieEncoder1(mGLSurfaceView.getContext(), width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
@@ -115,7 +115,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
     public void startRecording() {
         if (!mVideoEncoder.isRecording()) {
             File output = CameraHelper.getOutputMediaFile(CameraHelper.MEDIA_TYPE_VIDEO, "");
-            mVideoEncoder.startRecording(new MovieEncoder.EncoderConfig(output, null));
+            mVideoEncoder.startRecording(new BaseMovieEncoder.EncoderConfig(output, null));
         }
     }
 

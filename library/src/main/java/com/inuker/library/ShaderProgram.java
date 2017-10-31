@@ -17,6 +17,10 @@ public class ShaderProgram {
 
     protected Context context;
 
+    protected ShaderProgram(Context context, int vertexId, int fragId) {
+        this(context, vertexId, fragId, 0, 0);
+    }
+
     protected ShaderProgram(Context context, int vertexId, int fragId, int width, int height) {
         this.context = context;
 

@@ -40,8 +40,7 @@
 |序号|项目名称|内容简介|状态|
 |--- |-------|-------|----|
 |1|recorder1|GLSurfaceView + MediaMuxer，不共享EglContext，只能录制相机预览|Done|
-|2|recorder2|SurfaceView + MediaMuxer，共享EglContext，可以录制整个Surface|Pending|
-|3|recorder3|只录制Surface上某一个部分，如人脸|Pending|
+|2|recorder2|SurfaceView + MediaMuxer，共享EglContext，可以录制整个Surface|Done|
 
 
 ## **四，视频播放**

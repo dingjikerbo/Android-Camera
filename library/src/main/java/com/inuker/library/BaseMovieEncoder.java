@@ -53,37 +53,33 @@ import java.nio.ByteOrder;
  * <p>
  * TODO: tweak the API (esp. textureId) so it's less awkward for simple use cases.
  */
-public class MovieEncoder implements Runnable {
+public abstract class BaseMovieEncoder implements Runnable {
 
-    private static final int MSG_START_RECORDING = 0;
-    private static final int MSG_STOP_RECORDING = 1;
-    private static final int MSG_FRAME_AVAILABLE = 2;
-    private static final int MSG_QUIT = 4;
+    static final int MSG_START_RECORDING = 0;
+    static final int MSG_STOP_RECORDING = 1;
+    static final int MSG_FRAME_AVAILABLE = 2;
+    static final int MSG_QUIT = 4;
 
     // ----- accessed exclusively by encoder thread -----
     private WindowSurface mInputWindowSurface;
     private EglCore mEglCore;
-
-    private YUVProgram mYUVProgram;
 
     private VideoEncoderCore mVideoEncoder;
 
     private AudioEncoderCore mAudioEncoder;
 
     // ----- accessed by multiple threads -----
-    private volatile EncoderHandler mHandler;
+    protected volatile EncoderHandler mHandler;
 
     private Object mReadyFence = new Object();      // guards ready/running
     private boolean mReady;
     private boolean mRunning;
 
-    private Context mContext;
+    protected Context mContext;
 
-    private int mWidth, mHeight;
+    protected int mWidth, mHeight;
 
-    private ByteBuffer mYUVBuffer;
-
-    public MovieEncoder(Context context, int width, int height) {
+    public BaseMovieEncoder(Context context, int width, int height) {
         mContext = context;
         mWidth = width;
         mHeight = height;
@@ -172,6 +168,10 @@ public class MovieEncoder implements Runnable {
         }
     }
 
+    public abstract void onPrepareEncoder();
+
+    public abstract void onFrameAvailable(Object o, long timestamp);
+
     /**
      * Tells the video recorder that a new frame is available.  (Call from non-encoder thread.)
      * <p>
@@ -185,20 +185,12 @@ public class MovieEncoder implements Runnable {
      * before it calls updateTexImage().  The latter is preferred because we don't want to
      * stall the caller while this thread does work.
      */
-    public void frameAvailable(byte[] data, long timestamp) {
+    public void frameAvailable(Object object, long timestamp) {
         synchronized (mReadyFence) {
             if (!mReady) {
                 return;
             }
         }
-
-        if (mYUVBuffer == null) {
-            mYUVBuffer = ByteBuffer.allocateDirect(mWidth * mHeight * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8)
-                    .order(ByteOrder.nativeOrder());
-        }
-
-        mYUVBuffer.position(0);
-        mYUVBuffer.put(data);
 
         if (timestamp == 0) {
             // Seeing this after device is toggled off/on with power button.  The
@@ -209,8 +201,7 @@ public class MovieEncoder implements Runnable {
             return;
         }
 
-        mHandler.sendMessage(mHandler.obtainMessage(MSG_FRAME_AVAILABLE,
-                (int) (timestamp >> 32), (int) timestamp, mYUVBuffer));
+        onFrameAvailable(object, timestamp);
     }
 
     /**
@@ -240,11 +231,11 @@ public class MovieEncoder implements Runnable {
     /**
      * Handles encoder state change requests.  The handler is created on the encoder thread.
      */
-    private static class EncoderHandler extends Handler {
-        private WeakReference<MovieEncoder> mWeakEncoder;
+    static class EncoderHandler extends Handler {
+        private WeakReference<BaseMovieEncoder> mWeakEncoder;
 
-        public EncoderHandler(MovieEncoder encoder) {
-            mWeakEncoder = new WeakReference<MovieEncoder>(encoder);
+        public EncoderHandler(BaseMovieEncoder encoder) {
+            mWeakEncoder = new WeakReference<BaseMovieEncoder>(encoder);
         }
 
         @Override  // runs on encoder thread
@@ -252,7 +243,7 @@ public class MovieEncoder implements Runnable {
             int what = inputMessage.what;
             Object obj = inputMessage.obj;
 
-            MovieEncoder encoder = mWeakEncoder.get();
+            BaseMovieEncoder encoder = mWeakEncoder.get();
             if (encoder == null) {
                 return;
             }
@@ -267,7 +258,7 @@ public class MovieEncoder implements Runnable {
                 case MSG_FRAME_AVAILABLE:
                     long timestamp = (((long) inputMessage.arg1) << 32) |
                             (((long) inputMessage.arg2) & 0xffffffffL);
-                    encoder.handleFrameAvailable((ByteBuffer) obj, timestamp);
+                    encoder.handleFrameAvailable(timestamp);
                     break;
                 case MSG_QUIT:
                     Looper.myLooper().quit();
@@ -282,7 +273,9 @@ public class MovieEncoder implements Runnable {
      * Starts recording.
      */
     private void handleStartRecording(EncoderConfig config) {
+        LogUtils.v(String.format("handleStartRecording"));
         prepareEncoder(config.mMuxer, config.mEglContext, mWidth, mHeight);
+        onPrepareEncoder();
     }
 
     /**
@@ -294,22 +287,26 @@ public class MovieEncoder implements Runnable {
      *
      * @param timestampNanos The frame's timestamp, from SurfaceTexture.
      */
-    private void handleFrameAvailable(ByteBuffer buffer, long timestampNanos) {
+    private void handleFrameAvailable(long timestampNanos) {
+        LogUtils.v(String.format("handleFrameAvailable"));
+
         mVideoEncoder.start();
         mAudioEncoder.start();
 
-        mYUVProgram.useProgram();
-        mYUVProgram.setUniforms(buffer.array());
-        mYUVProgram.draw();
+        onFrameAvailable();
 
         mInputWindowSurface.setPresentationTime(timestampNanos);
         mInputWindowSurface.swapBuffers();
     }
 
+    public abstract void onFrameAvailable();
+
     /**
      * Handles a request to stop encoding.
      */
     private void handleStopRecording() {
+        LogUtils.v(String.format("handleStopRecording"));
+
         mVideoEncoder.stop();
         mAudioEncoder.stop();
         releaseEncoder();
@@ -326,8 +323,6 @@ public class MovieEncoder implements Runnable {
 
         mInputWindowSurface = new WindowSurface(mEglCore, mVideoEncoder.getInputSurface(), true);
         mInputWindowSurface.makeCurrent();
-
-        mYUVProgram = new YUVProgram(mContext, width, height);
     }
 
     private void releaseEncoder() {

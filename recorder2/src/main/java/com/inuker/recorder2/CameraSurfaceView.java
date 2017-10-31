@@ -4,25 +4,49 @@ import android.content.Context;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
-import android.opengl.GLES30;
+import android.opengl.EGL14;
 import android.os.Message;
 import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
+import com.inuker.library.CameraHelper;
 import com.inuker.library.EglCore;
-import com.inuker.library.OffscreenSurface;
+import com.inuker.library.BaseMovieEncoder;
+import com.inuker.library.MovieEncoder2;
+import com.inuker.library.TextureProgram;
 import com.inuker.library.WindowSurface;
 import com.inuker.library.YUVProgram;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
+import static android.opengl.GLES20.GL_CLAMP_TO_EDGE;
+import static android.opengl.GLES20.GL_COLOR_ATTACHMENT0;
 import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
+import static android.opengl.GLES20.GL_FRAMEBUFFER;
+import static android.opengl.GLES20.GL_FRAMEBUFFER_COMPLETE;
+import static android.opengl.GLES20.GL_LINEAR;
 import static android.opengl.GLES20.GL_NEAREST;
+import static android.opengl.GLES20.GL_RGBA;
+import static android.opengl.GLES20.GL_TEXTURE_2D;
+import static android.opengl.GLES20.GL_TEXTURE_MAG_FILTER;
+import static android.opengl.GLES20.GL_TEXTURE_MIN_FILTER;
+import static android.opengl.GLES20.GL_TEXTURE_WRAP_S;
+import static android.opengl.GLES20.GL_TEXTURE_WRAP_T;
+import static android.opengl.GLES20.GL_UNSIGNED_BYTE;
+import static android.opengl.GLES20.glBindFramebuffer;
+import static android.opengl.GLES20.glBindTexture;
+import static android.opengl.GLES20.glCheckFramebufferStatus;
 import static android.opengl.GLES20.glClear;
 import static android.opengl.GLES20.glClearColor;
+import static android.opengl.GLES20.glFramebufferTexture2D;
+import static android.opengl.GLES20.glGenFramebuffers;
 import static android.opengl.GLES20.glGenTextures;
+import static android.opengl.GLES20.glTexImage2D;
+import static android.opengl.GLES20.glTexParameterf;
+import static android.opengl.GLES20.glTexParameteri;
 
 /**
  * Created by liwentian on 17/8/16.
@@ -34,15 +58,22 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
     private Camera mCamera;
 
-    private YUVProgram mTextureProgram;
+    private YUVProgram mYUVProgram;
+    private TextureProgram mTextureProgram;
     private ByteBuffer mYUVBuffer;
 
     private EglCore mEglCore;
     private WindowSurface mWindowSurface;
 
-    private OffscreenSurface mOffscreenSurface;
+    private int mOffscreenTexture;
+
+    private int mFramebuffer;
 
     private SurfaceTexture mSurfaceTexture;
+
+    private FaceRender mFaceRender;
+
+    private MovieEncoder2 mVideoEncoder;
 
     public CameraSurfaceView(Context context) {
         super(context);
@@ -56,11 +87,51 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         mWindowSurface.makeCurrent();
     }
 
+    private void prepareFrameBuffer(int width, int height) {
+        int[] values = new int[1];
+
+        glGenTextures(1, values, 0);
+        mOffscreenTexture = values[0];   // expected > 0
+        glBindTexture(GL_TEXTURE_2D, mOffscreenTexture);
+
+        // Create texture storage.
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0,
+                GL_RGBA, GL_UNSIGNED_BYTE, null);
+
+        // Set parameters.  We're probably using non-power-of-two dimensions, so
+        // some values may not be available for use.
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER,
+                GL_NEAREST);
+        glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER,
+                GL_LINEAR);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,
+                GL_CLAMP_TO_EDGE);
+        glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T,
+                GL_CLAMP_TO_EDGE);
+
+        // Create framebuffer object and bind it.
+        glGenFramebuffers(1, values, 0);
+        mFramebuffer = values[0];    // expected > 0
+        glBindFramebuffer(GL_FRAMEBUFFER, mFramebuffer);
+
+        glFramebufferTexture2D(GL_FRAMEBUFFER, GL_COLOR_ATTACHMENT0,
+                GL_TEXTURE_2D, mOffscreenTexture, 0);
+
+        if (glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE) {
+            throw new IllegalStateException();
+        }
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+    }
+
     @Override
     public void onSurfaceChanged(int width, int height) {
-        mTextureProgram = new YUVProgram(getContext(), width, height);
+        prepareFrameBuffer(width, height);
 
-        mOffscreenSurface = new OffscreenSurface(mEglCore, width, height);
+        mFaceRender = new FaceRender(getContext());
+        mYUVProgram = new YUVProgram(getContext(), width, height);
+        mTextureProgram = new TextureProgram(getContext(), width, height);
+        mVideoEncoder = new MovieEncoder2(getContext(), width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
@@ -94,6 +165,7 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
             mCamera.release();
         }
 
+        mYUVProgram.release();
         mTextureProgram.release();
         mWindowSurface.release();
         mEglCore.makeNothingCurrent();
@@ -101,21 +173,23 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
     }
 
     private void onDrawFrame() {
-        mOffscreenSurface.makeCurrent();
+        glBindFramebuffer(GL_FRAMEBUFFER, mFramebuffer);
 
-        glClearColor(0.0f, 0.0f, 0.0f, 1.0f);
+        glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
         glClear(GL_COLOR_BUFFER_BIT);
 
-        mTextureProgram.useProgram();
+        mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mTextureProgram.setUniforms(mYUVBuffer.array());
+            mYUVProgram.setUniforms(mYUVBuffer.array());
         }
-        mTextureProgram.draw();
+        mYUVProgram.draw();
 
-        mWindowSurface.makeCurrentReadFrom(mOffscreenSurface);
+        mFaceRender.draw();
 
-        GLES30.glBlitFramebuffer(0, 0, mWindowSurface.getWidth(), mWindowSurface.getHeight(),
-                0, 0, mOffscreenSurface.getWidth(), mOffscreenSurface.getHeight(), GL_COLOR_BUFFER_BIT, GL_NEAREST);
+
+        glBindFramebuffer(GL_FRAMEBUFFER, 0);
+        mTextureProgram.draw(mOffscreenTexture);
+        mVideoEncoder.frameAvailable(mOffscreenTexture, mSurfaceTexture.getTimestamp());
 
         mWindowSurface.swapBuffers();
 
@@ -146,5 +220,28 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         }
 
         return super.handleMessage(msg);
+    }
+
+    public void startRecording() {
+        mRenderHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                if (!mVideoEncoder.isRecording()) {
+                    File output = CameraHelper.getOutputMediaFile(CameraHelper.MEDIA_TYPE_VIDEO, "");
+                    mVideoEncoder.startRecording(new BaseMovieEncoder.EncoderConfig(output, EGL14.eglGetCurrentContext()));
+                }
+            }
+        });
+    }
+
+    public void stopRecording() {
+        mRenderHandler.post(new Runnable() {
+            @Override
+            public void run() {
+                if (mVideoEncoder.isRecording()) {
+                    mVideoEncoder.stopRecording();
+                }
+            }
+        });
     }
 }

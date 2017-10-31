@@ -1,6 +1,5 @@
 package com.inuker.recorder1;
 
-import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
 import android.view.View;
@@ -8,12 +7,6 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 
 import com.inuker.library.BaseActivity;
-import com.inuker.library.BaseApplication;
-import com.inuker.library.CameraHelper;
-import com.inuker.library.MediaEncoderCore;
-import com.inuker.library.MovieEncoder;
-
-import java.io.File;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
