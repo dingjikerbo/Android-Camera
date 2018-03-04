@@ -1,18 +1,12 @@
 # Android Camera Demos
 
-**本项目主要有以下几点内容：**
-
-**一、围绕Android相机的各种Demo，包括预览，RGB转换，视频录制和播放，滤镜等，每种Demo都会给出若干种解决方案**
-
-**二、围绕Android相机及图像音频架构和原理做深入分析**
-
 ------
 
 ## **一、相机预览**
 
 |序号|项目名称|内容简介|状态|
 |--- |-------|-------|------|
-|1|GLSurfacePreview|GLSurfaceView + OpenGL相机预览，直接绘制到Display Surface|Done|
+|1|GLSurfacePreview|拿到相机输出的帧数据，直接绘制到屏幕|Done|
 |2|GLSurfacePreview2|GLSurfaceView + OpenGL相机预览，先绘制到FBO的Texture上，再处理后(变红)绘制到Display Surface|Done|
 |3|GLSurfacePreview3|GLSurfaceView + OpenGL相机预览，直接从相机的输出SurfaceTexture上复制数据到Display Surface|Pending|
 |4|SurfacePreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface|Done|
@@ -50,6 +44,10 @@
 |1|video1|SurfaceView播放原始视频|Pending|
 |2|video2|视频裁剪播放，并增加一层遮罩|Pending|
 
+
+## **技术要点**
+
+ - [相机遇到的问题](doc/相机遇到的问题.md)
 
 ------
 有问题或建议可以给我邮件

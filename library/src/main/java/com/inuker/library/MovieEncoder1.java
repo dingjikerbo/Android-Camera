@@ -42,11 +42,6 @@ public class MovieEncoder1 extends BaseMovieEncoder {
     @Override
     public void onFrameAvailable() {
         mYUVProgram.useProgram();
-
-        synchronized (mYUVBuffer) {
-            mYUVProgram.setUniforms(mYUVBuffer.array());
-        }
-
-        mYUVProgram.draw();
+        mYUVProgram.draw(mYUVBuffer.array());
     }
 }

@@ -5,7 +5,6 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
-import com.inuker.library.LogUtils;
 import com.inuker.library.YUVProgram;
 
 import java.io.IOException;
@@ -44,14 +43,11 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        LogUtils.v("onSurfaceCreated");
         mCamera = Camera.open(1);
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        LogUtils.v(String.format("onSurfaceChanged width = %d, height = %d", width, height));
-
         glViewport(0, 0, width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
@@ -87,11 +83,9 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glClearColor(1f, 1f, 1f, 1f);
 
-        mTextureProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mTextureProgram.setUniforms(mYUVBuffer.array());
+            mTextureProgram.draw(mYUVBuffer.array());
         }
-        mTextureProgram.draw();
 
         mSurfaceTexture.updateTexImage();
     }

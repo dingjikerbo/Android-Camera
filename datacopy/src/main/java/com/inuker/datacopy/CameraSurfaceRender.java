@@ -63,7 +63,6 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         mSurfaceTexture = new SurfaceTexture(textures[0]);
 
         mYUVProgram = new YUVProgram(mGLSurfaceView.getContext(), width, height);
-        mYUVProgram.setUpsideDown();
 
         try {
             mCamera.setPreviewTexture(mSurfaceTexture);
@@ -85,12 +84,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glClearColor(1f, 1f, 1f, 1f);
 
-        mYUVProgram.useProgram();
-        synchronized (mYUVBuffer) {
-            mYUVProgram.setUniforms(mYUVBuffer.array());
-        }
-        mYUVProgram.draw();
-
+        mYUVProgram.draw(mYUVBuffer.array());
         mSurfaceTexture.updateTexImage();
     }
 
