@@ -16,7 +16,7 @@ public class MainActivity extends Activity {
         setContentView(mGLSurfaceView);
 
         mGLSurfaceView.setEGLContextClientVersion(3);
-        mGLSurfaceView.setRenderer(new CameraSurfaceRender(mGLSurfaceView));
+        mGLSurfaceView.setRenderer(new CameraSurfaceRender2(mGLSurfaceView));
         mGLSurfaceView.setRenderMode(GLSurfaceView.RENDERMODE_WHEN_DIRTY);
     }
 

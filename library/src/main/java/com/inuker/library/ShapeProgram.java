@@ -24,9 +24,9 @@ public class ShapeProgram extends ShaderProgram {
         super(context, vertex, fragment);
 
         useProgram();
-        aPositionLocation = glGetAttribLocation(program, "a_Position");
-        aColorLocation = glGetAttribLocation(program, "a_Color");
-        uMatrixLocation = glGetUniformLocation(program, "u_Matrix");
+        aPositionLocation = glGetAttribLocation(mProgram, "a_Position");
+        aColorLocation = glGetAttribLocation(mProgram, "a_Color");
+        uMatrixLocation = glGetUniformLocation(mProgram, "u_Matrix");
 
         setIdentityM(mMatrix, 0);
 //        scaleM(mMatrix, 0, -1, 1, 1);

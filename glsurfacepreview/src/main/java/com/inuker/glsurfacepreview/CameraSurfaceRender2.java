@@ -25,7 +25,7 @@ import static android.opengl.GLES20.glViewport;
  * Created by liwentian on 17/8/16.
  */
 
-public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.PreviewCallback {
+public class CameraSurfaceRender2 implements GLSurfaceView.Renderer, Camera.PreviewCallback {
 
     private Camera mCamera;
 
@@ -37,20 +37,27 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     private GLSurfaceView mGLSurfaceView;
 
-    public CameraSurfaceRender(GLSurfaceView glSurfaceView) {
+    private int mPreviewWidth = 1280;
+    private int mPreviewHeight = 720;
+
+//    private int mPreviewWidth = 1920;
+//    private int mPreviewHeight = 1080;
+
+    public CameraSurfaceRender2(GLSurfaceView glSurfaceView) {
         mGLSurfaceView = glSurfaceView;
     }
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
         mCamera = Camera.open(1);
+        Camera.Parameters parameters = mCamera.getParameters();
+        parameters.setPreviewSize(mPreviewWidth, mPreviewHeight);
+        mCamera.setParameters(parameters);
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        glViewport(0, 0, width, height);
-
-        int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
+        int bufferSize = mPreviewWidth * mPreviewHeight * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
 
         mYUVBuffer = ByteBuffer.allocateDirect(bufferSize)
                 .order(ByteOrder.nativeOrder());
@@ -59,7 +66,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
         glGenTextures(1, textures, 0);
         mSurfaceTexture = new SurfaceTexture(textures[0]);
 
-        mYUVProgram = new YUVProgram(mGLSurfaceView.getContext(), width, height);
+        mYUVProgram = new YUVProgram(mGLSurfaceView.getContext(), mPreviewWidth, mPreviewHeight);
 
         try {
             mCamera.setPreviewTexture(mSurfaceTexture);
@@ -81,6 +88,8 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
     public void onDrawFrame(GL10 gl) {
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glClearColor(1f, 1f, 1f, 1f);
+
+        glViewport(0, 0, mPreviewHeight, mPreviewWidth);
 
         synchronized (mYUVBuffer) {
             mYUVProgram.draw(mYUVBuffer.array());

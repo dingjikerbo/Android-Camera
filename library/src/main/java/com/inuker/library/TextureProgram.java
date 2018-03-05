@@ -48,10 +48,10 @@ public class TextureProgram extends ShaderProgram {
     public TextureProgram(Context context, int vertexShader, int fragmentShader, int width, int height) {
         super(context, vertexShader, fragmentShader, width, height);
 
-        mUniformTextureLocation = glGetUniformLocation(program, "s_texture");
+        mUniformTextureLocation = glGetUniformLocation(mProgram, "s_texture");
 
-        aPositionLocation = glGetAttribLocation(program, "a_Position");
-        aTextureCoordinatesLocation = glGetAttribLocation(program, "a_TextureCoordinates");
+        aPositionLocation = glGetAttribLocation(mProgram, "a_Position");
+        aTextureCoordinatesLocation = glGetAttribLocation(mProgram, "a_TextureCoordinates");
     }
 
 

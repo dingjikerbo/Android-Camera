@@ -11,32 +11,32 @@ import static android.opengl.GLES20.glUseProgram;
 
 public class ShaderProgram {
 
-    protected int program;
+    protected int mProgram;
 
-    protected final int width, height;
+    protected int mWidth, mHeight;
 
-    protected Context context;
+    protected final Context mContext;
 
     protected ShaderProgram(Context context, int vertexId, int fragId) {
         this(context, vertexId, fragId, 0, 0);
     }
 
     protected ShaderProgram(Context context, int vertexId, int fragId, int width, int height) {
-        this.context = context;
+        mContext = context;
 
-        program = ShaderHelper.buildProgram(ResourceUtils.readText(context, vertexId),
+        mProgram = ShaderHelper.buildProgram(ResourceUtils.readText(context, vertexId),
                 ResourceUtils.readText(context, fragId));
 
-        this.width = Math.max(width, height);
-        this.height = Math.min(width, height);
+        mWidth = width;
+        mHeight = height;
     }
 
     public void useProgram() {
-        glUseProgram(program);
+        glUseProgram(mProgram);
     }
 
     public void release() {
-        glDeleteProgram(program);
-        program = -1;
+        glDeleteProgram(mProgram);
+        mProgram = -1;
     }
 }

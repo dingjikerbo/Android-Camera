@@ -62,10 +62,10 @@ public class YUVProgram extends ShaderProgram {
     };
 
     // Attribute locations
-    private final int aPositionLocation;
-    private final int aTextureCoordinatesLocation;
+    private final int mPositionLocation;
+    private final int mTextureCoordinatesLocation;
 
-    private final int uMVPMatrixLocation;
+    private final int mMVPMatrixLocation;
 
     private final FloatBuffer mGLCubeBuffer;
     private final FloatBuffer mGLTextureBuffer;
@@ -77,14 +77,17 @@ public class YUVProgram extends ShaderProgram {
     private float[] mMatrix = new float[16];
 
     public YUVProgram(Context context, int width, int height) {
-        super(context, R.raw.yuv_vertex, R.raw.yuv_fragment, width, height);
+        super(context, R.raw.yuv_vertex, R.raw.yuv_fragment);
 
-        mUniformYTextureLocation = glGetUniformLocation(program, "y_texture");
-        mUniformUVTextureLocation = glGetUniformLocation(program, "uv_texture");
-        uMVPMatrixLocation = glGetUniformLocation(program, "uMVPMatrix");
+        mWidth = Math.max(width, height);
+        mHeight = Math.min(width, height);
 
-        aPositionLocation = glGetAttribLocation(program, "a_Position");
-        aTextureCoordinatesLocation = glGetAttribLocation(program, "a_TextureCoordinates");
+        mUniformYTextureLocation = glGetUniformLocation(mProgram, "y_texture");
+        mUniformUVTextureLocation = glGetUniformLocation(mProgram, "uv_texture");
+        mMVPMatrixLocation = glGetUniformLocation(mProgram, "uMVPMatrix");
+
+        mPositionLocation = glGetAttribLocation(mProgram, "a_Position");
+        mTextureCoordinatesLocation = glGetAttribLocation(mProgram, "a_TextureCoordinates");
 
         mGLCubeBuffer = ByteBuffer.allocateDirect(CUBE.length * 4)
                 .order(ByteOrder.nativeOrder())
@@ -131,39 +134,39 @@ public class YUVProgram extends ShaderProgram {
         useProgram();
 
         mYBuffer.position(0);
-        mYBuffer.put(data, 0, width * height);
+        mYBuffer.put(data, 0, mWidth * mHeight);
 
         mUVBuffer.position(0);
-        mUVBuffer.put(data, width * height, width * height / 2);
+        mUVBuffer.put(data, mWidth * mHeight, mWidth * mHeight / 2);
 
         mYBuffer.position(0);
         glActiveTexture(GL_TEXTURE0);
         glBindTexture(GL_TEXTURE_2D, mYTestureId);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE, width, height,
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE, mWidth, mHeight,
                 0, GL_LUMINANCE, GL_UNSIGNED_BYTE, mYBuffer);
         glUniform1i(mUniformYTextureLocation, 0);
 
         mUVBuffer.position(0);
         glActiveTexture(GL_TEXTURE1);
         glBindTexture(GL_TEXTURE_2D, mUVTextureId);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE_ALPHA, width / 2, height / 2,
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_LUMINANCE_ALPHA, mWidth / 2, mHeight / 2,
                 0, GL_LUMINANCE_ALPHA, GL_UNSIGNED_BYTE, mUVBuffer);
         glUniform1i(mUniformUVTextureLocation, 1);
 
         Matrix.setIdentityM(mMatrix, 0);
-        int orientation = context.getResources().getConfiguration().orientation;
+        int orientation = mContext.getResources().getConfiguration().orientation;
         int degrees = orientation == Configuration.ORIENTATION_LANDSCAPE ? 0 : -90;
         Matrix.rotateM(mMatrix, 0, degrees, 0.0f, 0.0f, 1.0f);
 
-        GLES20.glUniformMatrix4fv(uMVPMatrixLocation, 1, false, mMatrix, 0);
+        GLES20.glUniformMatrix4fv(mMVPMatrixLocation, 1, false, mMatrix, 0);
 
         mGLCubeBuffer.position(0);
-        glVertexAttribPointer(aPositionLocation, 2, GL_FLOAT, false, 0, mGLCubeBuffer);
-        glEnableVertexAttribArray(aPositionLocation);
+        glVertexAttribPointer(mPositionLocation, 2, GL_FLOAT, false, 0, mGLCubeBuffer);
+        glEnableVertexAttribArray(mPositionLocation);
 
         mGLTextureBuffer.position(0);
-        glVertexAttribPointer(aTextureCoordinatesLocation, 2, GL_FLOAT, false, 0, mGLTextureBuffer);
-        glEnableVertexAttribArray(aTextureCoordinatesLocation);
+        glVertexAttribPointer(mTextureCoordinatesLocation, 2, GL_FLOAT, false, 0, mGLTextureBuffer);
+        glEnableVertexAttribArray(mTextureCoordinatesLocation);
 
         glDrawArrays(GL_TRIANGLE_STRIP, 0, 4);
     }
