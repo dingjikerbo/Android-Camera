@@ -6,9 +6,7 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.EGL14;
 import android.opengl.EGLContext;
-import android.opengl.GLES30;
 import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.Message;
 import android.view.SurfaceHolder;
 
@@ -16,7 +14,6 @@ import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.EventDispatcher;
 import com.inuker.library.LogUtils;
-import com.inuker.library.OffscreenSurface;
 import com.inuker.library.TextureProgram;
 import com.inuker.library.WindowSurface;
 import com.inuker.library.YUVProgram;
@@ -27,7 +24,6 @@ import java.nio.ByteOrder;
 
 import static android.opengl.GLES20.GL_CLAMP_TO_EDGE;
 import static android.opengl.GLES20.GL_COLOR_ATTACHMENT0;
-import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
 import static android.opengl.GLES20.GL_FRAMEBUFFER;
 import static android.opengl.GLES20.GL_FRAMEBUFFER_COMPLETE;
 import static android.opengl.GLES20.GL_LINEAR;
@@ -42,8 +38,6 @@ import static android.opengl.GLES20.GL_UNSIGNED_BYTE;
 import static android.opengl.GLES20.glBindFramebuffer;
 import static android.opengl.GLES20.glBindTexture;
 import static android.opengl.GLES20.glCheckFramebufferStatus;
-import static android.opengl.GLES20.glClear;
-import static android.opengl.GLES20.glClearColor;
 import static android.opengl.GLES20.glFramebufferTexture2D;
 import static android.opengl.GLES20.glGenFramebuffers;
 import static android.opengl.GLES20.glGenTextures;
@@ -179,9 +173,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
         mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mYUVProgram.setUniforms(mYUVBuffer.array());
+            mYUVProgram.draw(mYUVBuffer.array());
         }
-        mYUVProgram.draw();
 
         glBindFramebuffer(GL_FRAMEBUFFER, 0);
         mTextureProgram.draw(mOffscreenTexture);
