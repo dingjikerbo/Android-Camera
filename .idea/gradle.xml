@@ -9,7 +9,6 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/datacopy" />
             <option value="$PROJECT_DIR$/glsurfacepreview" />
             <option value="$PROJECT_DIR$/glsurfacepreview2" />
             <option value="$PROJECT_DIR$/glsurfacepreview3" />

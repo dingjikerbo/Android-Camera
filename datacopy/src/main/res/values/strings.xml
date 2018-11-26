@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">DataCopy</string>
-
-    <string-array name="converters">
-        <item>copy java to java</item>
-        <item>copy java to jni</item>
-        <item>copy jni to java</item>
-    </string-array>
-</resources>
