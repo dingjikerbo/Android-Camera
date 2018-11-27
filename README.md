@@ -7,7 +7,7 @@
 
 |序号|项目名称|内容简介|状态|
 |--- |-------|-------|------|
-|1|GLSurfacePreview|[拿到相机帧数据，直接绘制到屏幕](doc/相机预览总结.md)|Done|
+|1|GLSurfacePreview|[拿到相机帧数据，直接绘制到屏幕](doc/glsurfacepreview.md)|Done|
 |2|GLSurfacePreview2|[拿到相机帧数据，先绘制到FBO，离线处理后(变红)绘制到屏幕](doc/glsurfacepreview2.md)|Done|
 |3|GLSurfacePreview3|[GLSurfaceView + OpenGL相机预览，直接从相机的输出SurfaceTexture上复制数据到Display Surface](doc/glsurfacepreview3.md)|Done|
 |4|SurfacePreview|[SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface](doc/surfacepreview.md)|Done|
