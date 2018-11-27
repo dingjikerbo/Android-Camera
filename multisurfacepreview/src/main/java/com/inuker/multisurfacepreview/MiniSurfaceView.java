@@ -2,8 +2,6 @@ package com.inuker.multisurfacepreview;
 
 import android.content.Context;
 import android.opengl.EGLContext;
-import android.opengl.GLES30;
-import android.opengl.GLU;
 import android.os.Handler;
 import android.os.Message;
 import android.view.SurfaceHolder;
@@ -12,14 +10,11 @@ import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.EventDispatcher;
 import com.inuker.library.EventListener;
-import com.inuker.library.GlUtil;
-import com.inuker.library.LogUtils;
-import com.inuker.library.OffscreenSurface;
-import com.inuker.library.TextureProgram;
+import com.inuker.library.utils.GlUtil;
+import com.inuker.library.utils.LogUtils;
+import com.inuker.library.program.TextureProgram;
 import com.inuker.library.WindowSurface;
 
-import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
-import static android.opengl.GLES20.GL_NEAREST;
 import static com.inuker.multisurfacepreview.Events.EVENTS_DRAW;
 
 /**

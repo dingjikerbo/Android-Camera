@@ -9,13 +9,13 @@ import android.os.Message;
 import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
-import com.inuker.library.CameraHelper;
+import com.inuker.library.utils.CameraHelper;
 import com.inuker.library.EglCore;
-import com.inuker.library.BaseMovieEncoder;
-import com.inuker.library.MovieEncoder2;
-import com.inuker.library.TextureProgram;
+import com.inuker.library.encoder.BaseMovieEncoder;
+import com.inuker.library.encoder.MovieEncoder2;
+import com.inuker.library.program.TextureProgram;
 import com.inuker.library.WindowSurface;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.File;
 import java.io.IOException;

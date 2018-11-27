@@ -4,8 +4,7 @@ import android.content.Context;
 import android.graphics.Color;
 
 import com.inuker.library.Face;
-import com.inuker.library.LogUtils;
-import com.inuker.library.RectProgram;
+import com.inuker.library.program.RectProgram;
 
 /**
  * Created by liwentian on 2017/10/31.

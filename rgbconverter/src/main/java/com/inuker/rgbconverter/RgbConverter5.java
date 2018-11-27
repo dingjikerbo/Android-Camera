@@ -1,19 +1,13 @@
 package com.inuker.rgbconverter;
 
 import android.content.Context;
-import android.opengl.GLES20;
 import android.opengl.GLES30;
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Message;
 
-import com.inuker.library.EglCore;
 import com.inuker.library.EventDispatcher;
-import com.inuker.library.GlUtil;
-import com.inuker.library.LogUtils;
-import com.inuker.library.NativeUtils;
-import com.inuker.library.OffscreenSurface;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.utils.GlUtil;
+import com.inuker.library.utils.LogUtils;
+import com.inuker.library.utils.NativeUtils;
+import com.inuker.library.program.YUVProgram;
 
 import java.nio.ByteBuffer;
 

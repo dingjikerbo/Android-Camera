@@ -7,8 +7,8 @@ import android.opengl.GLES30;
 
 import com.inuker.library.BaseApplication;
 import com.inuker.library.EventDispatcher;
-import com.inuker.library.GlUtil;
-import com.inuker.library.LogUtils;
+import com.inuker.library.utils.GlUtil;
+import com.inuker.library.utils.LogUtils;
 import com.inuker.library.RuntimeCounter;
 
 import java.nio.ByteBuffer;

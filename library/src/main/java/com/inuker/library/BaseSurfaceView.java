@@ -11,8 +11,9 @@ import android.util.AttributeSet;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 
+import com.inuker.library.utils.LogUtils;
+
 import java.util.LinkedList;
-import java.util.List;
 import java.util.Queue;
 
 /**

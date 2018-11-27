@@ -12,7 +12,7 @@ import com.inuker.library.BaseApplication;
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.WindowSurface;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

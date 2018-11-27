@@ -1,13 +1,8 @@
 package com.inuker.rgbconverter;
 
 import android.content.Context;
-import android.os.Handler;
-import android.os.HandlerThread;
-import android.os.Message;
 
-import com.inuker.library.EglCore;
-import com.inuker.library.OffscreenSurface;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.program.YUVProgram;
 
 /**
  * Created by liwentian on 17/8/21.

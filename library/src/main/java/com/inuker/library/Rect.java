@@ -3,6 +3,8 @@ package com.inuker.library;
 import android.graphics.Color;
 
 
+import com.inuker.library.program.RectProgram;
+
 import static android.opengl.GLES20.GL_LINE_STRIP;
 import static android.opengl.GLES20.glDrawArrays;
 

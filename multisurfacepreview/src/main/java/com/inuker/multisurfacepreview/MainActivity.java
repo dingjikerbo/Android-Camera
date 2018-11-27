@@ -1,14 +1,11 @@
 package com.inuker.multisurfacepreview;
 
-import android.app.Activity;
-import android.opengl.EGL14;
 import android.opengl.EGLContext;
 import android.os.Bundle;
-import android.view.SurfaceView;
 import android.widget.FrameLayout;
 
 import com.inuker.library.BaseActivity;
-import com.inuker.library.LogUtils;
+import com.inuker.library.utils.LogUtils;
 
 /**
  * 两个SurfaceView共享EglContext，CameraSurfaceView将相机预览绘制到

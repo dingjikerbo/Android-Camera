@@ -4,10 +4,7 @@ import android.content.Context;
 import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
-import android.opengl.GLES20;
 import android.opengl.GLES30;
-import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.Message;
 import android.view.SurfaceHolder;
 
@@ -15,14 +12,13 @@ import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.OffscreenSurface;
 import com.inuker.library.WindowSurface;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 import static android.opengl.GLES20.GL_COLOR_BUFFER_BIT;
-import static android.opengl.GLES20.GL_LINEAR;
 import static android.opengl.GLES20.GL_NEAREST;
 import static android.opengl.GLES20.glClear;
 import static android.opengl.GLES20.glClearColor;

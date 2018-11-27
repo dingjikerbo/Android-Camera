@@ -5,6 +5,8 @@ import android.content.Context;
 import android.os.Handler;
 import android.view.WindowManager;
 
+import com.inuker.library.utils.LogUtils;
+
 /**
  * Created by liwentian on 17/8/16.
  */

@@ -1,5 +1,7 @@
 package com.inuker.library;
 
+import com.inuker.library.program.ShaderProgram;
+
 /**
  * Created by liwentian on 17/6/23.
  */

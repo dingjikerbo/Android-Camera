@@ -3,6 +3,7 @@ package com.example.dingjikerbo.glsurfacepreview3;
 import android.app.Activity;
 import android.opengl.GLSurfaceView;
 import android.os.Bundle;
+import android.util.Log;
 
 public class MainActivity extends Activity {
 
@@ -14,6 +15,8 @@ public class MainActivity extends Activity {
 
         mGLSurfaceView = new GLSurfaceView(this);
         setContentView(mGLSurfaceView);
+
+        Log.v("bush", "hello world");
 
         mGLSurfaceView.setEGLContextClientVersion(3);
         mGLSurfaceView.setRenderer(new CameraSurfaceRender(mGLSurfaceView));

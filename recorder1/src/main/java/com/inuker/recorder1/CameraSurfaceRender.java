@@ -5,11 +5,11 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
-import com.inuker.library.CameraHelper;
-import com.inuker.library.LogUtils;
-import com.inuker.library.BaseMovieEncoder;
-import com.inuker.library.MovieEncoder1;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.utils.CameraHelper;
+import com.inuker.library.utils.LogUtils;
+import com.inuker.library.encoder.BaseMovieEncoder;
+import com.inuker.library.encoder.MovieEncoder1;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.File;
 import java.io.IOException;

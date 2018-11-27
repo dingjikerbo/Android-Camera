@@ -2,8 +2,8 @@ package com.inuker.glsurfacepreview2;
 
 import android.content.Context;
 
-import com.inuker.library.GlUtil;
-import com.inuker.library.ShaderProgram;
+import com.inuker.library.utils.GlUtil;
+import com.inuker.library.program.ShaderProgram;
 
 import java.nio.FloatBuffer;
 

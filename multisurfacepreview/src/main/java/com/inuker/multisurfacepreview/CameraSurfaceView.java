@@ -13,10 +13,10 @@ import android.view.SurfaceHolder;
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.EventDispatcher;
-import com.inuker.library.LogUtils;
-import com.inuker.library.TextureProgram;
+import com.inuker.library.utils.LogUtils;
+import com.inuker.library.program.TextureProgram;
 import com.inuker.library.WindowSurface;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;

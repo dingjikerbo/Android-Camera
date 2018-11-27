@@ -5,14 +5,12 @@ import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLES30;
-import android.os.Handler;
-import android.os.HandlerThread;
 import android.os.Message;
 import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.program.YUVProgram;
 import com.inuker.library.WindowSurface;
 
 import java.io.IOException;

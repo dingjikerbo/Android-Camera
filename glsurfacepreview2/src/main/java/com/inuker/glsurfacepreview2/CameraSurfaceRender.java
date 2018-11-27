@@ -5,9 +5,8 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
-import com.inuker.library.LogUtils;
-import com.inuker.library.TextureProgram;
-import com.inuker.library.YUVProgram;
+import com.inuker.library.utils.LogUtils;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
