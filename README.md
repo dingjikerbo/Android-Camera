@@ -9,7 +9,7 @@
 |--- |-------|-------|------|
 |1|GLSurfacePreview|[拿到相机帧数据，直接绘制到屏幕](doc/glsurfacepreview.md)|Done|
 |2|GLSurfacePreview2|[拿到相机帧数据，先绘制到FBO，离线处理后(变红)绘制到屏幕](doc/glsurfacepreview2.md)|Done|
-|3|GLSurfacePreview3|[GLSurfaceView + OpenGL相机预览，直接从相机的输出SurfaceTexture上复制数据到Display Surface](doc/glsurfacepreview3.md)|Done|
+|3|GLSurfacePreview3|[直接给相机的预览纹理绘制到屏幕](doc/glsurfacepreview3.md)|Done|
 |4|SurfacePreview|[SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface](doc/surfacepreview.md)|Done|
 |5|SurfacePreview2|[SurfaceView + OpenGL + EGL相机预览，先绘制到PBuffer，再Blit到Display Surface](doc/surfacepreview2.md)|Done|
 |6|MultiSurfacePreview|[相机预览到两个SurfaceView，共享EglContext，先绘制到Texture，再将Texture处理后Draw到另一个Surface](doc/multisurfacepreview.md)|Done|
