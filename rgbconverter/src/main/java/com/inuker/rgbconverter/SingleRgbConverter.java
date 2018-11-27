@@ -7,11 +7,11 @@ import android.os.Message;
 import android.support.annotation.CallSuper;
 
 import com.inuker.library.EglCore;
-import com.inuker.library.utils.LogUtils;
 import com.inuker.library.OffscreenSurface;
+import com.inuker.library.utils.LogUtils;
 
 /**
- * Created by liwentian on 17/8/22.
+ * Created by dingjikerbo on 17/8/22.
  */
 
 public class SingleRgbConverter extends RgbConverter implements Handler.Callback {

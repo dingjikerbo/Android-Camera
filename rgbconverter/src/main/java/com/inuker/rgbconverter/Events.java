@@ -1,7 +1,7 @@
 package com.inuker.rgbconverter;
 
 /**
- * Created by liwentian on 17/8/21.
+ * Created by dingjikerbo on 17/8/21.
  */
 
 public class Events {

@@ -3,11 +3,11 @@ package com.inuker.rgbconverter;
 import android.content.Context;
 import android.opengl.GLES30;
 
-import com.inuker.library.utils.GlUtil;
 import com.inuker.library.program.YUVProgram;
+import com.inuker.library.utils.GlUtil;
 
 /**
- * Created by liwentian on 17/8/22.
+ * Created by dingjikerbo on 17/8/22.
  */
 
 public class RgbConverter3 extends SingleRgbConverter {

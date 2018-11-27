@@ -23,8 +23,8 @@ import android.os.Looper;
 import android.os.Message;
 
 import com.inuker.library.EglCore;
-import com.inuker.library.utils.LogUtils;
 import com.inuker.library.WindowSurface;
+import com.inuker.library.utils.LogUtils;
 
 import java.io.File;
 import java.lang.ref.WeakReference;

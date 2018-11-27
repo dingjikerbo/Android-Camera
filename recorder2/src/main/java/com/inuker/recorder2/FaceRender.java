@@ -7,7 +7,7 @@ import com.inuker.library.Face;
 import com.inuker.library.program.RectProgram;
 
 /**
- * Created by liwentian on 2017/10/31.
+ * Created by dingjikerbo on 2017/10/31.
  */
 
 public class FaceRender {

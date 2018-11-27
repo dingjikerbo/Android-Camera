@@ -5,7 +5,7 @@ import android.content.Context;
 import com.inuker.library.program.TextureProgram;
 
 /**
- * Created by liwentian on 2017/10/31.
+ * Created by dingjikerbo on 2017/10/31.
  */
 
 public class MovieEncoder2 extends BaseMovieEncoder {

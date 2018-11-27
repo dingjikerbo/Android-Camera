@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Locale;
 
 /**
- * Created by liwentian on 2017/8/29.
+ * Created by dingjikerbo on 2017/8/29.
  */
 
 public class CameraHelper {

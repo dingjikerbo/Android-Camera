@@ -3,7 +3,7 @@ package com.inuker.recorder2;
 import com.inuker.library.BaseApplication;
 
 /**
- * Created by liwentian on 2017/10/31.
+ * Created by dingjikerbo on 2017/10/31.
  */
 
 public class MyApplication extends BaseApplication {

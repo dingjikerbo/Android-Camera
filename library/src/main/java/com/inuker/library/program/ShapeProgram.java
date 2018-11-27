@@ -7,7 +7,7 @@ import static android.opengl.GLES20.glGetUniformLocation;
 import static android.opengl.Matrix.setIdentityM;
 
 /**
- * Created by liwentian on 2017/10/31.
+ * Created by dingjikerbo on 2017/10/31.
  */
 
 public class ShapeProgram extends ShaderProgram {

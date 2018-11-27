@@ -2,14 +2,13 @@ package com.inuker.library;
 
 import android.graphics.Color;
 
-
 import com.inuker.library.program.RectProgram;
 
 import static android.opengl.GLES20.GL_LINE_STRIP;
 import static android.opengl.GLES20.glDrawArrays;
 
 /**
- * Created by liwentian on 17/6/23.
+ * Created by dingjikerbo on 17/6/23.
  */
 
 public class Rect extends Shape<RectProgram> {

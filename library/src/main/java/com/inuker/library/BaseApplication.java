@@ -8,7 +8,7 @@ import android.view.WindowManager;
 import com.inuker.library.utils.LogUtils;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class BaseApplication extends Application {

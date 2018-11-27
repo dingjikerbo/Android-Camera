@@ -10,8 +10,8 @@ import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
-import com.inuker.library.program.YUVProgram;
 import com.inuker.library.WindowSurface;
+import com.inuker.library.program.YUVProgram;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -20,7 +20,7 @@ import java.nio.ByteOrder;
 import static android.opengl.GLES20.glGenTextures;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceView extends BaseSurfaceView implements Camera.PreviewCallback {

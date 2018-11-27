@@ -9,7 +9,7 @@ import com.inuker.library.utils.LogUtils;
 import java.nio.ByteBuffer;
 
 /**
- * Created by liwentian on 17/8/1.
+ * Created by dingjikerbo on 17/8/1.
  */
 
 public abstract class MediaEncoderCore {

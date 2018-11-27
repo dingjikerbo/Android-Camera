@@ -22,7 +22,7 @@ import static android.opengl.GLES20.glShaderSource;
 import static android.opengl.GLES20.glValidateProgram;
 
 /**
- * Created by liwentian on 17/6/22.
+ * Created by dingjikerbo on 17/6/22.
  */
 
 public class ShaderHelper {

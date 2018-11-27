@@ -22,7 +22,7 @@ import static android.opengl.GLES20.glGenTextures;
 import static android.opengl.GLES20.glViewport;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.PreviewCallback {

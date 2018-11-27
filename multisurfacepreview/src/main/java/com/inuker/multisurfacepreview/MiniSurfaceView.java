@@ -10,15 +10,15 @@ import com.inuker.library.BaseSurfaceView;
 import com.inuker.library.EglCore;
 import com.inuker.library.EventDispatcher;
 import com.inuker.library.EventListener;
+import com.inuker.library.WindowSurface;
+import com.inuker.library.program.TextureProgram;
 import com.inuker.library.utils.GlUtil;
 import com.inuker.library.utils.LogUtils;
-import com.inuker.library.program.TextureProgram;
-import com.inuker.library.WindowSurface;
 
 import static com.inuker.multisurfacepreview.Events.EVENTS_DRAW;
 
 /**
- * Created by liwentian on 17/8/17.
+ * Created by dingjikerbo on 17/8/17.
  */
 
 public class MiniSurfaceView extends BaseSurfaceView implements Handler.Callback, EventListener {

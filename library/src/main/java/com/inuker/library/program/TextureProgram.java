@@ -2,8 +2,8 @@ package com.inuker.library.program;
 
 import android.content.Context;
 
-import com.inuker.library.utils.GlUtil;
 import com.inuker.library.R;
+import com.inuker.library.utils.GlUtil;
 
 import java.nio.FloatBuffer;
 
@@ -20,7 +20,7 @@ import static android.opengl.GLES20.glGetUniformLocation;
 import static android.opengl.GLES20.glVertexAttribPointer;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class TextureProgram extends ShaderProgram {

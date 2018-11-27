@@ -3,7 +3,7 @@ package com.inuker.rgbconverter;
 import android.content.Context;
 
 /**
- * Created by liwentian on 17/8/21.
+ * Created by dingjikerbo on 17/8/21.
  */
 
 public class RgbConverter1 extends RgbConverter {

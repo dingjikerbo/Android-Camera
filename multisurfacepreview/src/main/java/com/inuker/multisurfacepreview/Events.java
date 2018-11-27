@@ -1,7 +1,7 @@
 package com.inuker.multisurfacepreview;
 
 /**
- * Created by liwentian on 17/8/19.
+ * Created by dingjikerbo on 17/8/19.
  */
 
 public class Events {

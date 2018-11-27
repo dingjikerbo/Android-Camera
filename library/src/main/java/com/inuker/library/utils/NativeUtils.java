@@ -1,7 +1,7 @@
 package com.inuker.library.utils;
 
 /**
- * Created by liwentian on 17/8/22.
+ * Created by dingjikerbo on 17/8/22.
  */
 
 public class NativeUtils {

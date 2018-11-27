@@ -3,7 +3,7 @@ package com.inuker.library;
 import static android.opengl.GLES20.glLineWidth;
 
 /**
- * Created by liwentian on 2017/10/31.
+ * Created by dingjikerbo on 2017/10/31.
  */
 
 public class Face extends Rect {

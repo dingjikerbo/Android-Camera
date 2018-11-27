@@ -21,7 +21,7 @@ import java.nio.ByteOrder;
 import static android.opengl.GLES20.glGenTextures;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceView extends BaseSurfaceView implements Camera.PreviewCallback {

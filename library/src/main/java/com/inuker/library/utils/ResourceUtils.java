@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 /**
- * Created by liwentian on 17/6/22.
+ * Created by dingjikerbo on 17/6/22.
  */
 
 public class ResourceUtils {

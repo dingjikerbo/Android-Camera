@@ -10,7 +10,7 @@ import android.os.Message;
 import android.support.annotation.Nullable;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class BaseActivity extends Activity implements Handler.Callback {

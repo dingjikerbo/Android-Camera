@@ -5,7 +5,7 @@ import android.content.Context;
 import com.inuker.library.program.YUVProgram;
 
 /**
- * Created by liwentian on 17/8/21.
+ * Created by dingjikerbo on 17/8/21.
  */
 
 public class RgbConverter2 extends SingleRgbConverter {

@@ -10,7 +10,7 @@ import android.widget.Button;
 import com.inuker.library.BaseActivity;
 
 /**
- * Created by liwentian on 17/8/22.
+ * Created by dingjikerbo on 17/8/22.
  */
 
 public class LaunchActivity extends BaseActivity {

@@ -5,11 +5,11 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
-import com.inuker.library.utils.CameraHelper;
-import com.inuker.library.utils.LogUtils;
 import com.inuker.library.encoder.BaseMovieEncoder;
 import com.inuker.library.encoder.MovieEncoder1;
 import com.inuker.library.program.YUVProgram;
+import com.inuker.library.utils.CameraHelper;
+import com.inuker.library.utils.LogUtils;
 
 import java.io.File;
 import java.io.IOException;
@@ -26,7 +26,7 @@ import static android.opengl.GLES20.glClearColor;
 import static android.opengl.GLES20.glGenTextures;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.PreviewCallback {

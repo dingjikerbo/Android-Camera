@@ -9,7 +9,7 @@ import static android.opengl.GLES20.glDeleteProgram;
 import static android.opengl.GLES20.glUseProgram;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class ShaderProgram {

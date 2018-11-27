@@ -1,16 +1,12 @@
 package com.inuker.library;
 
-import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
-import android.os.Message;
 import android.util.SparseArray;
 
 import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by liwentian on 17/8/17.
+ * Created by dingjikerbo on 17/8/17.
  */
 
 public class EventDispatcher {

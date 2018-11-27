@@ -4,15 +4,15 @@ import android.content.Context;
 import android.opengl.GLES30;
 
 import com.inuker.library.EventDispatcher;
+import com.inuker.library.program.YUVProgram;
 import com.inuker.library.utils.GlUtil;
 import com.inuker.library.utils.LogUtils;
 import com.inuker.library.utils.NativeUtils;
-import com.inuker.library.program.YUVProgram;
 
 import java.nio.ByteBuffer;
 
 /**
- * Created by liwentian on 17/8/22.
+ * Created by dingjikerbo on 17/8/22.
  */
 
 public class RgbConverter5 extends SingleRgbConverter {

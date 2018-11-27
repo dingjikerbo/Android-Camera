@@ -7,15 +7,15 @@ import android.opengl.GLES30;
 
 import com.inuker.library.BaseApplication;
 import com.inuker.library.EventDispatcher;
+import com.inuker.library.RuntimeCounter;
 import com.inuker.library.utils.GlUtil;
 import com.inuker.library.utils.LogUtils;
-import com.inuker.library.RuntimeCounter;
 
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
 
 /**
- * Created by liwentian on 17/8/21.
+ * Created by dingjikerbo on 17/8/21.
  */
 
 public abstract class RgbConverter implements IRgbConverter {

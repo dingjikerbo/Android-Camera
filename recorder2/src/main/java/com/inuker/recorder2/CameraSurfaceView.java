@@ -9,13 +9,13 @@ import android.os.Message;
 import android.view.SurfaceHolder;
 
 import com.inuker.library.BaseSurfaceView;
-import com.inuker.library.utils.CameraHelper;
 import com.inuker.library.EglCore;
+import com.inuker.library.WindowSurface;
 import com.inuker.library.encoder.BaseMovieEncoder;
 import com.inuker.library.encoder.MovieEncoder2;
 import com.inuker.library.program.TextureProgram;
-import com.inuker.library.WindowSurface;
 import com.inuker.library.program.YUVProgram;
+import com.inuker.library.utils.CameraHelper;
 
 import java.io.File;
 import java.io.IOException;
@@ -49,7 +49,7 @@ import static android.opengl.GLES20.glTexParameterf;
 import static android.opengl.GLES20.glTexParameteri;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceView extends BaseSurfaceView implements Camera.PreviewCallback {

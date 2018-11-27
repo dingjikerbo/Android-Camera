@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 /**
- * Created by liwentian on 17/8/1.
+ * Created by dingjikerbo on 17/8/1.
  */
 
 public class AndroidMuxer {

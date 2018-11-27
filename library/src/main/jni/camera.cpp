@@ -1,12 +1,10 @@
 //
-// Created by liwentian on 17/6/1.
+// Created by dingjikerbo on 17/6/1.
 //
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <jni.h>
-
-#include <android/log.h>
 
 #include <GLES3/gl3.h>
 

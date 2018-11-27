@@ -20,8 +20,84 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06c6953f-7d73-423f-8ada-ad5f1ec63f44" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/app/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/app/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/androidTest/java/com/inuker/camera/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/inuker/camera/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/test/java/com/inuker/camera/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/test/java/com/inuker/camera/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview2/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview2/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/CameraSurfaceRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/FilterTextureProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/FilterTextureProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/androidTest/java/com/example/dingjikerbo/glsurfacepreview3/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/androidTest/java/com/example/dingjikerbo/glsurfacepreview3/ExampleInstrumentedTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/test/java/com/example/dingjikerbo/glsurfacepreview3/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/test/java/com/example/dingjikerbo/glsurfacepreview3/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/CameraSurfaceRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/library/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventDispatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventDispatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EventListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Face.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Face.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Rect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/RuntimeCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/RuntimeCounter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/VertexArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/VertexArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/AndroidMuxer.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/AndroidMuxer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/AudioEncoderCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/AudioEncoderCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/BaseMovieEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/BaseMovieEncoder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MediaEncoderCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MediaEncoderCore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder2.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/RectProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/RectProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/ShaderProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/ShapeProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/ShapeProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/TextureProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/TextureProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/YUVProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/YUVProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/CameraHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/CameraHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/LogUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/NativeUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ResourceUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ShaderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ShaderHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/TaskUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/TaskUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/jni/camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/jni/camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/androidTest/java/com/inuker/multiglsurfacepreview/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/androidTest/java/com/inuker/multiglsurfacepreview/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/Events.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/test/java/com/inuker/multiglsurfacepreview/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/test/java/com/inuker/multiglsurfacepreview/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder1/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder1/src/androidTest/java/com/inuker/recorder1/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/src/androidTest/java/com/inuker/recorder1/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder1/src/test/java/com/inuker/recorder1/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/src/test/java/com/inuker/recorder1/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/src/androidTest/java/com/inuker/recorder2/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/androidTest/java/com/inuker/recorder2/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/FaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/FaceRender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/MainActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/MyApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/MyApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder2/src/test/java/com/inuker/recorder2/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/test/java/com/inuker/recorder2/ExampleUnitTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/Events.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/Events.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/IRgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/IRgbConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/ISurfaceContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/ISurfaceContainer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/LaunchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/LaunchActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter1.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter3.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surfacepreview/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surfacepreview2/proguard-rules.pro" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview2/proguard-rules.pro" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surfacepreview2/src/androidTest/java/com/inuker/glsurfacepreview3/ExampleInstrumentedTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview2/src/androidTest/java/com/inuker/glsurfacepreview3/ExampleInstrumentedTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/surfacepreview2/src/test/java/com/inuker/glsurfacepreview3/ExampleUnitTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview2/src/test/java/com/inuker/glsurfacepreview3/ExampleUnitTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,20 +123,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="144">
+              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraSurfaceRender.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
+      <file leaf-file-name="CameraSurfaceRender.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+            <state relative-caret-position="302">
+              <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -79,7 +155,11 @@
       <find>mmatrix</find>
       <find>mWidth</find>
       <find>glUniformMatrix4fv</find>
+      <find>liwentian</find>
     </findStrings>
+    <replaceStrings>
+      <replace>dingjikerbo</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -11525,6 +11605,7 @@
         <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" />
         <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" />
+        <option value="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java" />
       </list>
     </option>
   </component>
@@ -11575,7 +11656,7 @@
           <expand>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
             </path>
           </expand>
           <select />
@@ -12279,9 +12360,9 @@
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17811158" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.18343195" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32988167" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49928468" weight="0.18343195" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32988167" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
@@ -12375,13 +12456,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="622">
-          <caret line="62" lean-forward="true" selection-start-line="62" selection-end-line="62" />
         </state>
       </provider>
     </entry>
@@ -12661,15 +12735,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
+        <state relative-caret-position="170">
+          <caret line="68" column="32" lean-forward="true" selection-start-line="68" selection-start-column="32" selection-end-line="68" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="144">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="33" column="35" lean-forward="true" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -3,7 +3,6 @@ package com.example.dingjikerbo.glsurfacepreview3;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
-import android.util.Log;
 
 import com.inuker.library.program.OESProgram;
 

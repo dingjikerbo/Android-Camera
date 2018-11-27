@@ -3,7 +3,7 @@ package com.inuker.library;
 import com.inuker.library.program.ShaderProgram;
 
 /**
- * Created by liwentian on 17/6/23.
+ * Created by dingjikerbo on 17/6/23.
  */
 
 public abstract class Shape<T extends ShaderProgram> {

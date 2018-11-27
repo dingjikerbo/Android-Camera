@@ -5,8 +5,8 @@ import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
 
-import com.inuker.library.utils.LogUtils;
 import com.inuker.library.program.YUVProgram;
+import com.inuker.library.utils.LogUtils;
 
 import java.io.IOException;
 import java.nio.ByteBuffer;
@@ -39,7 +39,7 @@ import static android.opengl.GLES20.glTexParameterf;
 import static android.opengl.GLES20.glTexParameteri;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.PreviewCallback {
