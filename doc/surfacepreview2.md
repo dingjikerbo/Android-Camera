@@ -1,0 +1,9 @@
+# surfacepreview2工程
+
+本工程和surfacepreview工程的区别在于，surfacepreview工程是直接将相机帧数据绘制到WindowSurface上，而本工程是先将相机帧数据绘制到OffscreenSurface，再通过glBlitFramebuffer绘制到WindowSurface，即增加了一个离线处理的过程。
+
+这里要注意此处的OffscreenSurface其内部实现为PBuffer，与之前glsurfacepreview2工程的FBO是有所区别的，虽然同样是离线处理。
+
+pbuffer是和gl上下文绑定的，意味着切换pbuffer也要切换gl上下文，这个代价很大。相比之下，一个gl上下文下可以创建多个fbo，fbo之间的切换非常快，所以离屏渲染fbo是个更好的方案。
+
+pbuffer是平台相关的，eglCreateWindowSurface和eglCreatePbufferSurface，切换这两个surface是调用eglMakeCurrent，这个代价很大，另外pbuffer可以做成双缓冲的，和WindowSurface一样，而FBO是不行的。

@@ -108,9 +108,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
         mTextureProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mTextureProgram.setUniforms(mYUVBuffer.array());
+            mTextureProgram.draw(mYUVBuffer.array());
         }
-        mTextureProgram.draw();
 
         mWindowSurface.makeCurrentReadFrom(mOffscreenSurface);
 
