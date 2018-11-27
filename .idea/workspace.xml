@@ -9,6 +9,7 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="glRead" />
     <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
@@ -19,7 +20,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06c6953f-7d73-423f-8ada-ad5f1ec63f44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/jni/camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/jni/camera.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/LaunchActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/LaunchActivity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -44,53 +55,7 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MiniSurfaceView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1687">
-              <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EglCore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BaseSurfaceView.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1671">
-              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -106,6 +71,7 @@
       <find>glUniformMatrix4fv</find>
       <find>liwentian</find>
       <find>mOffscreenTexture</find>
+      <find>FPS_AVAILABLE</find>
     </findStrings>
     <replaceStrings>
       <replace>dingjikerbo</replace>
@@ -11561,6 +11527,15 @@
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" />
         <option value="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/LaunchActivity.java" />
+        <option value="$PROJECT_DIR$/library/src/main/jni/camera.cpp" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" />
       </list>
     </option>
   </component>
@@ -11611,18 +11586,18 @@
           <expand>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="multisurfacepreview" type="feadf853:AndroidModuleNode" />
+              <item name="rgbconverter" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="multisurfacepreview" type="feadf853:AndroidModuleNode" />
+              <item name="rgbconverter" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="multisurfacepreview" type="feadf853:AndroidModuleNode" />
+              <item name="rgbconverter" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="multisurfacepreview" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="rgbconverter" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -11663,7 +11638,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.multisurfacepreview">
+  <component name="RunManager" selected="Android App.rgbconverter">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -12076,7 +12051,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
     </configuration>
-    <configuration name="rgbconverter" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="rgbconverter" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="rgbconverter" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -12090,7 +12065,7 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -12310,7 +12285,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="796" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -12319,15 +12293,16 @@
       <window_info id="Build Variants" order="2" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.32988167" />
+      <window_info anchor="right" id="Preview" order="3" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Logcat" order="7" weight="0.36242604" />
+      <window_info anchor="bottom" id="Logcat" order="7" visible="true" weight="0.37278107" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.18343195" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49928468" weight="0.40828404" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988167" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -12336,7 +12311,6 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Preview" order="3" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -12353,105 +12327,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/GLHelper.java" />
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="194" selection-start-line="194" selection-end-line="194" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview2/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview2/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="27" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/android/opengl/GLSurfaceView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/styles.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/tex_fragment.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/tex_vertex.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/android/hardware/Camera.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="108" lean-forward="true" selection-start-line="108" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview4/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-26/android.jar!/android/hardware/Camera.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="107" column="45" selection-start-line="107" selection-start-column="45" selection-end-line="107" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-164" />
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-26/android.jar!/android/view/OrientationEventListener.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="20" column="26" lean-forward="true" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/RectProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/oes_vertex.glsl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" selection-start-column="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -12511,13 +12386,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
           <caret line="10" column="1" lean-forward="true" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/YUVProgram.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="81" column="53" selection-start-line="81" selection-start-column="53" selection-end-line="81" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -12647,13 +12515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/OffscreenSurface.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglSurfaceBase.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="253">
@@ -12675,31 +12536,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
+    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1671">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+        <state relative-caret-position="248">
+          <caret line="177" selection-start-line="177" selection-end-line="177" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1687">
-          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+          <caret line="70" column="37" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -12707,6 +12554,146 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
           <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="108" column="40" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1671">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/res/layout/launch_activity.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="7" column="15" lean-forward="true" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/LaunchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="41" column="37" lean-forward="true" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/jni/camera.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="41" column="55" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/LogUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/OffscreenSurface.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/YUVProgram.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1458">
+          <caret line="134" column="16" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="90" column="75" selection-start-line="90" selection-start-column="75" selection-end-line="90" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter3.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-702">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="81" column="27" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="123" selection-start-line="123" selection-end-line="123" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
         </state>
       </provider>
     </entry>

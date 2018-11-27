@@ -55,7 +55,6 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         mWindowSurface.makeCurrent();
 
         mYUVProgram = new YUVProgram(getContext(), BaseApplication.getScreenWidth(), BaseApplication.getScreenHeight());
-        mYUVProgram.setUpsideDown();
 
         mRgbConverter.start();
     }
@@ -115,9 +114,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
         mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mYUVProgram.setUniforms(mYUVBuffer.array());
+            mYUVProgram.draw(mYUVBuffer.array());
         }
-        mYUVProgram.draw();
 
         mWindowSurface.swapBuffers();
 

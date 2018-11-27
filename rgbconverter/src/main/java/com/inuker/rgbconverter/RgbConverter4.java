@@ -117,8 +117,7 @@ public class RgbConverter4 extends SingleRgbConverter {
 
         synchronized (mYUVBuffer) {
             mYUVProgram.useProgram();
-            mYUVProgram.setUniforms(mYUVBuffer.array());
-            mYUVProgram.draw();
+            mYUVProgram.draw(mYUVBuffer.array());
         }
 
         readPixels();

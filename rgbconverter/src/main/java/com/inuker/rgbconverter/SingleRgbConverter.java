@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
-import android.support.annotation.CallSuper;
 
 import com.inuker.library.EglCore;
 import com.inuker.library.OffscreenSurface;
@@ -72,7 +71,6 @@ public class SingleRgbConverter extends RgbConverter implements Handler.Callback
         return false;
     }
 
-    @CallSuper
     void onSurfaceCreated() {
         LogUtils.v(String.format("%s onSurfaceCreated", TAG));
         mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
@@ -80,12 +78,10 @@ public class SingleRgbConverter extends RgbConverter implements Handler.Callback
         mOffscreenSurface.makeCurrent();
     }
 
-    @CallSuper
     void onDrawSurface() {
         LogUtils.v(String.format("%s onDrawSurface", TAG));
     }
 
-    @CallSuper
     void onSurfaceDestroy() {
         LogUtils.v(String.format("%s onSurfaceDestroy", TAG));
 

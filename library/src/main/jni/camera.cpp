@@ -39,7 +39,7 @@ static int registerNativeMethods(JNIEnv *env, const char *className,
 }
 
 static int registerNatives(JNIEnv *env) {
-    const char *kClassName = "com/inuker/library/NativeUtils";     //指定要注册的类
+    const char *kClassName = "com/inuker/library/utils/NativeUtils";     //指定要注册的类
     return registerNativeMethods(env, kClassName, gMethods,
                                  sizeof(gMethods) / sizeof(gMethods[0]));
 }

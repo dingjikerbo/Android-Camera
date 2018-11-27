@@ -57,14 +57,12 @@ public abstract class RgbConverter implements IRgbConverter {
         onDestroy();
         mYUVBuffer = null;
         mPixelBuffer = null;
-        LogUtils.e("destroy, mPixelbuffer null");
         System.gc();
     }
 
     @Override
     public final void frameDrawed() {
         onDrawFrame();
-        GlUtil.checkGlError(String.format("%s frameDrawed", TAG));
     }
 
     @Override
@@ -77,14 +75,13 @@ public abstract class RgbConverter implements IRgbConverter {
 
     void readPixels() {
         if (mPixelBuffer == null) {
-            LogUtils.e(String.format("readPixels failed, pixelBuffer already set null!!"));
             return;
         }
         long start = System.currentTimeMillis();
         mPixelBuffer.position(0);
         GLES30.glReadPixels(0, 0, mWidth, mHeight, GLES30.GL_RGBA, GLES30.GL_UNSIGNED_BYTE, mPixelBuffer);
         mRuntimeCounter.add(System.currentTimeMillis() - start);
-        LogUtils.v(String.format("%s glReadPixels takes %dms", TAG, System.currentTimeMillis() - start));
+        LogUtils.v(String.format("%s glReadPixels(W/H=%d/%d) takes %dms", TAG, mWidth, mHeight, System.currentTimeMillis() - start));
         EventDispatcher.dispatch(Events.FPS_AVAILABLE, mRuntimeCounter.getAvg());
     }
 
@@ -94,19 +91,15 @@ public abstract class RgbConverter implements IRgbConverter {
 
     void pixelsToBitmap(ByteBuffer pixelBuffer) {
         if (pixelBuffer == null) {
-            LogUtils.e(String.format("pixelsToBitmap failed, pixelBuffer already set null!!"));
             return;
         }
 
-        long start = System.currentTimeMillis();
-
-        final Bitmap bmp = Bitmap.createBitmap(mWidth, mHeight, Bitmap.Config.ARGB_8888);
+        final Bitmap bmp = Bitmap.createBitmap(mHeight, mWidth, Bitmap.Config.ARGB_8888);
 
         pixelBuffer.rewind();
         bmp.copyPixelsFromBuffer(pixelBuffer);
 
         EventDispatcher.dispatch(Events.BITMAP_AVAILABLE, bmp);
-        LogUtils.v(String.format("pixelsToBitmap takes %dms", System.currentTimeMillis() - start));
     }
 
     abstract void onStart();
