@@ -20,85 +20,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06c6953f-7d73-423f-8ada-ad5f1ec63f44" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/androidTest/java/com/example/inuker/glsurfacepreview4/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/CameraSurfaceRender.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/glsurfacepreview4/src/test/java/com/example/inuker/glsurfacepreview4/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/src/main/res/raw/oes_fragment.glsl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/library/src/main/res/raw/oes_vertex.glsl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/CameraSurfaceRender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/CameraSurfaceRender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/FilterTextureProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview2/src/main/java/com/inuker/glsurfacepreview2/FilterTextureProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/AndroidMuxer.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/AndroidMuxer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/AudioEncoderCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/AudioEncoderCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseMovieEncoder.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/BaseMovieEncoder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/CameraHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/CameraHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglSurfaceBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglSurfaceBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/GlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/LogUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/LogUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/MediaEncoderCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MediaEncoderCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/MovieEncoder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/MovieEncoder2.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/NativeUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/NativeUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Rect.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Rect.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/RectProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/RectProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/ResourceUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ResourceUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/ShaderHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ShaderHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/ShaderProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/ShaderProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/Shape.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/ShapeProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/ShapeProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/TaskUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/TaskUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/TextureProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/TextureProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/VideoEncoderCore.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/VideoEncoderCore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/YUVProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/YUVProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/CameraSurfaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/FaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder2/src/main/java/com/inuker/recorder2/FaceRender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/CameraSurfaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter3.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/RgbConverter5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/rgbconverter/src/main/java/com/inuker/rgbconverter/SingleRgbConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -124,20 +47,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="112">
-              <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+            <state relative-caret-position="288">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CameraSurfaceRender.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CameraSurfaceRender.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="174">
+              <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -202,10 +125,6 @@
               <ExternalProjectPojo>
                 <option name="name" value=":glsurfacepreview3" />
                 <option name="path" value="$PROJECT_DIR$/glsurfacepreview3" />
-              </ExternalProjectPojo>
-              <ExternalProjectPojo>
-                <option name="name" value=":glsurfacepreview4" />
-                <option name="path" value="$PROJECT_DIR$/glsurfacepreview4" />
               </ExternalProjectPojo>
               <ExternalProjectPojo>
                 <option name="name" value=":library" />
@@ -413,11 +332,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="mergeReleaseJniLibFolders" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.test:monitor:1.0.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportTestMonitor102Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -707,11 +621,6 @@
                 <option name="name" value="mergeDebugProguardFiles" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.test:runner:1.0.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportTestRunner102Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.android.support.constraint:constraint-layout:1.0.2" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComAndroidSupportConstraintConstraintLayout102Library" />
@@ -751,11 +660,6 @@
                 <option name="description" value="Displays the configuration model of root project 'Android-Camera'. [incubating]" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="model" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.test.espresso:espresso-core:3.0.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoCore302Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the tasks runnable from root project 'Android-Camera' (some of the displayed tasks may belong to subprojects)." />
@@ -849,11 +753,6 @@
                 <option name="name" value="prepareComAndroidSupportSupportV42531Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.constraint:constraint-layout:1.1.3" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportConstraintConstraintLayout113Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Extracts Android annotations for the debug variant into the archive file" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="extractDebugAnnotations" />
@@ -877,11 +776,6 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareReleaseDependencies" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.test.espresso:espresso-idling-resource:3.0.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIdlingResource302Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="description" value="Displays the insight into a specific dependency in root project 'Android-Camera'." />
@@ -11629,8 +11523,8 @@
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java" />
         <option value="$PROJECT_DIR$/glsurfacepreview4/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" />
         <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" />
+        <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java" />
       </list>
     </option>
   </component>
@@ -11679,21 +11573,6 @@
       <pane id="AndroidView">
         <subPane>
           <expand>
-            <path>
-              <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="glsurfacepreview4" type="feadf853:AndroidModuleNode" />
-            </path>
-            <path>
-              <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="glsurfacepreview4" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-            </path>
-            <path>
-              <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="glsurfacepreview4" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="glsurfacepreview4" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
@@ -12384,6 +12263,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="796" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="Android Profiler" order="7" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -12399,8 +12279,8 @@
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2653791" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.18343195" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17811158" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.18343195" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988167" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -12779,17 +12659,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="112">
-          <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
+        <state relative-caret-position="174">
+          <caret line="22" column="25" selection-start-line="22" selection-start-column="25" selection-end-line="22" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
+    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="288">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>

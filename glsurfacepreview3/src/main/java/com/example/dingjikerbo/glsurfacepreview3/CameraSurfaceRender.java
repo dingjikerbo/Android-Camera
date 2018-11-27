@@ -20,7 +20,7 @@ import static android.opengl.GLES20.glGenTextures;
 import static android.opengl.GLES20.glViewport;
 
 /**
- * Created by liwentian on 17/8/16.
+ * Created by dingjikerbo on 17/8/16.
  */
 
 public class CameraSurfaceRender implements GLSurfaceView.Renderer, SurfaceTexture.OnFrameAvailableListener {
@@ -41,14 +41,11 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, SurfaceTextu
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        Log.v("bush", String.format("onSurfaceCreated"));
         mCamera = Camera.open(1);
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        Log.v("bush", String.format("onSurfaceChanged"));
-
         glViewport(0, 0, width, height);
 
         int[] textures = new int[1];
@@ -70,26 +67,17 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, SurfaceTextu
 
     @Override
     public void onDrawFrame(GL10 gl) {
-        Log.v("bush", "onDrawFrame");
-
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
         glClearColor(1f, 1f, 1f, 1f);
 
         mSurfaceTexture.updateTexImage();
         mSurfaceTexture.getTransformMatrix(mTransformMatrix);
 
-        StringBuilder sb = new StringBuilder();
-        for (float f : mTransformMatrix) {
-            sb.append(String.format("%.2f, ", f));
-        }
-        Log.v("bush", String.format("%s", sb.toString()));
-
         mProgram.draw(mSurfaceTextureId, mTransformMatrix);
     }
 
     @Override
     public void onFrameAvailable(SurfaceTexture surfaceTexture) {
-        Log.v("bush", "onFrameAvailable");
         mGLSurfaceView.requestRender();
     }
 }
