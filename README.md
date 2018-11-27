@@ -4,14 +4,15 @@
 
 ## **一、相机预览**
 
-|序号|项目名称|内容简介|相关文档|状态|
-|--- |-------|-------|------|-----|
-|1|GLSurfacePreview|拿到相机帧数据，直接绘制到屏幕|[相关文档](doc/相机预览总结.md)|Done|
-|2|GLSurfacePreview2|拿到相机帧数据，先绘制到FBO，离线处理后(变红)绘制到屏幕|[相关文档](doc/glsurfacepreview2.md)|Done|
-|3|GLSurfacePreview3|GLSurfaceView + OpenGL相机预览，直接从相机的输出SurfaceTexture上复制数据到Display Surface||Done|
-|4|SurfacePreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface||Done|
-|5|SurfacePreview2|SurfaceView + OpenGL + EGL相机预览，先绘制到PBuffer，再Blit到Display Surface||Done|
-|6|MultiSurfacePreview|相机预览到两个SurfaceView，共享EglContext，先绘制到Texture，再将Texture处理后Draw到另一个Surface||Done|
+
+|序号|项目名称|内容简介|状态|
+|--- |-------|-------|------|
+|1|GLSurfacePreview|拿到相机帧数据，直接绘制到屏幕[更多](doc/相机预览总结.md)|Done|
+|2|GLSurfacePreview2|拿到相机帧数据，先绘制到FBO，离线处理后(变红)绘制到屏幕 [更多](doc/glsurfacepreview2.md)|Done|
+|3|GLSurfacePreview3|GLSurfaceView + OpenGL相机预览，直接从相机的输出SurfaceTexture上复制数据到Display Surface [更多](doc/glsurfacepreview3.md)|Done|
+|4|SurfacePreview|SurfaceView + OpenGL + EGL相机预览，直接绘制到Display Surface [更多](doc/surfacepreview.md)|Done|
+|5|SurfacePreview2|SurfaceView + OpenGL + EGL相机预览，先绘制到PBuffer，再Blit到Display Surface [更多](doc/surfacepreview2.md)|Done|
+|6|MultiSurfacePreview|相机预览到两个SurfaceView，共享EglContext，先绘制到Texture，再将Texture处理后Draw到另一个Surface [更多](doc/multisurfacepreview.md)|Done|
 
 ## **二、RGB转换**
 利用GPU将相机帧(NV21)转成RGB并传至CPU，帧为1920 * 1080，RGBA
