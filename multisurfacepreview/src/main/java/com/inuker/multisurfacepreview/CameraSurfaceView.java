@@ -81,9 +81,6 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
         mEglCore = new EglCore(null, EglCore.FLAG_TRY_GLES3);
         mWindowSurface = new WindowSurface(mEglCore, holder.getSurface(), false);
         mWindowSurface.makeCurrent();
-
-        EGLContext context = EGL14.eglGetCurrentContext();
-        LogUtils.v(String.format("%s eglContext = %s", getClass().getSimpleName(), context));
     }
 
     private void prepareFrameBuffer(int width, int height) {

@@ -19,8 +19,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="06c6953f-7d73-423f-8ada-ad5f1ec63f44" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" beforeDir="false" afterPath="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -46,29 +45,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java">
+      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+            <state relative-caret-position="347">
+              <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OffscreenSurface.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/OffscreenSurface.java">
+      <file leaf-file-name="MiniSurfaceView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="23" column="41" selection-start-line="23" selection-start-column="41" selection-end-line="23" selection-end-column="41" />
+            <state relative-caret-position="57">
+              <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EglSurfaceBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglSurfaceBase.java">
+      <file leaf-file-name="CameraSurfaceView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+            <state relative-caret-position="-1687">
+              <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -76,17 +75,17 @@
       <file leaf-file-name="EglCore.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="279" column="7" lean-forward="true" selection-start-line="279" selection-start-column="7" selection-end-line="279" selection-end-column="7" />
+            <state relative-caret-position="672">
+              <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/MainActivity.java">
+      <file leaf-file-name="BaseSurfaceView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+            <state relative-caret-position="-1671">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -11536,7 +11535,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/glsurfacepreview/src/main/java/com/inuker/glsurfacepreview/MainActivity.java" />
-        <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
         <option value="$PROJECT_DIR$/multisurfacepreview/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/build.gradle" />
         <option value="$PROJECT_DIR$/glsurfacepreview4/src/main/res/layout/activity_main.xml" />
@@ -11562,6 +11560,7 @@
         <option value="$PROJECT_DIR$/surfacepreview/src/main/java/com/inuker/surfacepreview/CameraSurfaceView.java" />
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java" />
         <option value="$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java" />
+        <option value="$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java" />
       </list>
     </option>
   </component>
@@ -11612,18 +11611,18 @@
           <expand>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="surfacepreview2" type="feadf853:AndroidModuleNode" />
+              <item name="multisurfacepreview" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="surfacepreview2" type="feadf853:AndroidModuleNode" />
+              <item name="multisurfacepreview" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="surfacepreview2" type="feadf853:AndroidModuleNode" />
+              <item name="multisurfacepreview" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="surfacepreview2" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="multisurfacepreview" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -11664,7 +11663,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.surfacepreview">
+  <component name="RunManager" selected="Android App.multisurfacepreview">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -12327,8 +12326,8 @@
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
-      <window_info active="true" anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.18343195" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18383405" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.49928468" visible="true" weight="0.18343195" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32988167" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -12354,34 +12353,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/android/opengl/GLES20.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="663" column="30" selection-start-line="663" selection-start-column="30" selection-end-line="663" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-28/android.jar!/android/graphics/SurfaceTexture.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/ShaderHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="967">
-          <caret line="165" column="33" lean-forward="true" selection-start-line="165" selection-start-column="33" selection-end-line="165" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/Rect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-39">
-          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/GLHelper.java" />
     <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -12655,24 +12626,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-126">
-          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/WindowSurface.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="248">
           <caret line="40" column="21" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/MainActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -12683,17 +12640,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglSurfaceBase.java">
+    <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="279" column="7" lean-forward="true" selection-start-line="279" selection-start-column="7" selection-end-line="279" selection-end-column="7" />
+        <state relative-caret-position="325">
+          <caret line="119" lean-forward="true" selection-start-line="119" selection-end-line="119" />
         </state>
       </provider>
     </entry>
@@ -12704,10 +12654,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/CameraSurfaceView.java">
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglSurfaceBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="116" column="20" lean-forward="true" selection-start-line="116" selection-start-column="20" selection-end-line="116" selection-end-column="20" />
+        <state relative-caret-position="253">
+          <caret line="120" column="20" lean-forward="true" selection-start-line="120" selection-start-column="20" selection-end-line="120" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/surfacepreview2/src/main/java/com/inuker/surfacepreview2/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/Events.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/BaseSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1671">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/EglCore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MiniSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="70" column="37" lean-forward="true" selection-start-line="70" selection-start-column="37" selection-end-line="70" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/CameraSurfaceView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1687">
+          <caret line="80" column="26" lean-forward="true" selection-start-line="80" selection-start-column="26" selection-end-line="80" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/multisurfacepreview/src/main/java/com/inuker/multisurfacepreview/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="34" column="40" selection-start-line="34" selection-start-column="40" selection-end-line="34" selection-end-column="40" />
         </state>
       </provider>
     </entry>

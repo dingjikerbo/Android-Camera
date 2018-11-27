@@ -12,7 +12,7 @@
 |3|GLSurfacePreview3|[直接给相机的预览纹理绘制到屏幕](doc/glsurfacepreview3.md)|Done|
 |4|SurfacePreview|[拿到相机帧数据，直接绘制到屏幕](doc/surfacepreview.md)|Done|
 |5|SurfacePreview2|[拿到相机帧数据，先绘制到PBuffer，再Blit到WindowSurface](doc/surfacepreview2.md)|Done|
-|6|MultiSurfacePreview|[相机预览到两个SurfaceView，共享EglContext，先绘制到Texture，再将Texture处理后Draw到另一个Surface](doc/multisurfacepreview.md)|Done|
+|6|MultiSurfacePreview|[拿到相机帧数据，先转成纹理，再分别绘制到两个SurfaceView](doc/multisurfacepreview.md)|Done|
 
 ## **二、RGB转换**
 利用GPU将相机帧(NV21)转成RGB并传至CPU，帧为1920 * 1080，RGBA

@@ -1,0 +1,7 @@
+# multisurfacepreview工程
+
+本工程的意义在于要展示如何共享gl上下文。先在主surfaceview中将相机帧绘制到纹理上，然后将纹理绘制到屏幕上显示。另外开一个mini surfaceview，用于同步显示滤镜效果，需要复用主surfaceview中的纹理，但是这两个surfaceview的gl上下文不同，如何能共享纹理呢？
+
+所谓的gl上下文就是EGLContext，而纹理是和gl上下文绑定的，即对于两个surfaceview，由于各自有独立的gl上下文，所以纹理是不能共享的。
+
+如果要做到纹理共享，需在创建gl上下文时指定sharedContext。这样在surfaceviewA的gl上下文中创建的纹理对于surfaceviewB也是可用的。
