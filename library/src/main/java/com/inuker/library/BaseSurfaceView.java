@@ -64,7 +64,6 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
 
     @Override
     public final void surfaceCreated(SurfaceHolder holder) {
-        LogUtils.v(String.format("%s surfaceCreated", getName()));
         mRenderHandler.obtainMessage(MSG_SURFACE_CREATED, holder).sendToTarget();
     }
 
@@ -72,7 +71,6 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
 
     @Override
     public final void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        LogUtils.v(String.format("%s surfaceChanged width = %d, height = %d", getName(), width, height));
         mRenderHandler.obtainMessage(MSG_SURFACE_CHANGED, width, height).sendToTarget();
     }
 
@@ -80,7 +78,6 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
 
     @Override
     public final void surfaceDestroyed(SurfaceHolder holder) {
-        LogUtils.v(String.format("%s surfaceDestroyed", getName()));
         mRenderHandler.obtainMessage(MSG_SURFACE_DESTROY).sendToTarget();
         mRenderHandler.getLooper().quitSafely();
         mRenderHandler = null;
@@ -109,7 +106,6 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
                 break;
 
             case MSG_GET_EGLCONTEXT:
-                LogUtils.v(String.format("%s handleMessage %d", getClass().getSimpleName(), msg.what));
                 doGetEglContext((SurfaceCallback) msg.obj);
                 break;
         }
@@ -145,14 +141,11 @@ public abstract class BaseSurfaceView extends SurfaceView implements SurfaceHold
     }
 
     private void doGetEglContext(final SurfaceCallback callback) {
-        LogUtils.e("doGetEglContext");
-
         final EGLContext context = EGL14.eglGetCurrentContext();
 
         post(new Runnable() {
             @Override
             public void run() {
-                LogUtils.v(String.format("doGetEglContext run, context = %s", context));
                 callback.onCallback(context);
             }
         });

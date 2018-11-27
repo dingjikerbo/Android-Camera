@@ -1,0 +1,7 @@
+# surfacepreview工程
+
+本工程和前几个工程的区别在于前几个工程都是用GLSurfaceView，而本工程用SurfaceView。
+
+这两者的区别在于GLSurfaceView会自动管理OpenGL渲染所需的上下文，我们只需要关注单纯的绘制部分即可，即onDrawFrame中绘制。而SurfaceView中我们需要自己搭建OpenGL渲染的上下文，包括准备好EGL环境，创建渲染线程。
+
+虽然看起来麻烦一些，但其实提供了更多的灵活性，在后面的录屏工程中就能体会到这一点。
