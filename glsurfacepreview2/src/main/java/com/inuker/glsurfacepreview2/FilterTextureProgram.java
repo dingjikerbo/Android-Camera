@@ -51,10 +51,10 @@ public class FilterTextureProgram extends ShaderProgram {
     public FilterTextureProgram(Context context, int width, int height) {
         super(context, R.raw.filter_tex_vertex, R.raw.filter_tex_fragment, width, height);
 
-        mUniformTextureLocation = glGetUniformLocation(program, "s_texture");
+        mUniformTextureLocation = glGetUniformLocation(mProgram, "s_texture");
 
-        aPositionLocation = glGetAttribLocation(program, "a_Position");
-        aTextureCoordinatesLocation = glGetAttribLocation(program, "a_TextureCoordinates");
+        aPositionLocation = glGetAttribLocation(mProgram, "a_Position");
+        aTextureCoordinatesLocation = glGetAttribLocation(mProgram, "a_TextureCoordinates");
     }
 
     public void draw(int texture) {
