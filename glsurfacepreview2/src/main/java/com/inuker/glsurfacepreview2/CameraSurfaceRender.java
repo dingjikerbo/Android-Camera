@@ -4,6 +4,7 @@ import android.graphics.ImageFormat;
 import android.graphics.SurfaceTexture;
 import android.hardware.Camera;
 import android.opengl.GLSurfaceView;
+import android.view.Surface;
 
 import com.inuker.library.program.YUVProgram;
 import com.inuker.library.utils.LogUtils;
