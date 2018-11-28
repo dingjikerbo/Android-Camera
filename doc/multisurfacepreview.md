@@ -9,6 +9,7 @@
 关于gl上下文，可参考[官方文档](https://source.android.com/devices/graphics/arch-egl-opengl)
 
 原文如下：
-```
+
+`
 在使用 GLES 进行任何操作之前，需要创建一个 GL 上下文。在 EGL 中，这意味着要创建一个 EGLContext 和一个 EGLSurface。GLES 操作适用于当前上下文，该上下文通过线程局部存储访问，而不是作为参数进行传递。这意味着您必须注意渲染代码在哪个线程上执行，以及该线程上的当前上下文。
-```
+`
