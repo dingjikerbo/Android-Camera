@@ -43,9 +43,9 @@
 |2|video2|视频裁剪播放，并增加一层遮罩|Pending|
 
 
-## **技术要点**
+## **相关文档**
 
- - [相机遇到的问题](doc/相机遇到的问题.md)
+ - [SurfaceTexture源码解析](doc/SurfaceTexture源码解析.md)
 
 ------
 有问题或建议可以给我邮件
