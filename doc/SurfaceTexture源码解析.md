@@ -10,8 +10,6 @@ private long mFrameAvailableListener
 
 这必定是对应着native层的三个对象，mFrameAvailableListener不是我们Java层设置的那个listener
 
-[SurfaceTexture.cpp](http://androidxref.com/5.0.0_r2/xref/frameworks/base/core/jni/android/graphics/SurfaceTexture.cpp)
-
 SurfaceTexture构造函数中会调到Native层的SurfaceTexture_init：
 
 ```
@@ -41,7 +39,9 @@ static void SurfaceTexture_init(JNIEnv* env, jobject thiz, jboolean isDetached,
 可见Java层的mSurfaceTexture对应着Native层的GLConsumer，里面包含IGraphicBufferConsumer，而Java层的mProducer对应着IGraphicBufferProducer。Java层的mFrameAvailableListener对应着JNISurfaceTextureContext，这个对象设置到GLConsumer中了。
 
 整个SurfaceTexture.cpp要注意的有以下几个点：
+
 1，updateTexImage的实现
+
 2，BufferQueue::createBufferQueue(&producer, &consumer);
 
 先看createBufferQueue的实现：
