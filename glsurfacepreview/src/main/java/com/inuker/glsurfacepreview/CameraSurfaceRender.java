@@ -87,7 +87,7 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
             mYUVProgram.draw(mYUVBuffer.array());
         }
 
-        mSurfaceTexture.updateTexImage();
+//        mSurfaceTexture.updateTexImage();
     }
 
     @Override
