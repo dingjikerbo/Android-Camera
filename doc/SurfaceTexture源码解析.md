@@ -256,6 +256,10 @@ status_t GLConsumer::bindTextureImageLocked() {
     glEGLImageTargetTexture2DOES(mTexTarget, (GLeglImageOES)image);
     return doGLFenceWaitLocked();
 }
-
-
 ```
+
+总结一下，surfaceTexture初始化时就是创建一个BufferQueue，而创建BufferQueue就是要创建好producer和consumer，此外初始化好buffer的队列，还有allocator。这个allocator是个binder，具体实现在SurfaceFlinger中。而此处的BufferQueueProducer是Bn端，为什么呢，因为producer通常是是camera或者decoder，是另一个进程的，相当于client，而surfaceTexture相当于service，所以持有bn端。远端的camera如有帧数据来时，会调用dequeBuffer取一个buffer塞数据，塞好后再queueBuffer将其丢回到BufferQueue，然后通知consumer。BufferQueue是跑在surfaceTexture进程的，队列也是维护在自己进程，只不过allocator是要调到SurfaceFlinger进程，这么重要的事当然要交给系统来干。
+
+这里面很重要的一件事是allocator在SurfaceFlinger进程分配的buffer，如何同步到surfaceTexture进程，看一下GraphicBuffer，实现了Flattenable接口，每次SurfaceFlinger分配好后，就生成一个描述符，然后跨进程传到对端进程，对端收到后，只要在unflatten解包时顺便映射一下，就能获取该buffer在本进程的内存地址，这个映射应该是通过gralloc的驱动。GraphicBuffer中真正表示内存的是ANativeWindowBuffer对象。
+
+整个BufferQueue的数据结构就是一个slots数组和一个fifo队列。slots用于表示所有的buffer，记录buffer各种状态。而fifo队列是可用的buffer队列，方便consumer使用，直接从队列头取一个buffer就能用了。producer来一帧数据直接丢到队列尾即可。
