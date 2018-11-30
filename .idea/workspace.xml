@@ -3,6 +3,16 @@
   <component name="AndroidGradleBuildConfiguration">
     <option name="SYNC_PROJECT_BEFORE_BUILD" value="true" />
   </component>
+  <component name="AndroidLayouts">
+    <shared>
+      <config />
+    </shared>
+  </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="bush" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
+  </component>
   <component name="CMakeSettings">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
@@ -11,35 +21,9 @@
   <component name="ChangeListManager">
     <list default="true" id="9da52753-3ef6-4a1f-8ac6-9c61920b87b9" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/doc/SurfaceTexture源码解析.md" beforeDir="false" afterPath="$PROJECT_DIR$/doc/SurfaceTexture源码解析.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/proguard-rules.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/androidTest/java/com/example/inuker/glsurfacepreview4/ExampleInstrumentedTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/CameraSurfaceRender.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/java/com/example/inuker/glsurfacepreview4/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/drawable-v24/ic_launcher_foreground.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/drawable/ic_launcher_background.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/layout/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-hdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-mdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/colors.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/strings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/main/res/values/styles.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/glsurfacepreview4/src/test/java/com/example/inuker/glsurfacepreview4/ExampleUnitTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder1/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" beforeDir="false" afterPath="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,65 +49,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="CameraSurfaceRender.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="56" selection-start-line="56" selection-end-line="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CameraHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/CameraHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1264">
+              <caret line="207" column="16" lean-forward="true" selection-start-line="207" selection-start-column="16" selection-end-line="207" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recorder1/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MovieEncoder1.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="310">
+              <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
+        <entry file="file://$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CameraSurfaceRender.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GlUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="362">
-              <caret line="173" column="48" selection-start-line="173" selection-start-column="48" selection-end-line="173" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OESProgram.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="78" column="50" lean-forward="true" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oes_fragment.glsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/oes_fragment.glsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="oes_vertex.glsl" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/oes_vertex.glsl">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="16">
-              <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="YUVProgram.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/YUVProgram.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="86" column="55" selection-start-line="86" selection-start-column="35" selection-end-line="86" selection-end-column="55" />
+            <state relative-caret-position="-38">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -10580,7 +10549,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/GlUtil.java" />
+        <option value="$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java" />
         <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java" />
+        <option value="$PROJECT_DIR$/recorder1/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java" />
+        <option value="$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java" />
       </list>
     </option>
   </component>
@@ -10630,22 +10603,18 @@
           <expand>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="glsurfacepreview3" type="feadf853:AndroidModuleNode" />
+              <item name="recorder1" type="feadf853:AndroidModuleNode" />
             </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="glsurfacepreview3" type="feadf853:AndroidModuleNode" />
+              <item name="recorder1" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
               <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="glsurfacepreview3" type="feadf853:AndroidModuleNode" />
+              <item name="recorder1" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="glsurfacepreview3" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Android-Camera" type="1abcf292:AndroidViewProjectNode" />
-              <item name="library" type="feadf853:AndroidModuleNode" />
+              <item name="recorder1" type="cbb59c9e:AndroidPsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -10674,7 +10643,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.glsurfacepreview3">
+  <component name="RunManager" selected="Android App.recorder1">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -10940,7 +10909,7 @@
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
     </configuration>
-    <configuration name="recorder1" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="recorder1" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="recorder1" />
       <option name="DEPLOY" value="true" />
       <option name="DEPLOY_APK_FROM_BUNDLE" value="false" />
@@ -10954,7 +10923,7 @@
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="true" />
       <option name="PREFERRED_AVD" value="" />
       <option name="SELECTED_CLOUD_MATRIX_CONFIGURATION_ID" value="-1" />
       <option name="SELECTED_CLOUD_MATRIX_PROJECT_ID" value="" />
@@ -11283,19 +11252,19 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Logcat" />
+      <window_info anchor="bottom" id="Logcat" visible="true" weight="0.32988167" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16452074" />
       <window_info anchor="bottom" id="Build" weight="0.23224851" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32988167" />
       <window_info anchor="right" id="Gradle" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Theme Preview" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="right" id="Device File Explorer" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -11308,17 +11277,17 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
+    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/yuv_fragment.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        <state relative-caret-position="192">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
+        <state relative-caret-position="199">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
         </state>
       </provider>
     </entry>
@@ -11329,10 +11298,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/oes_vertex.glsl">
+    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/CameraSurfaceRender.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="16">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
+        <state relative-caret-position="101">
+          <caret line="55" column="26" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/glsurfacepreview3/src/main/java/com/example/dingjikerbo/glsurfacepreview3/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -11343,10 +11319,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/yuv_fragment.glsl">
+    <entry file="file://$PROJECT_DIR$/library/src/main/res/raw/oes_vertex.glsl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        <state relative-caret-position="16">
+          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -11357,10 +11333,48 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/program/OESProgram.java">
+    <entry file="file://$PROJECT_DIR$/recorder1/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="279">
-          <caret line="78" column="50" lean-forward="true" selection-start-line="78" selection-start-column="50" selection-end-line="78" selection-end-column="50" />
+        <state relative-caret-position="256">
+          <caret line="16" column="65" selection-start-line="16" selection-start-column="65" selection-end-line="16" selection-end-column="65" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/BaseMovieEncoder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="199">
+          <caret line="175" column="7" lean-forward="true" selection-start-line="175" selection-start-column="7" selection-end-line="175" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/encoder/MovieEncoder1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="38" column="35" lean-forward="true" selection-start-line="38" selection-start-column="35" selection-end-line="38" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/MainActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/library/src/main/java/com/inuker/library/utils/CameraHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1264">
+          <caret line="207" column="16" lean-forward="true" selection-start-line="207" selection-start-column="16" selection-end-line="207" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recorder1/src/main/java/com/inuker/recorder1/CameraSurfaceRender.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="56" selection-start-line="56" selection-end-line="56" />
         </state>
       </provider>
     </entry>

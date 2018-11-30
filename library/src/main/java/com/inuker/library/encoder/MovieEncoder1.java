@@ -32,6 +32,10 @@ public class MovieEncoder1 extends BaseMovieEncoder {
     public void onFrameAvailable(Object object, long timestamp) {
         byte[] data = (byte[]) object;
 
+        if (mYUVBuffer == null) {
+            return;
+        }
+
         synchronized (mYUVBuffer) {
             mYUVBuffer.position(0);
             mYUVBuffer.put(data);

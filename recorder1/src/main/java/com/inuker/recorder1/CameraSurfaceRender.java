@@ -49,14 +49,11 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
     @Override
     public void onSurfaceCreated(GL10 gl, EGLConfig config) {
-        LogUtils.v("onSurfaceCreated");
         mCamera = Camera.open(1);
     }
 
     @Override
     public void onSurfaceChanged(GL10 gl, int width, int height) {
-        LogUtils.v(String.format("onSurfaceChanged width = %d, height = %d", width, height));
-
         mVideoEncoder = new MovieEncoder1(mGLSurfaceView.getContext(), width, height);
 
         int bufferSize = width * height * ImageFormat.getBitsPerPixel(ImageFormat.NV21) / 8;
@@ -92,9 +89,8 @@ public class CameraSurfaceRender implements GLSurfaceView.Renderer, Camera.Previ
 
         mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mYUVProgram.setUniforms(mYUVBuffer.array());
+            mYUVProgram.draw(mYUVBuffer.array());
         }
-        mYUVProgram.draw();
 
         mSurfaceTexture.updateTexImage();
     }
