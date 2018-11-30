@@ -2,10 +2,6 @@
 
 本工程录制摄像头及音频。
 
-
-关于录屏可参考以下工程：
-https://bigflake.com/mediacodec/
-
 核心类是MovieEncoder1，由于继承自BaseMovieEncoder，所以持有VideoEncoderCore和AudioEncoderCore，这两个分别用于录制视频和音频。录制是用的系统类MediaCodec，根据传入的MIME_TYPE决定是录制视频还是音频。VideoEncoderCore和AudioEncoderCore内各有一个MediaCodec，但是共用一个MediaMuxer。
 
 当相机收到帧可用回调时，
@@ -19,3 +15,8 @@ https://bigflake.com/mediacodec/
 
 对于MediaMuxer来说，区分视频和音频是用trackIndex。
 
+
+# 参考文档
+
+关于录屏可参考以下工程：
+https://bigflake.com/mediacodec/
