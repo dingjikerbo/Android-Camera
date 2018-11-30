@@ -180,9 +180,8 @@ public class CameraSurfaceView extends BaseSurfaceView implements Camera.Preview
 
         mYUVProgram.useProgram();
         synchronized (mYUVBuffer) {
-            mYUVProgram.setUniforms(mYUVBuffer.array());
+            mYUVProgram.draw(mYUVBuffer.array());
         }
-        mYUVProgram.draw();
 
         mFaceRender.draw();
 
