@@ -11,7 +11,7 @@
 |2|GLSurfacePreview2|[拿到相机帧数据，先绘制到FBO，离线处理后(变红)绘制到屏幕](doc/glsurfacepreview2.md)|
 |3|GLSurfacePreview3|[直接给相机的预览纹理绘制到屏幕](doc/glsurfacepreview3.md)|
 |4|SurfacePreview|[拿到相机帧数据，直接绘制到屏幕](doc/surfacepreview.md)|
-|5|SurfacePreview2|[拿到相机帧数据，先绘制到PBuffer，再Blit到WindowSurface](doc/surfacepreview2.md)|
+|5|SurfacePreview2|[拿到相机帧数据，先绘制到PBuffer，再绘制到屏幕](doc/surfacepreview2.md)|
 |6|MultiSurfacePreview|[拿到相机帧数据，先转成纹理，再分别绘制到两个SurfaceView](doc/multisurfacepreview.md)|
 
 ## **二、RGB转换**
@@ -32,7 +32,7 @@
 |序号|项目名称|内容简介|
 |--- |-------|-------|
 |1|recorder1|[录制相机预览以及音频](doc/recorder1.md)|
-|2|recorder2|SurfaceView + MediaMuxer，共享EglContext，可以录制整个Surface|
+|2|recorder2|[录制纹理以及音频](doc/recorder2.md)|
 
 
 ## **四，视频播放**

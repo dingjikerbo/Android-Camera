@@ -1,0 +1,5 @@
+# recorder2工程
+
+本工程和recorder1工程区别在于，recorder1的视频是直接录制相机的帧，根据相机的previewFrame的buffer，绘制到MediaCodec的inputSurface上。
+
+本工程是录制纹理，方式更加灵活。先将相机帧绘制到纹理上，然后做一些额外的渲染，再将纹理绘制到MediaCodec的inputSurface上，不过要注意这两个过程是跑在不同的渲染线程，所以纹理要跨线程可用必须共享GL上下文。
