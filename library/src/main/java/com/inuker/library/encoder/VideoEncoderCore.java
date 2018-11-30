@@ -90,8 +90,6 @@ public class VideoEncoderCore extends MediaEncoderCore {
         mEncoder.configure(format, null, null, MediaCodec.CONFIGURE_FLAG_ENCODE);
         mInputSurface = mEncoder.createInputSurface();
         mEncoder.start();
-
-        LogUtils.v(String.format("%s prepareEncoder, mEncoder = %s", getClass().getSimpleName(), mEncoder));
     }
 
     /**

@@ -29,7 +29,6 @@ public abstract class MediaEncoderCore {
     protected MediaCodec.BufferInfo mBufferInfo;
 
     public MediaEncoderCore(AndroidMuxer muxer) {
-        LogUtils.v(String.format("%s <init> called", getClass().getSimpleName()));
         mMuxer = muxer;
         mBufferInfo = new MediaCodec.BufferInfo();
     }
@@ -49,8 +48,6 @@ public abstract class MediaEncoderCore {
      * not recording audio.
      */
     public void drainEncoder(boolean endOfStream) {
-//        LogUtils.v(String.format("%s drainEncoder: end = %b", getClass().getSimpleName(), endOfStream));
-
         final int TIMEOUT_USEC = 10000;
         if (VERBOSE) Log.d(TAG, "drainEncoder(" + endOfStream + ")");
 
@@ -129,8 +126,6 @@ public abstract class MediaEncoderCore {
     }
 
     public void release() {
-        LogUtils.v(String.format("%s.release", getClass().getSimpleName()));
-
         if (mEncoder != null) {
             mEncoder.stop();
             mEncoder.release();

@@ -1,0 +1,21 @@
+# recorder1工程
+
+本工程录制摄像头及音频。
+
+
+关于录屏可参考以下工程：
+https://bigflake.com/mediacodec/
+
+核心类是MovieEncoder1，由于继承自BaseMovieEncoder，所以持有VideoEncoderCore和AudioEncoderCore，这两个分别用于录制视频和音频。录制是用的系统类MediaCodec，根据传入的MIME_TYPE决定是录制视频还是音频。VideoEncoderCore和AudioEncoderCore内各有一个MediaCodec，但是共用一个MediaMuxer。
+
+当相机收到帧可用回调时，
+
+对于Audio，先调用drainEncoder给MediaCodec中的可用的OutputBuffers排空到muxer，带上trackIndex。然后再dequeueInputBuffer，用从AudioRecord中读取的数据填充好，再queueInputBuffer到MediaCodec中。
+
+可见，MediaCodec对应着两端，输入端对应着AudioRecord，输出端对应着MediaMexer。从AudioRecord中读取录制的音频数据，然后写到MediaMuxer中去和视频混合。
+
+再来看Video，同样有一个MediaCodec，同样分输入端和输出端，输出端和Audio端共用一个MediaMuxer，但是输入端没有类似AudioRecord的东西，而是通过createInputSurface返回了一个Surface，图像直接绘制到这个Surface上即可，这样MediaCodec在drainEncoder时同样可以有输出buffer到MediaMuxer。
+我们拿到这个Surface怎么绘制呢？首先创建OpenGL上下文，拿这个Surface作为参数创建一个EGL WindowSurface，然后makeCurrent，就可以开始渲染了，完后swapBuffer即可推送到前台生效。
+
+对于MediaMuxer来说，区分视频和音频是用trackIndex。
+

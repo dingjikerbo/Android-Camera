@@ -31,7 +31,7 @@
 
 |序号|项目名称|内容简介|
 |--- |-------|-------|
-|1|recorder1|GLSurfaceView + MediaMuxer，不共享EglContext，只能录制相机预览|
+|1|recorder1|[录制相机预览以及音频](doc/recorder1.md)|
 |2|recorder2|SurfaceView + MediaMuxer，共享EglContext，可以录制整个Surface|
 
 
