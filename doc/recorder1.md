@@ -6,7 +6,7 @@
 
 当相机收到帧可用回调时，
 
-对于Audio，先调用drainEncoder给MediaCodec中的可用的OutputBuffers排空到muxer，带上trackIndex。然后再dequeueInputBuffer，用从AudioRecord中读取的数据填充好，再queueInputBuffer到MediaCodec中。
+对于Audio，先调用drainEncoder给MediaCodec中的可用的OutputBuffers排空到muxer，然后再dequeueInputBuffer，用从AudioRecord中读取的数据填充好，再queueInputBuffer到MediaCodec中。
 
 可见，MediaCodec对应着两端，输入端对应着AudioRecord，输出端对应着MediaMexer。从AudioRecord中读取录制的音频数据，然后写到MediaMuxer中去和视频混合。
 
