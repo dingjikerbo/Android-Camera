@@ -11,14 +11,15 @@ import com.inuker.library.utils.GlUtil;
 
 import java.nio.FloatBuffer;
 
+import static android.opengl.GLES20.glGetUniformLocation;
+
 public class OESProgram extends ShaderProgram {
 
     private int muTexMatrixLoc;
     private int muMVPMatrixLoc;
     private int maPositionLoc;
     private int maTextureCoordLoc;
-
-    private int mTextureTarget;
+    private int muTextureLoc;
 
     private float[] mMVPMatrix = new float[16];
 
@@ -42,8 +43,6 @@ public class OESProgram extends ShaderProgram {
     public OESProgram(Context context, int width, int height) {
         super(context, R.raw.oes_vertex, R.raw.oes_fragment);
 
-        mTextureTarget = GLES11Ext.GL_TEXTURE_EXTERNAL_OES;
-
         maPositionLoc = GLES20.glGetAttribLocation(mProgram, "aPosition");
         GlUtil.checkLocation(maPositionLoc, "aPosition");
         maTextureCoordLoc = GLES20.glGetAttribLocation(mProgram, "aTextureCoord");
@@ -52,6 +51,8 @@ public class OESProgram extends ShaderProgram {
         GlUtil.checkLocation(muTexMatrixLoc, "uTexMatrix");
         muMVPMatrixLoc = GLES20.glGetUniformLocation(mProgram, "uMVPMatrix");
         GlUtil.checkLocation(muMVPMatrixLoc, "uMVPMatrix");
+        muTextureLoc = GLES20.glGetUniformLocation(mProgram, "sTexture");
+        GlUtil.checkLocation(muTextureLoc, "sTexture");
     }
 
     public void draw(int textureId, float[] texMatrix) {
@@ -63,7 +64,8 @@ public class OESProgram extends ShaderProgram {
 
         // Set the texture.
         GLES20.glActiveTexture(GLES20.GL_TEXTURE0);
-        GLES20.glBindTexture(mTextureTarget, textureId);
+        GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, textureId);
+        GLES20.glUniform1i(muTextureLoc, 0);
 
         // Copy the texture transformation matrix over.
         GLES20.glUniformMatrix4fv(muTexMatrixLoc, 1, false, texMatrix, 0);
@@ -101,7 +103,7 @@ public class OESProgram extends ShaderProgram {
         // Done -- disable vertex array, texture, and program.
         GLES20.glDisableVertexAttribArray(maPositionLoc);
         GLES20.glDisableVertexAttribArray(maTextureCoordLoc);
-        GLES20.glBindTexture(mTextureTarget, 0);
+        GLES20.glBindTexture(GLES11Ext.GL_TEXTURE_EXTERNAL_OES, 0);
         GLES20.glUseProgram(0);
     }
 }
